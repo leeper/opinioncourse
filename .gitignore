@@ -1,0 +1,8 @@
+# subdirectories to ignore #
+
+
+# filetypes to ignore #
+.docx
+
+# files to ignore #
+Syllabus.tex
