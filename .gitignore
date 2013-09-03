@@ -1,5 +1,9 @@
 # subdirectories to ignore #
-
+/Slides
+!/Slides/*.tex
+!/Slides/*.pdf
+!/Slides/*.bib
+!/Slides/*.png
 
 # filetypes to ignore #
 *.docx
