@@ -1,7 +1,7 @@
-Course materials for Public Opinion seminar
+Public Opinion Seminar
 =======
 
-This repository will hold materials for a course on public opinion. I'm teaching an initial version of this course as a master seminar at Aarhus University during Autumn term 2013. My plan is to create branches for each iteration of the course and merge the most recent version back into the master branch, preserving each version of the course separately for posterity.
+This repository holds materials for a course on public opinion. I'm teaching an initial version of this course as a master seminar at Aarhus University during Autumn term 2013. My plan is to create branches for each iteration of the course and merge the most recent version back into the master branch, preserving each version of the course separately for posterity.
 
 ## Motivation ##
 

@@ -2,7 +2,7 @@
 
 
 # filetypes to ignore #
-.docx
+*.docx
 
 # files to ignore #
 Syllabus.tex
