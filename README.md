@@ -16,7 +16,7 @@ Each class will end with a "preview" lecture of the next week's reading material
 
 ## Weekly Assignments ##
 
-Each week one student will write a short (less than one double-spaced page) response to whatever they find interesting or important from that week's readings. This will be due on Monday before class. Another student will respond however they see fit (i.e., agree, disagree, highlight other readings or perspectives, etc.) in a short (less than one double-spaced page) due Wednesday morning (by 12:00 noon).
+Each week one student will write a short (less than one double-spaced page) response to whatever they find interesting or important from that week's readings. This will be due on Monday before class. Another student will respond however they see fit (i.e., agree, disagree, highlight other readings or perspectives, etc.) in a short (less than one double-spaced page) due Wednesday morning (by 12:00 noon). Papers should be distributed via email to all course participants.
 
 Class will start each week with these students discussing their papers. All students should read the papers before class.
 
