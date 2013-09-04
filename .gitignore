@@ -9,4 +9,6 @@
 *.docx
 
 # files to ignore #
-Syllabus.tex
+Syllabus.*
+!Syllabus.pdf
+!Syllabi.bib
