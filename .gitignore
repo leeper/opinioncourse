@@ -3,6 +3,7 @@
 
 # filetypes to ignore #
 *.docx
+*.xlsx
 
 # files to ignore #
 Syllabus.*
