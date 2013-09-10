@@ -7,6 +7,17 @@ September 11, 2013
 * What aspect(s) of this week's readings did you find the most difficult or challenging?
 
 
+## Questions from Troels
+
+* Dahl asks us whether any group of people is entitled to form their own government; what is the appropriate size of a demos? If we think of Dahl’s criteria of effective participation; the right of every citizen to be heard in the process of lawmaking, one could argue that a small demos is to prefer in a democracy.  Do you agree? What is the relationship between the size of the demos and the role of public opinion?
+* The implication of Dahl’s principle for inclusion in the demos seems to be that the different age limits is incompatible with the ideal democracy. How serious is this problem? One could argue that introducing responsibility before full inclusion is granted is part of an educational process, but is this a reasonable argument?
+* Downs and others have argued elsewhere that it is individually and collectively irrational for most people to invest time and effort in trying to influence policy between elections. Indeed everyone could not invest the amount of time that politicians and political activists do. If they did politicians would argue about how to distribute much fewer resources. What are the implications of this argument for Dahl’s theory?
+* Herbst is interested in the effects of the growing amount of polling data on politics and how it transforms the meaning of public opinion. Is polling data – i.e. the aggregation of individual opinions on predefined issues – really the kind of public opinion that should be influencing policy? If polling data is what we mean by public opinion, should we use this technique to determine policy or to determine the policy agenda? Would that be effective participation? If you think of participation in a deliberative sense, the deliberative part – i.e. the public scrutiny of the reasoning opinions (hopefully) are grounded in – seems to be missing. Should public opinion be formed in public debate, or is the aggregation of private opinions sufficient?
+* Mansbridge presents four models for representation; Which model do you find most desirable? Returning to Downs: Which model is in accordance with rational behavior from individual voters and politicians?
+
+
+
+
 ## Herbst
 * What are the two values of public opinion that Herbst describes? (30)
 	* Instrumental and symbolic
