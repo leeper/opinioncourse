@@ -10,6 +10,15 @@ September 18, 2013
 ## Other notes/questions on readings ##
 
 ### Druckman and Lupia
+* How do Druckman and Lupia define "preferences"? (2,4--5) How does this compare to Eagly and Chaiken's definition of "attitude"?
+* For Druckman and Lupia, how are preference formed?
+* What are the basic principles of memory-based models of preference formation?
+ * If attitudes are expressed through a memory-based process (like Zaller's), do individuals actually have "attitudes"?
+* What are the basic principles of online models of preference formation?
+ * What role to beliefs have in attitudes formed online? Do these attitudes have "structure" in the way that Eagly and Chaiken discuss structure?
+* Are online and memory-based models credible? Which seems more plausible? Are they mutually exclusive?
+ * How is consistency defined in memory-based and online models?
+
 
 ### Eagly and Chaiken
 * How do Eagly and Chaiken define "attitude" (269)?
@@ -35,6 +44,7 @@ September 18, 2013
  * Response (49)
 * How does the "response" axiom compare to the "expectancy-value model" of attitudes described by Eagly and Chaiken (275)?
 * What is "political awareness"? How does Zaller measure it? What concerns might we have with this construct and its operationalization?
+ * Zaller puts a considerable amount of theoretical weight on "awareness" in explaining opinion change. Is he missing anything (such as ideas discussed by Druckman and Lupia, 13--19)?
 * How does Zaller characterize politics (47) and how does that reality compare the "issue involvement" experiment he describes on p.46? What do any differences imply for how citizens respond to elite influence?
  * Think especially about argument strength, involvement, and information levels
 * Is Zaller's model explaining opinion formation or just opinion *responding* (as in a survey interview)?
