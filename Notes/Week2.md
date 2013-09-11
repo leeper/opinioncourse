@@ -15,10 +15,23 @@ September 11, 2013
 * Herbst is interested in the effects of the growing amount of polling data on politics and how it transforms the meaning of public opinion. Is polling data – i.e. the aggregation of individual opinions on predefined issues – really the kind of public opinion that should be influencing policy? If polling data is what we mean by public opinion, should we use this technique to determine policy or to determine the policy agenda? Would that be effective participation? If you think of participation in a deliberative sense, the deliberative part – i.e. the public scrutiny of the reasoning opinions (hopefully) are grounded in – seems to be missing. Should public opinion be formed in public debate, or is the aggregation of private opinions sufficient?
 * Mansbridge presents four models for representation; Which model do you find most desirable? Returning to Downs: Which model is in accordance with rational behavior from individual voters and politicians?
 
+## From Sinnika
+
+* When reading Dahl, one is thinking that the best way to meet the criteria, would be a small demos. If you ask evolutionary psychologists what the appropriate size of the demos is, they would say that our brains are not fully evolved to comprehend politics on the scale of for instance the danish state. Our brains are programed to deal with theft, lying, threats and reprodution and we struggle to deal with the consequences of change in the fiscal budget or restrictions of our privacy.
+
+* The argument often goes that if the state can punish you for your actions, then you should have some say in who makes the laws. But when are you responsible for your own actions? Dahl says you should have overwhelming arguments to exclude a group of people from voting. From a biological standpoint it may be fair to say, that if you can vote when you are 80, you should be able to do so when you are 17.
+
+* Maybe the question should not be "are we meeting Dahl's criteria?" but "how far are we from Dahls criteria?". Mansbridge point is deliberation, collectively weighing options and ideas, in order to enlighten citizens and get all arguments and interests represented – but Downs is right, if the payoff isn't there, why should the people bother? Maybe the large state could create more payoff by giving citizens more influence via elections on a range of issues?
+
+* Herbst was the best article, really made me think! Public opinion isn't just poling, it really is (should be) the emergent product of deliberation. A nationwide saloon conversation, a meeting of minds, with the intention of being convinced by the better argument, the way Habermas intended it. Social media may be creating a new kind of "saloon' effect on the concept of public opinion. On Facebook people raise topics, that creates following and debate, and newspapers report on them, if they become big trends. However it has different features than the saloon, its open to everybody, you can be anonymous and all human social contact is lost. How does this effect the role of public opinion? Maybe it will make it less structured?
+
+* Downs in general: restricted by so many assumptions that I struggle to find it interesting.
 
 
 
-## Herbst
+## Other notes/questions on readings ##
+
+### Herbst
 * What are the two values of public opinion that Herbst describes? (30)
 	* Instrumental and symbolic
 * What are the definitions of public opinion she finds in the extant literature? (44)
@@ -56,7 +69,7 @@ September 11, 2013
 * Dahl places a large emphasis on the question of competence: who is competent to participate? Does competence appear anywhere in Herbst's discussion? Why or why not?
 
 
-## Downs
+### Downs
 * How does Downs define individual rationality? (4) What are the key facets of assessing rationality? (5)
 	* How does Downs' definition of rationality relate to Dahl's requirement that citizens know their own interest? Can citizens know their own interests? Why or why not?
 		* Downs acknowledges that people can make errors (9) but says that isn't irrationality because it could just be bad information.
@@ -90,7 +103,7 @@ September 11, 2013
 * Is Downs engaged social science (33--35)? Does he have any empirics?
 
 
-## Dahl
+### Dahl
 * What is Dahl's "strong principle of equality" (97--98)?
 	* Who is included and who is excluded from Dahl's definition, and on what grounds? (esp. ch9, 127)
 		* Age (122--123)
@@ -118,7 +131,7 @@ September 11, 2013
 * Downs talks about democracy in terms of individuals' and parties' strategic incentives and how those operate through elections. Dahl talks about democracy in terms of basic principles of inclusion and governmental procedure. What does each perspective get right and wrong?
 
 
-## Mansbridge
+### Mansbridge
 * What are the four types of representation addressed by Mansbridge? Can we think of any others?
 	* Promissory (mandate versus trustee distinction, 516)
 	* Anticipatory
