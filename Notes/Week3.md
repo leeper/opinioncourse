@@ -51,8 +51,28 @@ September 18, 2013
 * Zaller describes his model as "cognitive" as opposed to "affective"? How appropriate is this distinction? What implications does it have?
 * Zaller's model is a "memory-based" (MB) model, according to Druckman and Lupia. How does it compare to an online (OL) model (50)?
 
+
 ### Lau and Redlawsk
+* What are two ways that public opinions can be coherent without citizens having much information?
+ * The "miracle" of aggregation, whereby random errors cancel
+ * Heuristics
+* What are the five common heuristics employed by voters? How do they work?
+ * Party
+ * Ideology
+ * Endorsements
+ * Viability
+ * Candidate appearance
+* How well do Lau and Redlawsk's five heuristics translate to Denmark (or to any non-US political context)? What are they missing?
+* How does the "process tracing" methodology help Lau and Redlawsk test what heuristics are at work? (see 957)
+* Lau and Redlawsk expect heuristic use to be associated with "better quality" decisions? How do they define better quality?
+ * Is it possible to define whether an opinion is high quality or not? What alternatives to "correct voting" might be used as a metric of quality?
+* Do Lau and Redlawsk's results provide a viable alternative decision-making strategy to Zaller's high-information theory of opinion formation?
+ * When does using heuristics produce lower quality decisions? (964--66)
+* Does Lau and Redlawsk's study lend support to memory-based or online models of opinion formation?
+
 
 ### General Questions
 * How credible are the online versus memory-based models of opinion formation? Zaller offers his view (50); what do you think?
 * Are opinions affective, cognitive, or both? Why?
+* Zaller is talking about politics specifically, but Druckman and Lupia and Eagly and Chaiken are talking about opinion processes in general. Is politics like other domains? Or do we need politics-specific theories of opinion?
+* How well-informed do people have to be to form opinions? Can we set informational criteria for holding quality opinions? What would Dahl say?
