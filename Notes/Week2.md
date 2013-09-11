@@ -15,7 +15,7 @@ September 11, 2013
 * Herbst is interested in the effects of the growing amount of polling data on politics and how it transforms the meaning of public opinion. Is polling data – i.e. the aggregation of individual opinions on predefined issues – really the kind of public opinion that should be influencing policy? If polling data is what we mean by public opinion, should we use this technique to determine policy or to determine the policy agenda? Would that be effective participation? If you think of participation in a deliberative sense, the deliberative part – i.e. the public scrutiny of the reasoning opinions (hopefully) are grounded in – seems to be missing. Should public opinion be formed in public debate, or is the aggregation of private opinions sufficient?
 * Mansbridge presents four models for representation; Which model do you find most desirable? Returning to Downs: Which model is in accordance with rational behavior from individual voters and politicians?
 
-## From Sinnika
+## From Sinikka
 
 * When reading Dahl, one is thinking that the best way to meet the criteria, would be a small demos. If you ask evolutionary psychologists what the appropriate size of the demos is, they would say that our brains are not fully evolved to comprehend politics on the scale of for instance the danish state. Our brains are programed to deal with theft, lying, threats and reprodution and we struggle to deal with the consequences of change in the fiscal budget or restrictions of our privacy.
 
