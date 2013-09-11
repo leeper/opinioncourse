@@ -12,7 +12,7 @@ You can find an outline of the course objectives, schedule for the course, and a
 PDF versions of course slides (and the LaTeX sources for those slides) are available in the [/Slides](Slides) directory.
 Some rough notes for each day's discussion are posted a day or so before class in the [/Notes](Notes) directory:
 * [Week 2 notes](Notes/Week2.md)
-* Week 3 notes (To be posted before class)
+* [Week 3 notes](Notes/Week3.md)
 
 Following a summing up of the day's discussions, each class will end with a "preview" lecture of the next week's reading materials"
 * [Week 1](Slides/Lecture1-2.pdf)
