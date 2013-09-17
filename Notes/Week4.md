@@ -33,4 +33,11 @@ September 25, 2013
 * Feldman's goal is to show that opinions (despite not being structured ideologically), do have some kind of structure. How well does he succeed in demonstrating that? Why?
 
 ## Smith et al.
-
+* *Don't worry too much about the structural equation models (24--28). They're not important for us.*
+* How does behavioral genetics research analyze the "heritability" of traits? (18--19)
+* What is the equal environments assumption? Why does it matter? (19)
+* How do the authors measure ideology? (21 for the first study; 23 for the second study) How does this differ from Jost et al.?
+* Smith et al. are talking about genotypes and phenotypes. Which do they actually observe and does it matter? Can we study the genetic basis of opinions without observing genes?
+* If genes explain ideology and/or opinions, why should we have democratic institutions? Mansbridge talks about the importance of deliberation in order for representation to occur. If opinions are substantially genetically based, what role is there for deliberation?
+* By contrast, if biology plays no roles in attitudes, is it normatively superior to find that the environment explains all attitudes?
+* Overall, how convincing is Smith et al.'s defense of (some of) the main criticisms of genetic research on opinions?
