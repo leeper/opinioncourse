@@ -13,6 +13,7 @@ PDF versions of course slides (and the LaTeX sources for those slides) are avail
 Some rough notes for each day's discussion are posted a day or so before class in the [/Notes](Notes) directory:
 * [Week 2 notes](Notes/Week2.md)
 * [Week 3 notes](Notes/Week3.md)
+* [Week 4 notes](Notes/Week4.md)
 
 Following a summing up of the day's discussions, each class will end with a "preview" lecture of the next week's reading materials
 * [Week 1](Slides/Lecture1-2.pdf)
