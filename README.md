@@ -18,7 +18,8 @@ Some rough notes for each day's discussion are posted a day or so before class i
 Following a summing up of the day's discussions, each class will end with a "preview" lecture of the next week's reading materials
 * [Week 1](Slides/Lecture1-2.pdf)
 * [Week 2](Slides/Lecture2-2.pdf)
-* Week 3 (To be posted before class)
+* [Week 3](Slides/Lecture3-2.pdf)
+* Week 4 (To be posted before class)
 
 
 ## Weekly Assignments ##
