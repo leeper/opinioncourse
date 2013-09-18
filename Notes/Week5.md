@@ -9,6 +9,9 @@ October 2, 2013
 
 # Readings #
 
+## Tourangeau and Rasinski ##
+
+
 ## Bishop, Tuchfarber, and Oldendick ##
 
 
