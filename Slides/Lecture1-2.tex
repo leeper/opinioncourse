@@ -1,41 +1,8 @@
-
-<!-- saved from url=(0072)https://raw.github.com/leeper/opinioncourse/master/Slides/Lecture1-2.tex -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">\documentclass[12pt]{beamer} %Makes presentation
-%\documentclass[handout]{beamer} %Makes Handouts
-\usetheme{Singapore} %Gray with fade at top
-\useoutertheme[subsection=false]{miniframes} %Supppress subsection in header
-\useinnertheme{rectangles} %Itemize/Enumerate boxes
-\usecolortheme{seagull} %Color theme
-\usecolortheme{rose} %Inner color theme
-
-\definecolor{light-gray}{gray}{0.75}
-\definecolor{dark-gray}{gray}{0.55}
-\setbeamercolor{item}{fg=light-gray}
-\setbeamercolor{enumerate item}{fg=dark-gray}
-
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{mini frames}[default]
-\setbeamercovered{dynamics}
-\setbeamerfont*{title}{size=\Large,series=\bfseries}
-
-%\setbeameroption{notes on second screen} %Dual-Screen Notes
-%\setbeameroption{show only notes} %Notes Output
-
-\newcommand{\heading}[1]{\noindent \textbf{#1}\\ \vspace{1em}}
-
-\usepackage{bbding,color,multirow,times,ccaption,tabularx,graphicx,verbatim,booktabs,fixltx2e}
-\usepackage{colortbl} %Table overlays
-\usepackage[english]{babel}
-\usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc}
+\documentclass[12pt]{beamer} %Makes presentation
+\input{preamble}
 
 \title{Preview of\\``What is Public Opinion?''}
 
-%\author[]{Thomas J. Leeper}
-\institute[]{
-  \inst{}%
-  Department of Political Science and Government\\Aarhus University
-}
 \date[]{September 3, 2013}
 
 \begin{document}
@@ -47,17 +14,17 @@
 }
 
 
-\frame&lt;4&gt;[label=readings]{
+\frame<4>[label=readings]{
 \heading{Readings for Next Week}
 \begin{itemize}\itemsep1em
 \item Dahl -- {\em Democracy and Its Critics}
-\item&lt;2-&gt; Herbst -- {\em Numbered Voices}
-\item&lt;3-&gt; Downs -- {\em An Economic Theory of Democracy}
-\item&lt;4-&gt; Mansbridge -- ``Rethinking Representation''
+\item<2-> Herbst -- {\em Numbered Voices}
+\item<3-> Downs -- {\em An Economic Theory of Democracy}
+\item<4-> Mansbridge -- ``Rethinking Representation''
 \end{itemize}
 }
 
-\againframe&lt;1&gt;{readings}
+\againframe<1>{readings}
 
 \frame{
 \heading{Dahl}
@@ -69,7 +36,7 @@
 \end{itemize}
 }
 
-\againframe&lt;2&gt;{readings}
+\againframe<2>{readings}
 
 \frame{
 \heading{Herbst}
@@ -80,7 +47,7 @@
 \end{itemize}
 }
 
-\againframe&lt;3&gt;{readings}
+\againframe<3>{readings}
 
 \frame{
 \heading{Downs}
@@ -92,7 +59,7 @@
 \end{itemize}
 }
 
-\againframe&lt;4&gt;{readings}
+\againframe<4>{readings}
 
 \frame{
 \heading{Mansbridge}
