@@ -18,5 +18,4 @@ October 2, 2013
 ## Schuldt, Konrath, and Schwarz ##
 
 
-## Krosnick et al. ##
 
