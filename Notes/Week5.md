@@ -9,6 +9,9 @@ October 2, 2013
 
 # Readings #
 
+Note change to syllabus: Please read Roger Tourangeau and Kenneth A. Rasinski. Cognitive Processes Underlying Context
+Effects in Attitude Measurement. *Psychological Bulletin*, 103(3):299–314, 1988.
+
 ## Tourangeau and Rasinski ##
 
 
