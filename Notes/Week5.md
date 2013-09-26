@@ -13,6 +13,7 @@ Note change to syllabus: Please read Roger Tourangeau and Kenneth A. Rasinski. C
 Effects in Attitude Measurement. *Psychological Bulletin*, 103(3):299–314, 1988.
 
 ## Tourangeau and Rasinski ##
+[Questions will be posted on Friday]
 
 
 ## Bishop, Tuchfarber, and Oldendick ##
