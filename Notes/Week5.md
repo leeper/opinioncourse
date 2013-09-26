@@ -17,5 +17,7 @@ October 2, 2013
 
 ## Schuldt, Konrath, and Schwarz ##
 
-
-
+* What do Schuldt et al. aim to do? Are they trying to understand if people distinguish "climate change" from "global warming" (i.e., that they have separate opinions about each) or that the opinions people *report* depend on how the question is asked? How well do they test that?
+* What do they find? Does question wording matter? If so, how? And for whom?
+* What implications does this study (and studies like it) have for interpreting opinion data from survey?
+* What implications does it have for the question of whether citizens are rational or reasoned?
