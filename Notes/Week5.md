@@ -16,6 +16,14 @@ Effects in Attitude Measurement. *Psychological Bulletin*, 103(3):299–314, 198
 
 
 ## Bishop, Tuchfarber, and Oldendick ##
+* Why should we care about the research being reported by Bishop et al? Does it matter? If so, how? If no, why not?
+* What are the three different experimental conditions used by Bishop et al.? (243)
+* Does their decision create conditions that you would expect *a priori* to produce lots of "don't know" responses or few? Why?
+* Why do they argue that people might provide opinions to ficitious issue questions?
+* What are their findings? How often do people report opinions on fictious issues?
+* What implications do their findings have for interpreting public opinion data from surveys?
+* What implications do their findings have for designing and implementing survey-based opinion research?
+* Do any ethical considerations come to mind regarding this study? And do Bishop et al. address those considerations?
 
 
 ## Schuldt, Konrath, and Schwarz ##
