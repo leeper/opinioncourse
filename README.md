@@ -19,7 +19,8 @@ Some rough notes for each week's readings and discussion are available in the [/
 * [Week 2](Notes/Week2.md)
 * [Week 3](Notes/Week3.md)
 * [Week 4](Notes/Week4.md)
-* Week 5 notes (To be posted soon)
+* [Week 5](Notes/Week5.md)
+* Week 6 (To be posted soon)
 
 Each class ends with a "preview" lecture of the next week's reading materials:
 * [Week 1](Slides/Lecture1-2.pdf)
