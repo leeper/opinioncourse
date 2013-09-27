@@ -13,7 +13,16 @@ Note change to syllabus: Please read Roger Tourangeau and Kenneth A. Rasinski. C
 Effects in Attitude Measurement. *Psychological Bulletin*, 103(3):299–314, 1988.
 
 ## Tourangeau and Rasinski ##
-[Questions will be posted on Friday]
+* What are the four steps that Tourangeau and Rasinski say are involved in answering opinion questions on surveys? (299--300)
+ * Does their theory assume attitudes are memory-based, online, or doesn't it matter? Why?
+* Tourangeau and Rasinski discuss the difference between a stable attitude and a stable response (301). What are the implications of this distinction for interpreting public opinion?
+* The article focuses on two types of "context effects". What are they? (301)
+* How do those effects manifest at each of the four stages of the response process?
+* When survey respondents are asked to express opinions, Tourangeau and Rasinski argue that they have to map their response (the opinion) onto the set of alternatives available to them in a given opinion question. Does this mean that opinion questions (in open or closed ended formats) are a valid measure of opinions?
+* What is "editing" and why do respondents do it? (307--308) Does it provide more or less meaningful (or accurate) responses? Should people edit?
+* What are the factors that affect context effects at each stage of the question-answering process? (Table 3)
+* Can we trust the responses people give to surveys as accurate measures of their opinions (and thus of public opinion in general)?
+ * Thinking back to Herbst, how do the context effects discussed by Tourangeau and Rasinski enable "public opinion" to be used as a symbol in political debate?
 
 
 ## Bishop, Tuchfarber, and Oldendick ##
