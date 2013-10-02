@@ -24,3 +24,13 @@ October 9, 2013
 
 
 ## Chong and Druckman ##
+* What is framing? And what is a "framing effect"? (637)
+* Does framing mean that citizens have reasoned opinions, or not? Why?
+* What are the possible expectations about which arguments when in political debate? (639)
+* What three conditions do Chong and Druckman argue are necessary for arguments to be effective? (639)
+* What is a strong frame? And what makes it strong?
+* Do frames help citizens form value-consistent opinions or do they undermine value-consistent reasoning? (645, 647, 649--650)
+* Which frames/arguments are most influential? Does competition between arguments matter for what opinions citizens form? If so, how and under what conditions?
+* Does elite debate help or inhibit citizens' ability to reason about political issues?
+* Many people worry that framing effects demonstrate the fragility of human reasoning. What do the authors think? And what do you think?
+* 
