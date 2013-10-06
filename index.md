@@ -4,7 +4,7 @@ title: Public Opinion Seminar
 ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 ---
 
-# Course materials for teaching R #
+# Public Opinion Seminar #
 
 This repository holds materials for a course on public opinion. The initial version of this course is being conducted as a master seminar at Aarhus University during Autumn term 2013.
 
