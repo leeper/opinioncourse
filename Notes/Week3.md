@@ -1,3 +1,8 @@
+---
+layout: default
+title: Week 3 Notes
+---
+
 # Notes for "How do people form opinions?"
 September 18, 2013
 
