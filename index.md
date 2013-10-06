@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Public Opinion Seminar
+ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 ---
 
 # Course materials for teaching R #
@@ -9,14 +10,14 @@ This repository holds materials for a course on public opinion. The initial vers
 
 ## Syllabus ##
 
-You can find an outline of the course objectives, schedule for the course, and assigned readings in the [Syllabus](/Syllabus.pdf).
+You can find an outline of the course objectives, schedule for the course, and assigned readings in the [Syllabus](Syllabus.pdf).
 
 
 ## Slides and Notes ##
 
-PDF versions of course slides (and the LaTeX sources for those slides) are available in the [/Slides](Slides) directory.
+PDF versions of course slides (and the LaTeX sources for those slides) are available in the [/Slides]({{ page.ghurl }}/Slides) directory.
 
-Some rough notes for each week's readings and discussion are available in the [/Notes](Notes) directory.
+Some rough notes for each week's readings and discussion are available in the [/Notes]({{ page.ghurl }}/Notes) directory.
 
 Each class ends with a "preview" lecture of the next week's reading materials. Slides are posted before class.
 
