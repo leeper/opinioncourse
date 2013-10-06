@@ -1,6 +1,6 @@
 # Public Opinion Seminar #
 
-This repository holds materials for a course on public opinion. The initial version of this course is being conducted as a master seminar at Aarhus University during Autumn term 2013.
+This repository holds materials for a course on public opinion. The initial version of this course is being conducted as a master seminar at Aarhus University during Autumn term 2013. The course website can be found at: http://thomasleeper.com/opinioncourse/.
 
 ## Syllabus ##
 
@@ -50,7 +50,6 @@ Links to these materials can be found in the following table:
 Each week one student will write a short (less than one double-spaced page) response to whatever they find interesting or important from that week's readings. This will be **due Monday before class (by 12:00 noon)**. Another student will respond however they see fit (i.e., agree, disagree, highlight other readings or perspectives, etc.) in a short (less than one double-spaced page) **due Tuesday morning (by 12:00 noon)**. Papers should be distributed via email to all course participants. This can be done via Blackboard.
 
 Class will start each week with these students discussing their papers. All students should read the papers before class.
-
 
 
 ## Why GitHub? ##
