@@ -27,7 +27,7 @@ Links to these materials can be found in the following table:
 | Slides                          | Reading Notes             | "Preview" Slides                |
 | ------------------------------- | ------------------------- | ------------------------------- |
 | [Week 1](Slides/Lecture1-1.pdf) | No notes                  | [Week 1](Slides/Lecture1-2.pdf) |
-| No slides                       | [Week 2](Notes/Week2.md)  | [Week 2](Slides/Lecture2-2.pdf) |
+| No slides                       | [Week 2](Notes/Week2)  | [Week 2](Slides/Lecture2-2.pdf) |
 | [Week 3](Slides/Lecture3-1.pdf) | [Week 3](Notes/Week3.md)  | [Week 3](Slides/Lecture3-2.pdf) |
 | [Week 4](Slides/Lecture4-1.pdf) | [Week 4](Notes/Week4.md)  | [Week 4](Slides/Lecture4-2.pdf) |
 | [Week 5](Slides/Lecture5-1.pdf) | [Week 5](Notes/Week5.md)  | [Week 5](Slides/Lecture5-2.pdf) |
