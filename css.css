@@ -38,8 +38,14 @@ h3 {
 /* TABLES */
 table {
     text-align:center;
-	align:center;
+	margin-left:auto; 
+    margin-right:auto;
 	max-width: 50%;
+}
+
+td {
+    text-align:center;
+    padding:5px;
 }
 
 /* TEXT */
