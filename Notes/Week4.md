@@ -1,3 +1,8 @@
+---
+layout: default
+title: Week 4 Notes
+---
+
 # Week 4 Notes
 September 25, 2013
 
