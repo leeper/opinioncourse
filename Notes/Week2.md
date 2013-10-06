@@ -1,3 +1,8 @@
+---
+layout: default
+title: Week 2 Notes
+---
+
 # Notes for "What is public Opinion?"
 September 11, 2013
 
