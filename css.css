@@ -1,7 +1,8 @@
 /* GENERAL FORMATTING */
 html {
     margin : 5px;
-	padding : 5px;
+    padding : 5px;
+    font-family:Garamond,Georgia,Palatino,serif;
 }
 
 body {
