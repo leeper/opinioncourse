@@ -61,4 +61,4 @@ Class will start each week with these students discussing their papers. All stud
 
 ## Why GitHub? ##
 
-Read more about why this course is on GitHub [here](fork.html).
+Read more about why this course is on GitHub [here](fork).
