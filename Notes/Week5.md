@@ -1,3 +1,8 @@
+---
+layout: default
+title: Week 5 Notes
+---
+
 # Week 5 Notes #
 October 2, 2013
 
