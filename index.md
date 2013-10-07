@@ -4,9 +4,9 @@ title: Public Opinion Seminar
 ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 ---
 
-# Public Opinion Seminar #
+# Seminar: Does Public Opinion Matter? #
 
-This repository holds materials for a course on public opinion. The initial version of this course is being conducted as a master seminar at Aarhus University during Autumn term 2013.
+The initial version of this course is being conducted as a master seminar at Aarhus University during Autumn term 2013.
 
 ## Syllabus ##
 
@@ -15,13 +15,7 @@ You can find an outline of the course objectives, schedule for the course, and a
 
 ## Slides and Notes ##
 
-PDF versions of course slides (and the LaTeX sources for those slides) are available in the [/Slides]({{ page.ghurl }}/Slides) directory.
-
-Some rough notes for each week's readings and discussion are available in the [/Notes]({{ page.ghurl }}/Notes) directory.
-
-Each class ends with a "preview" lecture of the next week's reading materials. Slides are posted before class.
-
-Links to these materials can be found in the following table:
+PDF versions of course slides (both main lectures and the short "preview" lectures of the next week's readings) are available in the table below. Links to the notes for each week's readings can also be found below.
 
 
 | Slides                          | Reading Notes             | "Preview" Slides                |
@@ -51,14 +45,9 @@ Links to these materials can be found in the following table:
 | [Week 14](Slides/Lecture14-1.pdf) | [Week 14](Notes/Week14)  | [Week 14](Slides/Lecture14-2.pdf) |
 -->
 
+You can also download all of the content for this course as a .zip [in one click](https://github.com/leeper/opinioncourse/archive/gh-pages.zip) or view it on [GitHub]({{ page.ghurl }}).
+
 ## Weekly Assignments ##
 
 Each week one student will write a short (less than one double-spaced page) response to whatever they find interesting or important from that week's readings. This will be **due Monday before class (by 12:00 noon)**. Another student will respond however they see fit (i.e., agree, disagree, highlight other readings or perspectives, etc.) in a short (less than one double-spaced page) **due Tuesday morning (by 12:00 noon)**. Papers should be distributed via email to all course participants. This can be done via Blackboard.
 
-Class will start each week with these students discussing their papers. All students should read the papers before class.
-
-
-
-## Why GitHub? ##
-
-Read more about why this course is on GitHub [here](fork).
