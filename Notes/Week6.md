@@ -3,7 +3,7 @@ layout: default
 title: Week 6 Notes
 ---
 
-# Week 5 Notes #
+# Week 6 Notes #
 October 9, 2013
 
 ## General questions ##
