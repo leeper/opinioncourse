@@ -27,7 +27,7 @@ PDF versions of course slides (both main lectures and the short "preview" lectur
 | [Week 3](Slides/Lecture3-1.pdf) | [Week 3](Notes/Week3)  | [Week 3](Slides/Lecture3-2.pdf) |
 | [Week 4](Slides/Lecture4-1.pdf) | [Week 4](Notes/Week4)  | [Week 4](Slides/Lecture4-2.pdf) |
 | [Week 5](Slides/Lecture5-1.pdf) | [Week 5](Notes/Week5)  | [Week 5](Slides/Lecture5-2.pdf) |
-| Week 6 | [Week 6](Notes/Week6) | Week 6 |
+| [Week 6](Slides/Lecture6-1.pdf) | [Week 6](Notes/Week6)  | [Week 6](Slides/Lecture6-2.pdf) |
 | Week 7 (No class) | | |
 | Week 8 | [Week 8](Notes/Week8) | Week 8 |
 | Week 9 | Week 9 | Week 9 |
@@ -37,7 +37,6 @@ PDF versions of course slides (both main lectures and the short "preview" lectur
 | Week 13 | Week 13 | Week 13 |
 | Week 14 | Week 14 | Week 14 |
 <!--
-| [Week 6](Slides/Lecture6-1.pdf) | [Week 6](Notes/Week6)  | [Week 6](Slides/Lecture6-2.pdf) |
 | [Week 8](Slides/Lecture8-1.pdf) | [Week 8](Notes/Week8)  | [Week 8](Slides/Lecture8-2.pdf) |
 | [Week 9](Slides/Lecture9-1.pdf) | [Week 9](Notes/Week9)  | [Week 9](Slides/Lecture9-2.pdf) |
 | [Week 10](Slides/Lecture10-1.pdf) | [Week 10](Notes/Week10)  | [Week 10](Slides/Lecture10-2.pdf) |
