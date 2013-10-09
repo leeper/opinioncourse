@@ -17,7 +17,15 @@ October 23, 2013
 *Note: You do not need to read Lodge, Steenbergen, and Brau - "The Responsive Voter". Consider it an optional refresher on OL models.*
 
 ## Taber and Lodge ##
-
+* What is Bayesian reasoning/updating? How does this differ from motivated skepticism? (755)
+* What is motivation? What kinds of motivation do Taber and Lodge say are at work in citizens' thinking? (756)
+* What is "attitude polarization"? Why do the authors say it happens? How strong is the extant evidence for polarization? (756) Do they find any evidence for it (764--767)
+* What are the authors' expectations for how motivated reasoning works? (757)
+* How do the authors study motivated reasoning? How credible is their research design? (757--760)
+* What issues do they use for the study? Why do they choose these issues? What impact does it have for the generalizability of their results?
+* How do people evaluate attitude-congruent arguments? What about incongruent arguments? (760--761)
+* Are people more likely to look at congruent or incongruent information? (763--764)
+* Taber and Lodge discuss the idea of beliefs and opinions as "possessions" that people want to defend. (767) How credible is this argument and what implications does it have for the ideas of Bayesian updating, rationality, and democratic deliberation?
 
 ## Page, Shapiro, and Dempsey ##
 * Page et al. talk about public opinion in the aggregate. This is a shift from much of what we've read so far. What conceptualization of public opinion (from Herbst) do they adopt?
