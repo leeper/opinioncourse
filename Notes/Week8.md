@@ -20,7 +20,15 @@ October 23, 2013
 
 
 ## Page, Shapiro, and Dempsey ##
-
+* Page et al. talk about public opinion in the aggregate. This is a shift from much of what we've read so far. What conceptualization of public opinion (from Herbst) do they adopt?
+* What assumptions do the authors make about how citizens form opinions? (23--24)
+* Do the authors expect large/direct or small/indirect effects of media? Why do they focus on television? (24--25)
+* What data do the authors use to look at what moves public opinion? (25--26) What is their unit of analysis?
+* Do the level and unit of analysis adopted in this paper create any problems for the authors? What is the mechanism by which these aggregate results are produced?
+* How do the authors measure media content? (26) How does this differ from the experimental research we've read in previous weeks? Does this increase or decrease the credibility of their research?
+* How stable is aggregate opinion over-time? (28--29) What effect does media content have on opinions?
+* What effect do interest groups have on opinion? (37) Does this result make sense? Why or why not?
+* The authors find large effects of the Presidency. What implications does that have for anticipatory representation? Do those results generalize beyond the US?
 
 ## Healy and Malhotra ##
 * Healy and Malhotra look at the effects of tornadoes on voting. Why? What's the logic here? What do tornadoes tell us about voting behavior? (194)
