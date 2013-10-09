@@ -14,7 +14,7 @@ October 23, 2013
 
 # Readings #
 
-* Note: You do not need to read Lodge, Steenbergen, and Brau - "The Responsive Voter". Consider it an optional refresher on OL models. *
+*Note: You do not need to read Lodge, Steenbergen, and Brau - "The Responsive Voter". Consider it an optional refresher on OL models.*
 
 ## Taber and Lodge ##
 
