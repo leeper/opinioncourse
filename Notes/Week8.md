@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Week 7 Notes
+title: Week 8 Notes
 ---
 
 # Week 5 Notes #
-October 16, 2013
+October 23, 2013
 
 ## General questions ##
 * Did you learn anything from this week's readings? If so, what?
