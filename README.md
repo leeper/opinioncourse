@@ -27,7 +27,7 @@ Links to these materials can be found in the following table:
 | [Week 5](Slides/Lecture5-1.pdf) | [Week 5](Notes/Week5.md)  | [Week 5](Slides/Lecture5-2.pdf) |
 | Week 6 | [Week 6](Notes/Week6.md) | Week 6 |
 | Week 7 (No class) |
-| Week 8 | Week 8 | Week 8 |
+| Week 8 | [Week 8](Notes/Week8.md) | Week 8 |
 | Week 9 | Week 8 | Week 9 |
 | Week 10 | Week 10 | Week 10 |
 | Week 11 | Week 11 | Week 11 |
