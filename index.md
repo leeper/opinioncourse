@@ -8,14 +8,14 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 The initial version of this course is being conducted as a master seminar at Aarhus University during Autumn term 2013.
 
-### Syllabus ###
 ---
+### Syllabus ###
 
 You can find an outline of the course objectives, schedule for the course, and assigned readings in the [Syllabus](Syllabus.pdf).
 
 
-### Slides and Notes ###
 ---
+### Slides and Notes ###
 
 PDF versions of course slides (both main lectures and the short "preview" lectures of the next week's readings) are available in the table below. Links to the notes for each week's readings can also be found below.
 
@@ -49,8 +49,8 @@ PDF versions of course slides (both main lectures and the short "preview" lectur
 
 You can also download all of the content for this course as a .zip [in one click](https://github.com/leeper/opinioncourse/archive/gh-pages.zip) or view it on [GitHub]({{ page.ghurl }}).
 
-### Weekly Assignments ###
 ---
+### Weekly Assignments ###
 
 Each week one student will write a short (less than one double-spaced page) response to whatever they find interesting or important from that week's readings. This will be **due Monday before class (by 12:00 noon)**. Another student will respond however they see fit (i.e., agree, disagree, highlight other readings or perspectives, etc.) in a short (less than one double-spaced page) **due Tuesday morning (by 12:00 noon)**. Papers should be distributed via email to all course participants. This can be done via Blackboard.
 
