@@ -3,7 +3,7 @@ layout: default
 title: Week 8 Notes
 ---
 
-# Week 5 Notes #
+# Week 8 Notes #
 October 23, 2013
 
 ## General questions ##
