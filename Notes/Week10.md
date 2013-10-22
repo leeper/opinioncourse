@@ -3,7 +3,7 @@ layout: default
 title: Week 10 Notes
 ---
 
-# Week 9 Notes #
+# Week 10 Notes #
 November 6, 2013
 
 ## General questions ##
