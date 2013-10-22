@@ -21,11 +21,18 @@ October 30, 2013
 * What is the D term? (28)
 * How do the authors test their theory? (Sections IV-VI) What do they find?
 * Does their model completely explain all behavior or is there still some irrationality? (39)
-* 
 
 
 ## Olson ##
 
 
 
+## Eagly and Chaiken ##
+*Please read the section on behavior (pp.295--303) from Eagly and Chaiken (Week 3)*
+
 ## Fazio and Towles-Schwen ##
+* What are the two categories of attitude-behavior processes the authors discuss? How do they compare? (97, 99--100)
+* In deliberative processes, what factors shape peoples' decisions to act? (99)
+* What is the MODE model? Is it deliberative or spontaneous? (100)
+* Are the two types of behavior processes mutually exclusive? (102--103)
+* 
