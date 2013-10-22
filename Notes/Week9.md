@@ -35,4 +35,3 @@ October 30, 2013
 * In deliberative processes, what factors shape peoples' decisions to act? (99)
 * What is the MODE model? Is it deliberative or spontaneous? (100)
 * Are the two types of behavior processes mutually exclusive? (102--103)
-* 
