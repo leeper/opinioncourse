@@ -24,4 +24,4 @@ November 6, 2013
 
 
 ## Disch ##
-
+*Disch is very interesting, but consider it optional. It expands upon ideas we read earlier by Mansbridge.*
