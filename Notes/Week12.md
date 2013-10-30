@@ -15,8 +15,10 @@ November 20, 2013
 # Readings #
 
 *Note: Please read Ch.1 and Ch.5 from Riker (from last week's reading list).*
+*Note: Do not read the Erikson article. I will just discuss its main contributions during seminar.*
 
-## Erikson ##
+## Riker ##
+(Chapters 1 and 5 from Riker; in compendium)
 
 
 ## Jacobs and Page ##
@@ -24,6 +26,4 @@ November 20, 2013
 
 ## Stimson, Mackuen, and Erikson ##
 
-
-## Riker ##
 
