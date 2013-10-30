@@ -14,12 +14,13 @@ November 13, 2013
 
 # Readings #
 
-*Note: We will read Ch.1 and Ch.5 from Riker next week (Week 12)*
+*Note: We will read Ch.1 and Ch.5 from Riker next week (Week 12) instead.*
 
 ## Druckman and Leeper ##
 
 
 ## Page and Shapiro ##
+*Note: Read just chapter 10: "Democracy, Information, and the Rational Public."*
 
 
 ## Mackuen, Erikson, and Stimson ##
