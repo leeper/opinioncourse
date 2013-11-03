@@ -34,7 +34,14 @@ November 6, 2013
 
 
 ## Sniderman ##
-
+* What is "minimalism" according to Sniderman? (67)
+* According to Sniderman, how are citizens able to make political decisions in spite of the complexity of policy questions?
+* Sniderman questions the idea from Dahl (and Lau and Redlawsk) that citizens can know their own interests (72). He introduces the "self-help heuristic" as an example (you might know it better as the "deservingness" heuristic, from earlier in the course). Is it indeed tautological to argue that citizens can make effective decisions if they can rely on heuristics like deservingness? Are the heuristics themselves judgments that some citizens cannot make?
+* How does Sniderman distinguish economic (decision-theoretic) tasks from public/political choice tasks? Which are easy and which are hard? (75-77)
+ * According to Sniderman, what distinguishes Kahneman and Tversky-style probabilistic choices from most political choices?
+* What role does the political system have in helping citizens form opinions and translate opinions into voting decisions? (68--69, 81)
+* What are the four characteristics of public opinion described by Sniderman (and summarized on p.83)?
+* According to Sniderman, what are the tasks citizens are actually expected to do in a democracy? (74--75) What do these tasks mean for how we should theorize, study, and critique opinions and vote choices?
 
 ## Disch ##
 *Disch is very interesting, but consider it optional. It expands upon ideas we read earlier by Mansbridge.*
