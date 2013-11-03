@@ -30,7 +30,16 @@ November 6, 2013
 * If outside observers can, with information about candidates' positions and voters' interests, make "better" decisions about whom voters should elect, why do we allow (or, perhaps, force) voters to decide for themselves who should govern?
 * *Note: You do not need to read the appendix.*
 
+
 ## Hobolt ##
+* How does Hobolt define "competence" and "competent voting"? How does this compare to Lau and Redlawsk's idea of "correct" voting? (151--155)
+* Table 1 shows levels of European citizens' knowledge of the EU. Should citizens be expected to know these things? And can we use that knowledge as a metric of competence? (Think back to Dahl).
+* What heuristic cue (that we've seen before in Lau and Redlawsk's article from several weeks ago) does Hobolt focus on?
+* Hobolt distinguishes between "issue-specific" and "second-order" voting on the EU. What are these two different forms of voting? Is one normatively superior? (157--158)
+ * If people vote in different ways (i.e., the model of vote choice varies across voters), can we interpret election results as expressions of public opinion?
+* Hobolt describes the dimensionality of EU politics. What are the two dimensions? (161--165) What does she ultimately find about how voters use these dimensions in voting in EU referenda?
+ * How well to citizens' preferences map onto the positions of their preferred party (on both dimensions)? (165--166)
+* How do information and cues affect citizens' voting on the EU referendum? Are the effects of cues homogeneous or heterogeneous across the electorate?
 
 
 ## Sniderman ##
