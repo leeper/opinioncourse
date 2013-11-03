@@ -31,7 +31,7 @@ PDF versions of course slides (both main lectures and the short "preview" lectur
 | Week 7 (No class) | | |
 | [Week 8](Slides/Lecture8-1.pdf) | [Week 8](Notes/Week8)  | [Week 8](Slides/Lecture8-2.pdf) |
 | [Week 9](Slides/Lecture9-1.pdf) | [Week 9](Notes/Week9)  | [Week 9](Slides/Lecture9-2.pdf) |
-| Week 10 | Week 10 | Week 10 |
+| Week 10 | [Week 10](Notes/Week10) | Week 10 |
 | Week 11 | Week 11 | Week 11 |
 | Week 12 | Week 12 | Week 12 |
 | Week 13 | Week 13 | Week 13 |
