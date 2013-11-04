@@ -33,7 +33,7 @@ Links to these materials can be found in the following table:
 | Week 11 | Week 11 | Week 11 |
 | Week 12 | Week 12 | Week 12 |
 | Week 13 | Week 13 | Week 13 |
-| Week 14 | Week 14 | Week 14 |
+| Week 14 | Week 14 | n/a |
 <!--
 | [Week 10](Slides/Lecture10-1.pdf) | [Week 10](Notes/Week10.md)  | [Week 10](Slides/Lecture10-2.pdf) |
 | [Week 11](Slides/Lecture11-1.pdf) | [Week 11](Notes/Week11.md)  | [Week 11](Slides/Lecture11-2.pdf) |
