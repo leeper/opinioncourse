@@ -32,4 +32,4 @@ Send the essay to the two other members of your group. In class, you will provid
 
 
 ## Sniderman et al. ##
-You can find the reading here: [Sniderman et al. Chapter 2](../Sniderman et al. Ch2.pdf)
+You can find the reading here: [Sniderman et al. Chapter 2](../SnidermanCh2.pdf)
