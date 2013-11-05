@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Public Opinion Seminar
+title: Home
 ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 ---
 
