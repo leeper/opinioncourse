@@ -32,13 +32,6 @@ November 13, 2013
 * The authors mention that "strong opinions and stability are often seen as signs of an engaged and thoughtful citizenry - coveted attributes. Attitude strenght promotes constraint and engagement." (62) Does this mean that stability of opinions should be seen as a normative good? Why or why not?
 
 
-## Page and Shapiro ##
-*Note: Read just chapter 10: "Democracy, Information, and the Rational Public."*
-
-
-## Mackuen, Erikson, and Stimson ##
-*Note: Just glance at the first few pages of this article to learn the definition of "macropartisanship". The heavy discussion of American politics in the remainder of the article distracts too much from the core theoretical contribution I want you to see.*
-
 ## Gilens ##
 * Unlike the readings for Week 8, which focused on individuals' responses to information, Gilens focuses on macro-level responses to information. I.e., what would the aggregate policy preference of the electorate be if the public were better informed?
 * Gilens focuses on policy-specific information. Why? What does he see as the problems with measures of citizens' (general) political knowledge? (379--380)
@@ -55,4 +48,21 @@ November 13, 2013
 * Given Gilens's results, consider the following:
  * Which opinions are better, those that people have or those that people would have if fully informed? Can we actually know what those counterfactual opinions would be?
  * What should be done about political ignorance? And can anything be done?
+
+
+## Page and Shapiro ##
+*Note: Read just chapter 10: "Democracy, Information, and the Rational Public."*
+* As background, Page and Shapiro's book analyzes essentially all public opinion data collected in the United States over a fifty year period. They look at "marginals" - i.e., the aggregate proportion of the public estimated to favor or oppose particular policies and compare those aggregate proportions over time. The article we previously read by Page, Shapiro, and Dempsey (Week 8) is an excerpt from the book. This chapter summarizes the book as a whole.
+* What properties does macro opinion have, in spite of micro level ignorance and opinion instability?
+* Are macro opinion shifts coherent? (385) What explains macro shifts in opinion (385--86)
+* In debates about citizen capacity, with whom do Page and Shapiro fall? With Dahl, with Sniderman, with Zaller? Do they believe the public is capable of knowing their own interests?
+* The authors discuss the idea of "collective wisdom" (386). Does this mean that individual-level ignorance is unimportant?
+* Page and Shapiro retrospectively evaluate the "coherence" and "predictability" of opinion shifts. (388--89)Is this credible? Indeed, if we are able to predict such shifts, why bother studying opinion?
+* Page and Shapiro discuss collective deliberation. (390--91) How do these idea mesh with the notions of representation discussed by Mansbridge (and by Disch, if you read it)?
+* Page and Shapiro emphasize the importance of education for improving democracy (391--93). How likely is education to matter for improving knowledge and changing (improving?) public opinion?
+* The authors discuss how sometimes the public is not privy to relevant information or the public is even misled by political leaders and the media. If the public is dependent on elites for forming their opinions, how can their opinions be seen as exogeneous inputs to the political system? (393--397)
+ * How does their discussion of "the marketplace of ideas" mesh with what we know about the effects of arguments (e.g., from Chong and Druckman, Week 6)?
+
+## Mackuen, Erikson, and Stimson ##
+*Note: Just glance at the first few pages of this article to learn the definition of "macropartisanship". The heavy discussion of American politics in the remainder of the article distracts too much from the core theoretical contribution I want you to see.*
 
