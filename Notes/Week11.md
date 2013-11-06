@@ -37,6 +37,6 @@ November 13, 2013
 
 
 ## Mackuen, Erikson, and Stimson ##
-
+*Note: Skip this article. The heavy discussion of American politics distracts too much from the core theoretical contribution I want you to see.*
 
 ## Gilens ##
