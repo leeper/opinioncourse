@@ -40,3 +40,19 @@ November 13, 2013
 *Note: Just glance at the first few pages of this article to learn the definition of "macropartisanship". The heavy discussion of American politics in the remainder of the article distracts too much from the core theoretical contribution I want you to see.*
 
 ## Gilens ##
+* Unlike the readings for Week 8, which focused on individuals' responses to information, Gilens focuses on macro-level responses to information. I.e., what would the aggregate policy preference of the electorate be if the public were better informed?
+* Gilens focuses on policy-specific information. Why? What does he see as the problems with measures of citizens' (general) political knowledge? (379--380)
+ * How does Gilens measure policy-specific information/knowledge? (380--81)
+ * How does Gilens measure general political knowledge? (382)
+ * How correlated are the two measures? (Table 1)
+* Gilens focuses on changing peoples' "knowledge" of political "facts" rather than changing their beliefs or perceptions about reality. Is this important?
+* How does Gilens analyze the effects of information on opinions? What do the regression models include (in terms of outcomes and independent variables)? (383--84)
+* Gilens uses an "imputation" method to predict what a respondent's opinion would be if they were better informed. What assumptions do we need to make to believe this evidence? Is it a credible prediction? (384, Table 2)
+* What effect do general knowledge and policy-specific knowledge have on macro opinion? (Table 2)
+* In his second study, Gilens conducts an experiment on information exposure. How do the results from the experiment compare to the "imputation" results from his first study? How does this affect the credibility of the first results? (385--87, Table 3)
+* For what subset of the electorate does policy-specific information have the largest effects? (388, Tables 4 and 5)
+ * How do the analyses presented in Tables 4 and 5 differ? At what levels of policy-specific knowledge is opinion being imputed?
+* Given Gilens's results, consider the following:
+ * Which opinions are better, those that people have or those that people would have if fully informed? Can we actually know what those counterfactual opinions would be?
+ * What should be done about political ignorance? And can anything be done?
+
