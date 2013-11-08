@@ -33,3 +33,9 @@ Send the essay to the two other members of your group. In class, you will provid
 
 ## Sniderman et al. ##
 You can find the reading here: [Sniderman et al. Chapter 2](../SnidermanCh2.pdf)
+
+
+## Bachrach and Baratz ##
+Peter Bachrach and Morton S. Baratz. 1962. "Two Faces of Power" *American Political Science Review* 56(4):947--952.
+
+This is a very short, but seminal piece of political science literature. It is relevant to today's discussions, as they relate to questions about who has power in collective decision making and whether that power is indeed observable.
