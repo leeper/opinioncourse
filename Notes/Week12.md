@@ -22,7 +22,19 @@ November 20, 2013
 
 
 ## Stimson, Mackuen, and Erikson ##
-
+* The authors focus on "dynamic representation." How do they define it and how does it correspond, if at all, to any of the models of representation outlined by Mansbridge?
+* How do the authors conceptualize the causal influence of opinion on policy? (543) What do they say needs to be shown in order to demonstrate influence?
+* What mechanism is proposed for connnecting opinion to policy? (544) Is it universal or conditional?
+ * How does their proposed mechanism of influence "feel"? Does it feel like democracy at work?
+* *Note: Do not worry about the specifics of the statistics.*
+* The authors rely on a general (i.e., not issue-specific) measure of public opinion called "policy mood". (548) What is it? How does it relate to "macropartisanship" (from last week)?
+ * What are the advantages and disadvantages of this aggregated measure of opinion?
+* What is their outcome variable? How is it measured? (549--550)
+* What are the findings? (Look especially at the tables). How much does public opinion matter?
+* The results in Table 5 and Figure 5 (556--558) aggregate across all outcomes. How responsive does government in general seem to be to public opinion?
+ * See especially p.557: how closely related are opinion and policy?
+* Overall, can these results be interpreted as normatively desirable? Why or why?
+* In Week 8 we asked whether opinions should be responsive to outside political events and whether there was any evidence of such responsiveness. Here, we see that opinion should be something that policymakers should be responsive to. What then are the ultimate "inputs" to the political system?
 
 ## Jacobs and Page ##
 * As is clear in the title, what is the research question underlying this paper? What do the authors want to know?
