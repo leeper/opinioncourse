@@ -18,7 +18,30 @@ November 20, 2013
 *Note: Do not read the Erikson article. I will just discuss its main contributions during seminar.*
 
 ## Riker ##
-(Chapters 1 and 5 from Riker; in compendium)
+*Read Chapters 1 and 5 in compendium*
+
+* Riker is talking about "social choice theory." What is it?
+* What is the "paradox of voting" (or Condorcet paradox)? (1--2, 16--19)
+ * What (two) assumptions are made in establishing the paradox?
+ * How credible is the preference assumption in light of what we know about opinion formation?
+ * If individuals have transitive preferences, are social choices necessarily transitive? Are they necessarily intransitive? Does the paradox make predictions about how preferences aggregate to a social choice?
+* What does Riker say are the three core elements of democracy? (5)
+ * What does Riker say the relationship is between voting and democracy (5)
+ * Does Riker think liberty is necessary or sufficient for democracy? Instrumental or symbolic? (6--7)
+* What are the key differences between the "liberal" and "populist" interpetations of voting? (8--14)
+ * Does either interpretation assume that the public's views are inherently correct or a normatively (or morally) better basis for government action? (10, 14; think also about Dahl)
+* Riker asks "Can the democartic ideal be attained if hte method used to attain it produces confusion" (18). What do you think?
+* What is Arrow's theorem? (116) What are its six "fairness" conditions? (116--119) How well do these capture "fairness"?
+ * Can any method that satisfies the conditiongs guarantee a social ordering (i.e., a social choice)?
+* What are "cycles" and why can they occur? (120)
+* What implications does cycling have for representation? Can we ever observe representation in a world where social choices cycle?
+* As the number of voters in an electorate increase, how likely is there to be a condorcet winner? What about as the number of alternatives increase? (121--122)
+* Under what conditions can a stable social choice be obtained? (124)
+ * *Note: Pages 123--128 are a bit technical, so don't worry about the details.*
+ * In Section 5.E, Riker concludes that the only fairness condition that can be relaxed (and thus produce a social choice) is transitivity. What implications does he say relaxing this condition would have? (130--132)
+* Riker critiques the idea of "collective rationality" (132) saying that it is "an illgetimate anthropomorphism." Page and Shapiro defend the idea of collective rationality empirically. Who is right?
+* Riker makes the assumption, throughout the text, that opinions are stable. If opinions are unstable (either because they fluctuate randomly or because they are systematically responsive to politics), what implications would this have for social choice?
+* Riker concludes that so long as the fairness criteria are non-satisfiable, social choice is not possible. What role, then, should the public's views have in government?
 
 
 ## Stimson, Mackuen, and Erikson ##
