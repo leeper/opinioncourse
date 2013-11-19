@@ -6,6 +6,16 @@ title: Week 13 Notes
 # Week 13 Notes #
 November 27, 2013
 
+## Assignment ##
+Please write a 500-word essay that addresses the prompt below.
+
+>Representation is historically defined as a one-way link between public (or public opinions specifically) and elected representatives. Yet much of the public's information about politics comes (directly or indirectly) from elected officials and other politicians. The public's views are thus endogenous to the institutions meant to represent those views. As such, representation as defined by democratic theory is impossible.
+
+Defend, challenge, or qualify the above statement, with reference to literature from the course.
+
+Send your essay to the two other members of your group and to the instructor by 12:00 (noon) on Tuesday. In class, you will provide feedback to each other in groups on each other's essays.
+
+
 ## General questions ##
 * Did you learn anything from this week's readings? If so, what?
 * What aspect(s) of this week's readings did you find the most compelling?
@@ -15,7 +25,7 @@ November 27, 2013
 # Readings #
 
 ## Truman ##
-
+*Note: We covered the most important ideas from Truman during last week's class, so it is not essential to read the text.*
 
 ## Olson ##
 *We read Olson in Week 9. Please revisit your notes from that, as it is relevant here, as well.*
