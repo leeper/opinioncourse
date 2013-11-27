@@ -43,6 +43,16 @@ Send your essay to the two other members of your group and to the instructor by 
 ## Hibbing and Theiss-Morse ##
 
 
+## Hibbing and Theiss-Morse ##
+* *Note: This is written in the context of American politics, but its normative discussions are universal.*
+* The authors lay out four models of democratic procedures (which reflect agenda-setting and decision-making processes). How do these compare to "liberalism" and "populism" as defined by Riker? (164--69)
+* The authors focus quite a bit on social capital theory. What is social capital and what impacts does it allegedly have on society? (169--72)
+* Next, Hibbing and Theiss-Morse discuss deliberative democracy (something we haven't spent much time on, but that we've seen in Mansbridge's text and others). What benefits does deliberation allegedly have? (172--181)
+* *Note: The second chapter we read (Chapter 8) reviews some of the empirical contributions of the book, in response to the normative discussions of Chapter 7. In short, the authors conducted a number of studies to understand what the (American) public thinks about deliberation, citizen involvement, democracy, government decision-making, etc. Their findings, as you will see, are that citizens' preferences over democratic institutions do not conform very closely to the normative ideas summarized in the previous chapter. Their conclusions is that citizens prefer "stealth democracy," essentially giving limitless authority to policymakers provided that those policymakers do not act exclusively in their own self-interest.*
+* If democratic theory demanding greater citizen involvement and greater deliberation conflicts with citizens' preferences over processes (i.e., citizens do not want deliberation), should we follow normative theory or citizens' preferences?
+ * Are citizens' opinions about democratic processes worth listening to? Why or why?
+ * If empirical evidence suggests that citizens and society are not better off with direct democratic institutions, is this because of a failure of the institutions (as Riker would argue) or a failure of the people to properly and adequately engage with politics?
+
 ## Sniderman et al. ##
 You can find the reading here: [Sniderman et al. Chapter 2](../SnidermanCh2.pdf)
 
