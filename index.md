@@ -38,7 +38,7 @@ PDF versions of course slides (both main lectures and the short "preview" lectur
 | [Week 11](Slides/Lecture11-1.pdf) | [Week 11](Notes/Week11)  | [Week 11](Slides/Lecture11-2.pdf) |
 | [Week 12](Slides/Lecture12-1.pdf) | [Week 12](Notes/Week12)  | [Week 12](Slides/Lecture12-2.pdf) |
 | Week 13 | [Week 13](Notes/Week13) | [Week 13](Slides/Lecture13-2.pdf) |
-| Week 14 | Week 14 | n/a |
+| Week 14 | [Week 14](Notes/Week14) | n/a |
 <!--
 | [Week 13](Slides/Lecture13-1.pdf) | [Week 13](Notes/Week13)  | [Week 13](Slides/Lecture13-2.pdf) |
 | [Week 14](Slides/Lecture14-1.pdf) | [Week 14](Notes/Week14)  | n/a |
