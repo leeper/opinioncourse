@@ -40,7 +40,6 @@ Send your essay to the two other members of your group and to the instructor by 
 * Riker is concerned (e.g., on pp.246--47) about the use of elections (or public opinion in general) to symbolize a "popular will." How does this compare to Herbst's discussions of the strategic use of public opinion as a symbol?
 * Which model of democracy - liberalism or populism - does Riker believe most likely to devolve into tyranny? Why? (247--49)
 * Riker argues that liberalism alone does not defend democracy (i.e., citizens' having a veto is not sufficient). He argues that democracy also requires constitutional/institutional restraint (i.e., institutions which slow policymaking and prevent populist action). How credible is this view?
-## Hibbing and Theiss-Morse ##
 
 
 ## Hibbing and Theiss-Morse ##
