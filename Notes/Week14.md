@@ -54,7 +54,15 @@ Send your essay to the two other members of your group and to the instructor by 
  * If empirical evidence suggests that citizens and society are not better off with direct democratic institutions, is this because of a failure of the institutions (as Riker would argue) or a failure of the people to properly and adequately engage with politics?
 
 ## Sniderman et al. ##
-You can find the reading here: [Sniderman et al. Chapter 2](../SnidermanCh2.pdf)
+*You can find the reading here: [Sniderman et al. Chapter 2](../SnidermanCh2.pdf)*
+
+* *Note: The Sniderman et al. reading is an excerpt from a forthcoming book about the Danish Muhammad cartoon crisis. It is the only "case study" that we read for the class. Why? Because it asks us to consider the tensions between core ideas in public opinion: public sentiment, democratic theory, tolerance, minority and majority groups, etc.*
+* How do Danes view "Muslims" versus "Islamic fundamentalists"? Are the measures reported, e.g., in Table 2.2, evidence of Danish toleration of Muslims or not?
+* Is toleration of minority groups necessary for democracy? How tolerated are different minority and fringe groups in Denmark? How tolerant are Danes in general?
+* If groups pose a threat to democratic or liberal norms (e.g., demanding special accommodation) or to democratic institutions (e.g., by introducing religious requirements into state activities), should their voices be permitted?
+* What impact did the cartoon crisis have on support for civil liberties (not just of Muslims, but of all the studied groups)?
+* One of the basic principles of Dahl's notion of democracy is that citizens can and do know their own interests and thus their opinions should be accepted on face value. If those opinions contain what others see as objectionable content - anti-semitism, intolerance, etc. - what place do those opinions have in democracy?
+* What conclusion to Sniderman et al. reach about the cartoon crisis? Did Danes' opinions of Muslims behave as they "ought"?
 
 
 ## Bachrach and Baratz ##
