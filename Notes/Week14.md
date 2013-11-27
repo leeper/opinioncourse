@@ -26,8 +26,20 @@ Send your essay to the two other members of your group and to the instructor by 
 # Readings #
 
 ## Riker ##
-
-
+* One of the most prominent critiques of majority rule is the idea of "majority tyranny," where minority groups' rights are infringed by a stable majority of the public. Is Riker concerned about majority tyranny? Why or why not? (233-234)
+* On p.236, Riker argues that voting is not fair. On what grounds does he argue this? What does he see as the fundamental problem in aggregating preferences? (This relates to the ideas from the previous chapters that we have read from him.)
+ * Riker focuses on voting for discussing the aggregation of preferences. To what extent do his claims about voting extend to the realm of opinion measurement in general (e.g., through public opinion polls)? Are polls able to fairly represent public opinion?
+* Riker discusses two kinds of ways that voting systems can be manipulated. (236--238) What are they? And what consequences do they have for social choice?
+* Riker provides a very succinct definition of "populism" on p.238. What is it?
+* Why does he reject populism? (238--239)
+* *Note: Do not worry about the discussion of U.S. elections on pp.239--241*
+* On p.242, Riker provides a succinct definition of "liberalism". What is it?
+* In point 4 on p.243, Riker describes a situation in which a candidate has offended a majority of the public and yet is somehow reelected. Does Riker feel this is a violation of the liberal interpretation of voting? Why or why?
+ * In your own view, is Riker's view a satisfying notion of democracy?
+* What citizen capacities does Riker's liberal view of democracy require? Does it require, e.g., knowledge, well-formed opinions, aggregate coherence of public opinion, etc.? (esp. 244--45)
+* Riker is concerned (e.g., on pp.246--47) about the use of elections (or public opinion in general) to symbolize a "popular will." How does this compare to Herbst's discussions of the strategic use of public opinion as a symbol?
+* Which model of democracy - liberalism or populism - does Riker believe most likely to devolve into tyranny? Why? (247--49)
+* Riker argues that liberalism alone does not defend democracy (i.e., citizens' having a veto is not sufficient). He argues that democracy also requires constitutional/institutional restraint (i.e., institutions which slow policymaking and prevent populist action). How credible is this view?
 ## Hibbing and Theiss-Morse ##
 
 
