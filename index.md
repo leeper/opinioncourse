@@ -14,10 +14,6 @@ The initial version of this course is being conducted as a master seminar at Aar
 You can find an outline of the course objectives, schedule for the course, and assigned readings in the [Syllabus](Syllabus.pdf).
 
 ---
-## Course Evaluation ##
-Here is [a link to the course evaluation](http://www.survey-xact.dk/LinkCollector?key=RC43FLYF9P1J). It closes on December 16th.
-
----
 ## Slides and Notes ##
 
 PDF versions of course slides (both main lectures and the short "preview" lectures of the next week's readings) are available in the table below. Links to the notes for each week's readings can also be found below.

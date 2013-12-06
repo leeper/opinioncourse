@@ -6,9 +6,6 @@ This repository holds materials for a course on public opinion. The initial vers
 
 You can find an outline of the course objectives, schedule for the course, and assigned readings in the [Syllabus](/Syllabus.pdf).
 
-## Course Evaluation ##
-Here is a link to the course evaluation: http://www.survey-xact.dk/LinkCollector?key=RC43FLYF9P1J. It closes on December 16th.
-
 ## Slides and Notes ##
 
 PDF versions of course slides (and the LaTeX sources for those slides) are available in the [/Slides](Slides) directory.
