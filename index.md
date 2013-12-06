@@ -46,4 +46,3 @@ You can also download all of the content for this course as a .zip [in one click
 ## Weekly Assignments ##
 
 Each week one student will write a short (less than one double-spaced page) response to whatever they find interesting or important from that week's readings. This will be **due Monday before class (by 12:00 noon)**. Another student will respond however they see fit (i.e., agree, disagree, highlight other readings or perspectives, etc.) in a short (less than one double-spaced page) **due Tuesday morning (by 12:00 noon)**. Papers should be distributed via email to all course participants. This can be done via Blackboard.
-
