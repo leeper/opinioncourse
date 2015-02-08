@@ -5,6 +5,18 @@
 # filetypes to ignore #
 *.docx
 *.xlsx
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.toc
+*.maf
+*.mtc*
+*.stc*
 
 # files to ignore #
 FinalExam.*
