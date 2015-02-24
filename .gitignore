@@ -17,6 +17,7 @@
 *.maf
 *.mtc*
 *.stc*
+*.bib.bak
 
 # files to ignore #
 FinalExam.*
