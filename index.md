@@ -20,15 +20,15 @@ You can find an outline of the course objectives, schedule for the course, and a
 
 A tentative schedule is below:
 
- - Week 1 (Jan. 15): What are opinions?
- - Week 2 (Jan. 22): Measuring opinions (and survey methods)
- - Week 3 (Jan. 29): Opinion dynamics and change (and macro opinion analysis)
- - Week 4 (Feb. 5): Information and opinion responsiveness (and experimental methods)
- - Week 5 (Feb. 12): Predispositions and Constraint
+ - Week 1 (Jan. 15): Public Opinion and Democracy
+ - Week 2 (Jan. 22): What are opinions?
+ - Week 3 (Jan. 29): Measuring opinions (and survey methods)
+ - Week 4 (Feb. 5): Opinion dynamics and change (and macro opinion analysis)
+ - Week 5 (Feb. 12): Information and opinion responsiveness (and experimental methods) 
  - Week 6: Reading Week peer feedback sessions (see below)
- - Week 7 (Feb. 26): Motivated reasoning
- - Week 8 (Mar. 4): Heuristics and cognitive biases
- - Week 9 (Mar. 11): Representation
+ - Week 7 (Feb. 26): Predispositions and Constraint
+ - Week 8 (Mar. 4): Motivated reasoning
+ - Week 9 (Mar. 11): Heuristics and cognitive biases
  - Weeks 10-11: Revision and feedback sessions
 
 ---
@@ -59,7 +59,7 @@ There are three problem sets for the course, which are designed to assess studen
 | Macro Analysis | Jan. 29 | Feb. 2 |
 | Experimentation | Feb. 5 | Feb. 9 |
 
-In each problem set, students will answer a series of short prompts about methods of public opinion research and provide simple analyses (using the statisticdal software of their choice) using data provided by the instructor. This is useful primarily for gauging students' competence with these methods and for the instructor to possibly prepare additional instruction on these topics as needed.
+In each problem set, students will answer a series of short prompts about methods of public opinion research and provide simple analyses (using the statistical software of their choice) using data provided by the instructor. This is useful primarily for gauging students' competence with these methods, which may be necessary for the exam, and for the instructor to possibly prepare additional instruction on these topics as needed.
 
 ---
 ## Reading Week Activities ##
