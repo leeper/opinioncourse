@@ -1,21 +1,15 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx,setspace,hyperref,amsmath,amsfonts,multirow,ccaption,mdwlist,comment}
-% mini table of contents
-\usepackage{minitoc}
-\dosecttoc % make section toc
-\setcounter{secttocdepth}{2} % subsection depth
-\renewcommand{\stctitle}{} % no title
-\nostcpagenumbers
 
-% optionally include commented environments
-\excludecomment{lessonplan}
-\excludecomment{finalexam}
+\usepackage{minitoc}
+\dosecttoc
+\setcounter{secttocdepth}{2}
+\renewcommand{\stctitle}{}
+\nostcpagenumbers
 
 \setlength{\marginparwidth}{.5in}
 \usepackage{natbib}
-% Two lines to create in-text full citations for a syllabus
-% And comment out my other standard bibtext commands
 \usepackage{bibentry}
 \newcommand{\reading}[2][]{\noindent -- {#1 }\bibentry{#2}.\vspace{.25em}\\}
 \newcommand{\seealso}{\noindent \emph{See Also:}\\}
@@ -66,6 +60,8 @@ After this course, students should be able to:
 
 \section{Formative Assessment}
 
+Formative assessment consists of in-class discussion activities and three out-of-class problem sets submitted at the beginning of the course.
+
 \subsection{Discussion Activities}
 
 The course will primarily involve student-led discussions with the exception of a few lecture elements surrounding methodological issues in public opinion research.
@@ -103,12 +99,12 @@ In each problem set, students will answer a series of short prompts about method
 
 The exam for the course is an independent research paper of approximately 5,000 words that addresses an important political science question related to public opinion, political psychology, or political behaviour, offers a theoretical contribution toward understanding that question, and reports a planned empirical analysis to test that theory. The requirements for the empirical component are flexible and it can involve an original survey and/or experimental data collection, a pilot test of a proposed research design, qualitative data analysis (such as focus groups or semi-structured interviewing), the analysis of existing public opinion data, or a mix of these. Thus, while it is not expected that students conduct a large-scale study, they must conduct some novel data collection and/or analysis (even at a very small scale).
 
-The exam is due April 26, 2016 at 5pm.
+\vspace{1em}
+
+\noindent The exam is due \textbf{April 26, 2016 at 5pm}.
 
 
-
-
-\clearpage
+%\clearpage
 \section{Course Outline}
 The general schedule for the course is as follows. Details on the readings for each week are provided on the following pages.
 \secttoc
@@ -122,8 +118,8 @@ The general schedule for the course is as follows. Details on the readings for e
 \reading[Chapter 1 from]{Riker1988}
 
 \seealso
-\reading{Lippman1922}
-\reading{Lippman1928}
+\reading{Lippmann1922}
+\reading{Lippmann1928}
 \reading{Dahl2006}
 \reading{Pitkin1967}
 \reading{Disch2011}
@@ -134,17 +130,25 @@ The general schedule for the course is as follows. Details on the readings for e
 \reading{BachrachBaratz1962}
 \reading{Fishkin2006}
 \reading[Chapter 8 from]{Schattschneider1975}
-\reading{McCloskyHoffmannOhara1960}
+\reading{McCloskyHoffmanOHara1960}
 \reading{Erikson1978}
 
 \clearpage
 \subsection{Week 2: What are opinions? (Jan. 22)}
 \reading{EaglyChaiken1998}
 \reading[Chapter 3 from ]{Zaller1992}
+\reading{Evans2008}
 
 \seealso
 \reading{DruckmanLupia2000}
-
+\reading{EaglyChaiken2007}
+\reading{EaglyChaiken1993}
+\reading{Fazio2007}
+\reading{Ajzen2001}
+\reading{PettyKrosnick1995}
+\reading{Hovland1953}
+\reading{McGuire1969}
+\reading{Katz1960}
 
 \clearpage
 \subsection{Week 3: Survey and Questionnaire Methods (Jan. 29)}
@@ -159,13 +163,12 @@ This will cover both the process of measuring opinions and the principles of sur
 
 \seealso
 \reading{Grovesetal2009}
-\reading{Lohr2010}
+\reading{Lohr2009}
 \reading{Berinskyetal2011}
-\reading{SchumanPresser}
-\reading[]{SchaefferPresser2003}
-\reading[]{KrosnickJuddWittenbrink2005}
-\reading[]{RevillaSarisKrosnick2013}
-
+\reading{SchumanPresser1981}
+\reading{SchaefferPresser2003}
+\reading{KrosnickJuddWittenbrink2005}
+\reading{RevillaSarisKrosnick2013}
 \reading{YeagerLarsonKrosnickTompson2010}
 \reading{Krosnicketal2002}
 \reading{Brady2000}
@@ -181,13 +184,13 @@ We will discuss methods of macro opinion analysis
 % basic reading on time-series analysis
 
 \seealso
-\reading{Callegaroetal2015}
-\reading{AndresGolschSchmidt}
-\reading[]{DruckmanLeeper2012a}
+\reading{Callegaroetal2014}
+\reading{AndresGolschSchmidt2013}
+\reading{DruckmanLeeper2012a}
 \reading{Gilens2001}
 \reading{MacKuenEriksonStimson1989}
 \reading{AnsolabehereRoddenSnyder2008}
-\reading{Sanders2006}
+\reading{Sanders2012}
 \reading{JohnstonBrady2002}
 
 \clearpage
@@ -198,8 +201,9 @@ We will also cover experimental methods.
 \reading{ChongDruckman2007a}
 \reading{Kuklinskietal2000}
 \citet[90-92]{DelliCarpiniKeeter1997}
-\reading[]{DruckmanNelson2003}
+\reading{DruckmanNelson2003}
 % basic reading on experimental design (maybe from handbook?)
+\reading{PettyCacioppo1986}
 
 \seealso
 \reading{GainesKuklinskiQuirk2007}
@@ -210,12 +214,12 @@ We will also cover experimental methods.
 \reading{LauRedlawsk2001}
 \reading{GronlundMilner2006}
 \reading{TilleyWlezien2008}
-\reading{MutzImpersonalInfluence}
-\reading{HuckfeldtSprague}
+\reading{Mutz1992}
+\reading{HuckfeldtSprague2006}
 \reading{Nickerson2008}
 \reading{BennettIyengar2008}
-\reading[]{ChongDruckman2007b}
-\reading[]{DruckmanFeinLeeper2012}
+\reading{ChongDruckman2007b}
+\reading{DruckmanFeinLeeper2012}
 
 \clearpage
 \subsection{Week 6: Reading Week (Feb. 19) - no class meeting}
@@ -239,48 +243,51 @@ There will be no class meeting on February 19 (LT Week 6) due to Reading Week. B
 
 
 \clearpage
-\subsection{Week 8: Motivated reasoning (Mar. 4)}
+\subsection{Week 8: Heuristics and cognitive biases (Mar. 4)}
 
-\reading{TaberLodge2006}
-\reading[]{DruckmanBolsen2011}
-\reading[]{SlothuusdeVreese2010}
-\reading[]{LeeperSlothuus2014}
-\reading[]{Evans2008}
+\reading{Chaiken1980}
+\reading{MarksMiller1987}
+\reading{Petersenetal2011}
+\reading{Healy2010}
+\reading{Petersenetal2011}
 
 \seealso
-\reading{Kunda1990}
-\reading[]{MoldenHiggins2004}
-\reading[]{RedlawskCivettiniEmmerson2010}
-\reading[]{DruckmanPetersonSlothuus2013}
+\reading{LauRedlawsk2001}
+\reading{DanceySheagley2012}
+\reading{TverskyKahneman1974}
+\reading{KuklinskiHurley1994}
+\reading{Hobolt2007}
+\reading{Arceneaux2007}
+\reading{ValentinoHutchingsWhite2002}
+\reading{Lupu2013}
 
 
 \clearpage
-\subsection{Week 9: Heuristics and cognitive biases (Mar. 11)}
+\subsection{Week 9: Motivated reasoning (Mar. 11)}
 
-\reading[]{Chaiken1980}
-\reading[]{MarksMiller1987}
-\reading{Petersenetal2011}
-\reading{Healy2010}
-\reading[]{Petersenetal2011}
+\reading{TaberLodge2006}
+\reading{DruckmanBolsen2011}
+\reading{SlothuusdeVreese2010}
+\reading{LeeperSlothuus2014}
 
 \seealso
-\reading[]{LauRedlawsk2001}
-\reading[]{DanceySheagley2012}
-\reading[]{TverskyKahneman1974}
-\reading[]{KuklinskiHurley1994}
-\reading[]{Hobolt2007}
-\reading[]{Arceneaux2007}
-\reading[]{Valentinoetal2002}
-\reading[]{Lupu2013}
+\reading{Kunda1990}
+\reading{MoldenHiggins2004}
+\reading{RedlawskCivettiniEmmerson2010}
+\reading{DruckmanPetersonSlothuus2013}
 
 
 \clearpage
 % - Week 10 (Mar. 18): Vote choice and behavior?
 %% TOULOUSE CONFERENCE; NEED TO RESCHEDULE
-\subsection{Week 10}
+\subsection{Week 10: Political Identity (TBD)}
+
+\reading{Greene1999}
+\reading{Huddy2001}
+\reading{IyengarSoodLelkes2012}
 
 \seealso
-
+\reading{KnowlesGardner2008}
 
 \clearpage
 % - Week 11 (Mar. 25): Revision sessions
@@ -290,8 +297,6 @@ There will be no class meeting on February 19 (LT Week 6) due to Reading Week. B
 \seealso
 
 
-
-% load bibtext, but don't generate a bibliography
 \bibliographystyle{plain}
 \nobibliography{References}
 
