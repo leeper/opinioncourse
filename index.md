@@ -22,14 +22,14 @@ A tentative schedule is below:
 
  - Week 1 (Jan. 15): Public Opinion and Democracy
  - Week 2 (Jan. 22): What are opinions?
- - Week 3 (Jan. 29): Measuring opinions (and survey methods)
- - Week 4 (Feb. 5): Opinion dynamics and change (and macro opinion analysis)
- - Week 5 (Feb. 12): Information and opinion responsiveness (and experimental methods) 
+ - Week 3 (Jan. 29): Measuring opinions
+ - Week 4 (Feb. 5): Opinion dynamics and change
+ - Week 5 (Feb. 12): Information and opinion responsiveness
  - Week 6: Reading Week peer feedback sessions (see below)
  - Week 7 (Feb. 26): Predispositions and Constraint
  - Week 8 (Mar. 4): Motivated reasoning
  - Week 9 (Mar. 11): Heuristics and cognitive biases
- - Weeks 10-11: Revision and feedback sessions
+ - Weeks 10-11 (Mar. 18/25): Political Identity (and revision and feedback sessions)
 
 ---
 ## Weekly Questions and Writing Assignments ##
@@ -55,9 +55,9 @@ There are three problem sets for the course, which are designed to assess studen
 
 | Problem Set | Assigned | Due Date |
 |-------------|----------|----------|
-| Micro Analysis | Jan. 22 | Jan. 26 |
-| Macro Analysis | Jan. 29 | Feb. 2 |
-| Experimentation | Feb. 5 | Feb. 9 |
+| [Micro Analysis](Assignments/ProblemSet1.html) | Jan. 22 | Jan. 26 |
+| [Macro Analysis](Assignments/ProblemSet2.html) | Jan. 29 | Feb. 2 |
+| [Experimentation](Assignments/ProblemSet3.html) | Feb. 5 | Feb. 9 |
 
 In each problem set, students will answer a series of short prompts about methods of public opinion research and provide simple analyses (using the statistical software of their choice) using data provided by the instructor. This is useful primarily for gauging students' competence with these methods, which may be necessary for the exam, and for the instructor to possibly prepare additional instruction on these topics as needed.
 
