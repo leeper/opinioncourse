@@ -18,13 +18,51 @@ You are asked to watch a short slidecast covering relevant material and then com
 
  1. In your own words, what makes a sample representative of a population? What are some different ways of thinking of representativeness?
  
- 2. If one's goal is to estimate the proportion of the British population that supports the UK leaving the European Union, how large of a sample would be needed to estimate that percentage within +/- 2 percentage points? What about within +/- 0.5 percentage points? (Show your work.)
+ 2. In a few sentences, answer the following: What is coverage error? What consequences does it have for survey research? How can over-coverage and under-coverage errors be addressed?
  
- 3. [Something about weights]
+ 3. If one's goal is to estimate the proportion of the British population that supports the UK leaving the European Union, how large of a sample would be needed to estimate that percentage within +/- 2 percentage points? What about within +/- 0.5 percentage points? (Show your work.)
  
- 4. [Empirical problem about generating post-stratification weights]
+ 4. In a simple random sample, all individuals in a sample are given equal *design* weights for the purposes of analyzing the resulting data. In a stratified sample (and any complex survey design), these weights differ across individuals. Consider a hypothetical survey of members of the population of England and Wales age 16 and over that is stratified by levels of education (i.e., three strata: those no qualifications, with some qualifications, and those with a university degree or greater). The census estimates of these population strata sizes are available from [the Office for National Statistics](http://www.ons.gov.uk/ons/rel/census/2011-census-analysis/local-area-analysis-of-qualifications-across-england-and-wales/info-highest-qualifications.html). If the sample strata are equally sized (i.e., the same number of individuals are interviewed in each stratum) and individuals in the "university degree or above" stratum were assigned weights of 1, for which stratum are the design weights going to be larger than 1 and for which are the design weights going to be smaller than 1? Explain your answer.
  
- 5. [Empirical problem about weighted versus unweighted data]
+ 5. Consider the following hypothetical population and sample. For each of the following six groups, what post-stratification weights would make the sample data match the population distribution of sex and religion?
+ 
+   - Male, Christian
+     - Population: 20%
+     - Sample: 12%
+   - Male, Muslim
+     - Population: 10%
+     - Sample: 12%
+   - Male, Any other religion
+     - Population: 20%
+     - Sample: 30%
+   - Female, Christian
+     - Population: 24%
+     - Sample: 26%
+   - Female, Muslim
+     - Population: 8%
+     - Sample: 4%
+   - Female, Any other religion
+     - Population: 18%
+     - Sample: 16%
+ 
+ 5. Consider the following sample data:
+ 
+  | Obs. | X | Y  | Weight |
+  | ---- | - | -- | ------ |
+  | 1    | 1 | 92 | 1.30   |
+  | 2    | 1 | 85 | 0.99   |
+  | 3    | 1 | 88 | 1.21   |
+  | 4    | 1 | 69 | 1.01   |
+  | 5    | 0 | 71 | 0.73   |
+  | 6    | 0 | 54 | 0.55   |
+  | 7    | 0 | 68 | 1.05   |
+  | 8    | 0 | 59 | 0.60   |
+  
+  a. If these data were collected as a simple random sample, what would the sample mean of Y be? What would its standard error be (assuming an infinitely large population and simple random sampling?
+  
+  b. What is the *weighted* sample mean of Y?
+  
+  c. What are the mean values of Y for groups X=0 and X=1? Assuming a simple random sample and, is the difference between these means statistically significant? Recall that the formula for a two-sample t-test is the mean difference between the groups divided by the pooled standard deviation; the pooled standard deviation is: sqrt((s_0/(n-1)) + (s_1/(n-1))).
 
 ## Submission Instructions ##
 
