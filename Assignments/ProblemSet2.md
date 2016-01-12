@@ -18,28 +18,52 @@ You are asked to watch a short slidecast covering relevant material and then com
 
  1. Thinking of different ways of designing public opinion research, define "cross-sectional design," "repeated cross-sectional design," and "panel design". Identify the advantages and disadvantages of each design.
  
- 2. Consider the following hypothetical data on attitudes toward the European Union (measured on a scale from 0 to 1, with higher scores indicating greater positivity toward the EU) in the UK and in Germany collected at two points in time.
+ 2. Consider the following hypothetical data on attitudes toward the European Union (measured as 0=negative and 1=positive) in the UK and in Germany collected at two points in time:
  
-   - Germany, time 1: .7
-   - Germany, time 2: .8
-   - United Kingdom, time 1: .6
-   - United Kingdom, time 2: .4
+   - Germany, time 1: .70
+   - Germany, time 2: .80
+   - United Kingdom, time 1: .60
+   - United Kingdom, time 2: .40
    
-   a. Assuming repeated cross-sectional surveys of n = 2500 in each country and a margin of error of +/- .02, what is the standard deviation
+   a. Assuming repeated cross-sectional surveys of n = 500 in each country at each point in time, what is the standard error of each estimate?
  
- [assess whether an over-time change is statistically significant; using raw data and using top-lines]
- 
-   c. How much farther apart are the UK and Germany at time 2 than they were at time 1?
+   b. How much farther apart are the UK and Germany at time 2 than they were at time 1?
    
-   d. Are the differences between the UK and Germany at each time point (i.e., separately for time 1 and time 2) statistically significant?
+   c. Are the differences between the UK and Germany at each time point (i.e., separately for time 1 and time 2) statistically significant?
    
-   e. If the data were instead collected from a panel (i.e., the same respondents interviewed twice) and we re-estimated the difference using a within-subjects t-test, would we obtain a more precise or less precise estimate of the over-time change? Why? What information (not provided here) would you need to calculate that test statistic? 
+   d. If the data were instead collected from a panel (i.e., the same respondents interviewed twice), what additional information could we learn about opinion dynamics in the two countries? What would this tell us about the individual-level change in opinion (above and beyond the macro-level changes)?
  
- 3. [estimate a regression coefficient for a simple bivariate relationship]
+ 3. Consider the following table reporting the results of a hypothetical regression of support for same-sex marriage rights (measured 1=strongly oppose to 7=strongly support) as a function of left-right political ideology (measured from 0=left to 1=right):
  
- 4. [interpret a regression coefficient]
+    |           | Coef. | SE  |
+    | --------- | ----- | --- |
+    | Ideology  | 2.5   | 0.7 |
+    | Intercept | 4.1   | 0.6 |
+    |           |       |     |
+    | R-squared | .32   |     |
+    |         n | 1500  |     |
  
- 5. Something about panel regression
+   a. In plain language, what relationship does ideology appear to have with support for same-sex marriage rights? Is this relationship substantively large or small?
+   
+   b. Is the relationship between ideology and same-sex marriage support statistically distinguishable from zero? (Show your work.)
+   
+   c. For what reasons might we hesitate to draw a causal inference from these data?
+ 
+ 4. Imagine we are interested in knowing the effect of economic performance on support for the government, conditional on whether one's own party is in government. To test this a researcher collects monthly data on percentage GDP growth and, from a repeated cross-sectional survey over a ten-year period, an average feeling thermometer rating of government support (ranging from 0 to 100) separately by party (assume two parties: government and opposition).
+ 
+    a. Describe the structure of the dataset. What is the unit of analysis? How many observations are there? What are the variables?
+    
+    a. Assuming economic performance and party identification are exogeneous, describe a regression model that would provide an estimate of the effect of of economic performance on the feeling thermometer for each group. How would you interpret the regression coefficients in each case?
+ 
+ 5. Consider a four-wave panel survey that begins with 2000 respondents. The goal of the study is to assess the relationship between economic uncertainty (measured as "high" or "low") and support for economic redistribution (measured on a 0-1 scale), measured at each panel wave.
+
+    a. Assuming no attrition, if we all respondents to all waves were pooled and analyzed together in a single regression model of opinion on economic uncertainty, what are we ignoring in our analysis? Can we consider the coefficient on economic uncertainty to be a causal effect?
+    
+    b. In the scenario in (a), what consequence does this approach have for the uncertainty surrounding our estimates?
+    
+    c. Another way to estimate the effect of uncertainty on support for redistribution is a fixed effects regression. In what ways would this approach improve our inference? In what ways would it limit us?
+    
+    d. If 15% of remaining respondents attrit (leave the panel) after each panel wave, how many respondents are left in wave 4? Briefly describe how you could (or would) deal with this attrition in practical or statistical ways.
  
 
 ## Submission Instructions ##

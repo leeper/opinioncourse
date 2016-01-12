@@ -20,11 +20,15 @@ You are asked to watch a short slidecast covering relevant material and then com
  
  2. In a few sentences, answer the following: What is coverage error? What consequences does it have for survey research? How can over-coverage and under-coverage errors be addressed?
  
- 3. If one's goal is to estimate the proportion of the British population that supports the UK leaving the European Union, how large of a sample would be needed to estimate that percentage within +/- 2 percentage points? What about within +/- 0.5 percentage points? (Show your work.)
+ 3. Define "element variance" and "sampling variance". How do these relate to "standard deviation" and "standard error"?
  
- 4. In a simple random sample, all individuals in a sample are given equal *design* weights for the purposes of analyzing the resulting data. In a stratified sample (and any complex survey design), these weights differ across individuals. Consider a hypothetical survey of members of the population of England and Wales age 16 and over that is stratified by levels of education (i.e., three strata: those no qualifications, with some qualifications, and those with a university degree or greater). The census estimates of these population strata sizes are available from [the Office for National Statistics](http://www.ons.gov.uk/ons/rel/census/2011-census-analysis/local-area-analysis-of-qualifications-across-england-and-wales/info-highest-qualifications.html). If the sample strata are equally sized (i.e., the same number of individuals are interviewed in each stratum) and individuals in the "university degree or above" stratum were assigned weights of 1, for which stratum are the design weights going to be larger than 1 and for which are the design weights going to be smaller than 1? Explain your answer.
+ 4. Imagine that 1000 respondents are recruited to participate in a survey and complete the interview, 1700 were invited to participate but chose not to participate, and 600 were invited but their eligibility for the study was unknown. What are the upper and lower bounds of the response rate for this study? Should we be concerned with this response rate? Defend your answer.
  
- 5. Consider the following hypothetical population and sample. For each of the following six groups, what post-stratification weights would make the sample data match the population distribution of sex and religion?
+ 5. If one's goal is to estimate the proportion of the British population that supports the UK leaving the European Union, how large of a sample would be needed to estimate that percentage within +/- 2 percentage points? What about within +/- 0.5 percentage points? (Show your work.)
+ 
+ 6. In a simple random sample, all individuals in a sample are given equal *design* weights for the purposes of analyzing the resulting data. In a stratified sample (and any complex survey design), these weights differ across individuals. Consider a hypothetical survey of members of the population of England and Wales age 16 and over that is stratified by levels of education (i.e., three strata: those no qualifications, with some qualifications, and those with a university degree or greater). The census estimates of these population strata sizes are available from [the Office for National Statistics](http://www.ons.gov.uk/ons/rel/census/2011-census-analysis/local-area-analysis-of-qualifications-across-england-and-wales/info-highest-qualifications.html). If the sample strata are equally sized (i.e., the same number of individuals are interviewed in each stratum) and individuals in the "university degree or above" stratum were assigned weights of 1, for which stratum are the design weights going to be larger than 1 and for which are the design weights going to be smaller than 1? Explain your answer.
+ 
+ 7. Consider the following hypothetical population and sample. For each of the following six groups, what post-stratification weights would make the sample data match the population distribution of sex and religion?
  
    - Male, Christian
      - Population: 20%
@@ -45,7 +49,7 @@ You are asked to watch a short slidecast covering relevant material and then com
      - Population: 18%
      - Sample: 16%
  
- 5. Consider the following sample data:
+ 8. Consider the following sample data:
  
   | Obs. | X | Y  | Weight |
   | ---- | - | -- | ------ |
