@@ -20,7 +20,7 @@
 
 \frame{
 	\frametitle{Inference Population}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item We want to speak to a population
 		\item But what population is it?
 		\item<2-> Example: ``The UK population''
@@ -29,7 +29,7 @@
 
 \frame{
 	\frametitle{Population Census}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep0.5em
 		\item All population units are in study
 		\item<2-> History of national censuses
 			\begin{itemize}
@@ -48,7 +48,7 @@
 
 \frame{
 	\frametitle{Advantages and Disadvantages}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Advantages
 			\begin{itemize}
 				\item<2-> Perfectly representative
@@ -66,7 +66,7 @@
 
 \frame{
 	\frametitle{Representativeness}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item What does it mean for a sample to be representative?
 		\item<2-> Different conceptions of representativeness:
 			\begin{itemize}
@@ -80,7 +80,7 @@
 
 \frame{
 	\frametitle{Obtaining Representativeness}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item<1-> Quota sampling (common prior to the 1940s)
 		\item<2-> Simple random sampling
 		\item<3-> Advanced survey designs
@@ -89,7 +89,7 @@
 
 \frame{
 	\frametitle{Convenience Samples}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item<1-> What is a convenience sample?
 		\item<2-> Different types:
 			\begin{itemize}
@@ -107,39 +107,34 @@
 
 \frame{
 	\frametitle{Sampling Frames}
-	\begin{itemize}\itemsep2em
-		\item Enumeration (listing) of all units eligible for sample selection
-		\item Two flavors:
-			\begin{itemize}
-				\item Random sample from an ordered list
-				\item Systematic sampling from a randomized list
-			\end{itemize}
+	\begin{itemize}\itemsep0.25em
+		\item Definition: Enumeration (listing) of all units eligible for sample selection
 		\item Building a sampling frame
 			\begin{itemize}
 				\item Combine existing lists
-				\item Canvass/enumerate from scratch
+				\item Canvass/enumerate from scratch (e.g., walk around and identify all addresses that people might live in)
 			\end{itemize}
+		\item There might be multiple frames of the sample population (e.g., telephone list, voter list, residential addresses)
+		\item List might be at wrong unit of analysis (e.g., households when we care about individuals)
 	\end{itemize}
 }
 
 \frame{
-	\frametitle{Big considerations}
-	\begin{itemize}\itemsep2em
-		\item Coverage!
+	\frametitle{Coverage: A Big Issue}
+	\begin{itemize}\itemsep0.5em
+		\item Coverage: any mismatch between population and sampling frame
 			\begin{itemize}
-				\item Undercoverage
-				\item Overcoverage
+			\item \textit{Undercoverage}: the sampling frame does not include all eligible members of the population (e.g., not everyone has a telephone, so a telephone list does not include all people)
+			\item \textit{Overcoverage}: the sampling frame includes ineligible units (e.g., residents of a country are not necessarily citizens so a list of residents has overcoverage for the population of residents)
 			\end{itemize}
-		\item<2-> What is a unit?
-		\item<3-> Clustering
-		\item<4-> Overlap between units
-		\item<5-> List maintenance
+		\item Coverage of a frame can change over time (e.g., residential mobility, attrition)
 	\end{itemize}
 }
+
 
 \frame{
 	\frametitle{Multi-frame Designs}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Construct one sample from multiple sampling frames
 		\item E.g., ``Dual-frame'' (landline and mobile)
 		\item Analytically complicated
@@ -156,7 +151,7 @@
 
 \frame{
 	\frametitle{Sampling without a Sampling Frame}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Sometimes we have a population that can be sampled but not (easily) enumerated in full
 		\item<2-> Examples
 			\begin{itemize}
@@ -170,7 +165,7 @@
 
 \frame{
 	\frametitle{Rare or ``hidden'' populations}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Big concern: coverage!
 		\item<2-> Solutions?
 			\begin{itemize}
@@ -189,7 +184,136 @@
 \section{Parameters and Estimates}
 \frame{\tableofcontents[currentsection]}
 
-\frame{\frametitle{}}
+\frame{
+	\frametitle{Inference from Sample to Population}
+	\begin{itemize}\itemsep1em
+	\item We want to know population parameter $\theta$
+	\item We only observe sample estimate $\hat{\theta}$
+	\item We have a guess but are also uncertain
+	\vspace{1em}
+	\item<2-> What range of values for $\theta$ does our $\hat{\theta}$ imply?
+	\item<2-> Are values in that range large or meaningful?
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{How Uncertain Are We?}
+	\begin{itemize}\itemsep1em
+	\item Our uncertainty depends on sampling procedures (we'll discuss different approaches shortly)
+	\item Most importantly, \textit{sample size}
+		\begin{itemize}
+		\item As $n \rightarrow \infty$, uncertainty $\rightarrow 0$
+		\end{itemize}
+	\item We typically summarize our uncertainty as the \textit{standard error}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Standard Errors (SEs)}
+	\begin{itemize}\itemsep1em
+	\item Definition: ``The standard error of a sample estimate is the average distance that a sample estimate ($\hat{\theta}$) would be from the population parameter ($\theta$) if we drew many separate random samples and applied our estimator to each.''
+\end{itemize}
+}
+
+
+\frame{
+	\frametitle{What affects size of SEs?}
+	\begin{itemize}\itemsep0.5em
+	\item Larger variance in $x$ means smaller SEs
+	\item More unexplained variance in $y$ means bigger SEs
+	\item More observations reduces the numerator, thus smaller SEs
+	\item Other factors:
+		\begin{itemize}
+		\item Homoskedasticity
+		\item Clustering
+		\end{itemize}
+	\item Interpretation:
+		\begin{itemize}
+		\item Large SE: Uncertain about population effect size
+		\item Small SE: Certain about population effect size
+		\end{itemize}
+	\end{itemize}
+}
+
+
+
+\frame{
+	\frametitle{Ways to Express Our Uncertainty}
+	\begin{enumerate}\itemsep1em
+	\item Standard Error
+	\item Confidence interval
+	\item p-value
+	\end{enumerate}
+}
+
+
+\frame{
+	\frametitle{Confidence Interval (CI)}
+	\begin{itemize}\itemsep1em
+	\item Definition: Were we to repeat our procedure of sampling, applying our estimator, and calculating a confidence interval \textit{repeatedly} from the population, a fixed percentage of the resulting intervals would include the true population-level slope.
+	\item Interpretation: If the confidence interval overlaps zero, we are uncertain if $\beta$ differs from zero
+	\end{itemize}
+}
+
+% CI PLOT
+
+\frame{
+	\frametitle{Confidence Interval (CI)}
+	\begin{itemize}\itemsep1em
+	\item A CI is simply a range, centered on the slope
+	\item Units: Same scale as the coefficient ($\frac{y}{x}$)
+	\item We can calculate different CIs of varying \textit{confidence}
+		\begin{itemize}
+		\item Conventionally, $\alpha = 0.05$, so 95\% of the CIs will include the $\beta$
+		\end{itemize}
+	\end{itemize}
+
+}
+
+
+
+
+
+\frame{
+	\frametitle{p-value}
+	\begin{itemize}\itemsep1em
+	\item A summary measure in a hypothesis test
+	\item General definition: ``the probability of a statistic as extreme as the one we observed, if the null hypothesis was true, the statistic is distributed as we assume, and the data are as variable as observed''
+	\item Definition in the context of a mean: ``the probability of a mean as large as the one we observed \dots''
+	%\item Procedure: Calculate a $t$-statistic, then go back to the $t$-distribution to determine how likely a given $t$-ratio is
+	\end{itemize}
+}
+
+
+
+
+\frame{
+	\frametitle{The p-value is not:}
+	\begin{itemize}\itemsep1em
+	\item The probability that a hypothesis is true or false
+	\item A reflection of our confidence or certainty about the result
+	\item The probability that the true slope is in any particular range of values
+	\item A statement about the importance or substantive size of the effect
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Significance}
+	\begin{enumerate}\itemsep1em
+    	\item Substantive significance
+    		\begin{itemize}
+        		\item<2-> Is the effect size (or range of possible effect sizes) \textit{important} in the real world?
+    		\end{itemize}
+    	\item Statistical significance
+    		\begin{itemize}
+        		\item<3-> Is the effect size (or range of possible effect sizes) larger than a predetermined threshold?
+        		\item<3-> Conventionally, $p \le 0.05$
+    		\end{itemize}
+	\end{enumerate}
+}
+
+
 
 
 
@@ -200,7 +324,7 @@
 
 \frame{
 	\frametitle{Simple Random Sampling (SRS)}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Advantages
 			\begin{itemize}
 				\item Simplicity of sampling
@@ -216,10 +340,10 @@
 
 \frame{
 	\frametitle{Sample Estimates from an SRS}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Each unit in frame has equal probability of selection
 		\item Sample statistics are unweighted
-		\item Variances are easy to calculate
+		\item Sampling variances are easy to calculate
 		\item Easy to calculate sample size need for a particular variance
 	\end{itemize}
 }
@@ -236,7 +360,7 @@
 	SE_{\bar{y}} = \sqrt{(1-f)\frac{s^2}{n}}
 	\end{equation}
 	where $f = $ proportion of population sampled,\\
-	$s^2 = $ sample variance, and\\
+	$s^2 = $ sample (element) variance, and\\
 	$n = $ sample size
 }
 
@@ -258,7 +382,7 @@
 
 \frame{
 	\frametitle{Estimating sample size}
-	\begin{itemize}
+	\begin{itemize}\itemsep0.5em
 		\item Imagine we want to conduct a political poll
 		\item We want to know what percentage of the public will vote for which coalition/party
 		\item How big of a sample do we need to make a relatively precise estimate of voter support?
@@ -318,7 +442,7 @@
 
 \frame{
 	\frametitle{Important considerations}
-	\begin{itemize}\itemsep1em
+	\begin{itemize}\itemsep0.5em
 		\item Required sample size depends on $p$ and $SE$
 		\item<2-> In large populations, population size is irrelevant
 		\item<3-> In small populations, precision is influenced by the proportion of population sampled
@@ -329,7 +453,7 @@
 
 \frame{
 	\frametitle{Sampling Error}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Definition? Reasons why a sample estimate may not match the population parameter
 		\item<2-> Unavoidable!
 		\item<3-> Sources of sampling error:
@@ -349,7 +473,7 @@
 
 \frame{
 	\frametitle{Simple Random Sampling (SRS)}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Advantages
 			\begin{itemize}
 				\item Simplicity of sampling
@@ -365,9 +489,9 @@
 
 \frame{
 	\frametitle{Stratified Sampling}
-	\begin{itemize}\itemsep2em
-		\item What is it?
-		\item Why do we do?
+	\begin{itemize}\itemsep1em
+		\item What is it? Random samples within ``strata'' of the population
+		\item Why do we do? To reduce uncertainty of our estimates
 		\item<2-> Most useful when subpopulations are:
 		    \begin{enumerate}
 		    \item identifiable in advance
@@ -379,7 +503,7 @@
 
 \frame{
 	\frametitle{Stratified Sampling}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Advantages
 			\begin{itemize}
 				\item<2-> Avoid certain kinds of sampling errors
@@ -398,7 +522,7 @@
 
 \frame{
 	\frametitle{Outline of Process}
-	\begin{enumerate}\itemsep1em
+	\begin{enumerate}
 		\item Identify our population
 		\item Construct a sampling frame
 		\item Identify variables we already have that are related to our survey variables of interest
@@ -409,20 +533,20 @@
 }
 
 \frame{
-	\frametitle{Estimates from a stratified sample}
-	\begin{itemize}\itemsep2em
+	\frametitle{{\normalsize Estimates from a stratified sample}}
+	\begin{itemize}\itemsep0.75em
 		\item Within-strata estimates are calculated just like an SRS
 		\item Within-strata variances are calculated just like an SRS
 		\vspace{1em}
 		\item Sample-level estimates are weighted averages of stratum-specific estimates
-		\item Sample-level variances are weighted averages of strataum-specific variances
+		\item Sample-level variances are weighted averages of stratum-specific variances
 	\end{itemize}
 }
 
 
 \frame{
 	\frametitle{Design effect}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
         \item What is it?
 		\item<2-> Ratio of variances in a design against a same-sized SRS
 		\item<3-> $d^2 = \frac{Var_{stratified}(y)}{Var_{SRS}(y)}$
@@ -434,7 +558,7 @@
 
 \frame{
 	\frametitle{How many strata?}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item How many strata can we have in a stratified sampling plan?
 		\item<2-> As many as we want, up to the limits of sample size
 	\end{itemize}
@@ -443,7 +567,7 @@
 
 \frame{
 	\frametitle{How do we allocate sample units to strata?}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Proportional allocation
 		\item Optimal precision
 		\item Allocation based on stratum-specific precision objectives
@@ -453,8 +577,8 @@
 
 \frame{
 	\frametitle{Example Setup}
-	\begin{itemize}\itemsep2em
-		\item Interested in individual-level rate of crime victimization in Denmark
+	\begin{itemize}\itemsep1em
+		\item Interested in individual-level rate of crime victimization in some country
 		\item We think rates differ among native-born and immigrant populations
 		\item Assume immigrants make up 12\% of population
 		\item Compare uncertainty from different designs ($n=1000$)
@@ -463,7 +587,7 @@
 
 \frame{
 	\frametitle{SRS}
-	\begin{itemize}\itemsep1em
+	\begin{itemize}\itemsep0.5em
 		\item Assume equal rates across groups ($p=0.10$)
 		\item Overall estimate is just $\frac{Victims}{n}$
 		\item $SE(p) = \sqrt{\frac{p(1-p)}{n-1}}$
@@ -502,7 +626,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIa}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Assume different rates across groups (immigrants higher risk)
 		\item $p_{native}=0.1$ and $p_{imm}=0.3$ (thus $p_{pop} = 0.124$)
 		\item $Var(p) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{p_h(1-p_h)}{n_h - 1}$
@@ -513,7 +637,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIa}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
         \item $SE(p) = 0.01022$
 		\item Compare to SRS:
 		    \begin{itemize}
@@ -526,7 +650,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIa}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
         \item Subgroup variances are still different
         \item $SE(p_{native}) = \sqrt{\frac{p(1-p)}{879}} = \sqrt{\frac{.09}{879}} = 0.010$
         \item $SE(p_{imm}) = \sqrt{\frac{p(1-p)}{119}} = sqrt{\frac{.21}{119}} = 0.040$
@@ -536,7 +660,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIb}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Assume different rates across groups (immigrants lower risk)
 		\item $p_{native}=0.3$ and $p_{imm}=0.1$ (thus $p_{pop} = 0.276$)
 		\item $Var(p) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{p_h(1-p_h)}{n_h - 1}$
@@ -547,7 +671,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIb}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item $SE(p) = 0.014$
 		\item Compare to SRS:
 		    \begin{itemize}
@@ -560,7 +684,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIa}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
         \item Subgroup variances are still different
         \item $SE(p_{native}) = \sqrt{\frac{p(1-p)}{879}} = \sqrt{\frac{.21}{879}} = 0.0155$
         \item $SE(p_{imm}) = \sqrt{\frac{p(1-p)}{119}} = sqrt{\frac{.09}{119}} = 0.0275$
@@ -571,7 +695,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIc}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep0.5em
 		\item Look at same design, but a different survey variable (household size)
 		\item Assume: $\bar{y}_{native}=4$ and $\bar{Y}_imm=6$ (thus $\bar{Y}_{pop} = 4.24$)
 		\item Assume: $Var(Y_{native}) = 1$ and $Var(Y_imm) = 3$ and $Var(Y_{pop}) = 4$
@@ -582,7 +706,7 @@
 
 \frame{
 	\frametitle{Proportionate Allocation IIc}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item $SE(\bar{y}) = 0.0443$
 		\item Compare to SRS:
 		    \begin{itemize}
@@ -611,7 +735,7 @@
 
 \frame{
 	\frametitle{Disproportionate Allocation II}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Neyman optimal allocation
 		\item How does this work?
 		    \begin{itemize}
@@ -624,7 +748,7 @@
 
 \frame{
 	\frametitle{Disproportionate Allocation II}
-	\begin{itemize}\itemsep1em
+	\begin{itemize}\itemsep0.5em
 		\item Assume big difference in victimization
 		\item $p_{native}=0.01$ and $p_{imm}=0.50$  (thus $p_{pop} = 0.0688$)
 		\item Allocate according to: $n_h = n \frac{W_h S_h}{\sum_{h=1}^{H} W_h S_h}$
@@ -636,7 +760,7 @@
 
 \frame{
 	\frametitle{Disproportionate Allocation II}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep0.5em
 		\item $SE(p_{native}) = \sqrt{\frac{p(1-p)}{225}} = \sqrt{\frac{0.0099}{225}} = 0.00663$
 		\item $SE(p_{imm}) = \sqrt{\frac{p(1-p)}{775}} = \sqrt{\frac{.25}{775}} = 0.01796$
 		\item $Var(p) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{p_h(1-p_h)}{n_h - 1}$
@@ -647,7 +771,7 @@
 
 \frame{
 	\frametitle{Disproportionate Allocation II}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep0.5em
 		\item $SE(p) = 0.00622$
 		\item Compare to SRS:
 		    \begin{itemize}
@@ -660,7 +784,7 @@
 
 \frame{
 	\frametitle{Final Considerations}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Reductions in uncertainty come from creating homogeneous groups
 		\item Estimates of design effects are variable-specific
 		\item Sampling variance calculations do not factor in time, costs, or feasibility
@@ -673,7 +797,7 @@
 
 \frame{
 	\frametitle{Cluster Sampling}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item What is it?
 		\item Why do we do?
 		\item<2-> Most useful when:
@@ -687,7 +811,7 @@
 
 \frame{
 	\frametitle{Cluster Sampling}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Advantages
 			\begin{itemize}
 				\item<2-> Cost savings!
@@ -706,7 +830,7 @@
 
 \frame{
 	\frametitle{Cluster Sampling}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Number of stages
 			\begin{itemize}
 				\item One-stage sampling
@@ -721,7 +845,7 @@
 
 \frame{
 	\frametitle{Sampling Variance for Cluster Sampling}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Sampling variance depends on \textit{between}-cluster variation:\\
 		$Var(\bar{y}) = (\frac{1-f}{a})(\frac{1}{a-1})(\sum_{\alpha=1}^{a}(\bar{y}_{\alpha} - \bar{y})^2)$
 		\item When \textit{between}-cluster variance is high, \textit{within}-cluster variance is likely to be low
@@ -733,7 +857,7 @@
 
 \frame{
 	\frametitle{Design Effect for Cluster Sampling}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Cluster samples almost always less \textit{statistically} efficient than SRS
 		\item Design Effect depends on cluster homogeneity:
 		\begin{itemize}\itemsep1em
@@ -754,7 +878,7 @@
 
 \frame{
 	\frametitle{Goal of Survey Research}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item The goal of survey research is to estimate population-level quantities (e.g., means, proportions, totals)
 		\item Samples estimate those quantities with uncertainty (sampling error)
 		\item Sample estimates are unbiased if they match population quantities
@@ -773,8 +897,7 @@
 				\item Due to nonresponse
 				\item Due to sampling error
 			\end{itemize}
-		\item<2-> Weights can be used to ``correct'' a sample
-		\item<3-> Weighting is never perfect
+		\item<2-> Weighting is never perfect
 			\begin{itemize}
 				\item Limited to work with observed variables
 				\item Rarely have good knowledge of coverage, nonresponse, or sampling error
@@ -785,7 +908,7 @@
 
 \frame{
 	\frametitle{Three Kinds of Weights}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Design Weights
 		\item Nonresponse Weights
 		\item Post-Stratification Weights
@@ -794,7 +917,7 @@
 
 \frame{
 	\frametitle{Design Weights}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Address design-related unequal probability of selection into a sample
 		\item Applied to \textit{complex survey designs}:
 			\begin{itemize}
@@ -807,8 +930,8 @@
 }
 
 \frame{
-	\frametitle{Design Weights: Simple Random Sampling}
-	\begin{itemize}\itemsep1em
+	\frametitle{Design Weights: SRS}
+	\begin{itemize}\itemsep0.5em
 		\item Imagine sampling frame of 100,000 units
 		\item Sample size will be 1,000 
 		\item What is the probability that a unit in the sampling frame is included in the sample?
@@ -819,19 +942,19 @@
 }
 
 \frame{
-	\frametitle{Design Weights: Stratified Sample}
-	\begin{itemize}\itemsep1em
+	\frametitle{{\normalsize Design Weights: Stratified Sample}}
+	\begin{itemize}\itemsep0.5em
 		\item Imagine sampling frame of 100,000 units
 			\begin{itemize}
-				\item 90,000 Danes \& 10,000 Immigrants
+				\item 90,000 Native-born \& 10,000 Immigrants
 			\end{itemize}
 		\item Sample size will be 1,000 (proportionate allocation)
 			\begin{itemize}
-				\item 900 Danes \& 100 Immigrants
+				\item 900 Native-born \& 100 Immigrants
 			\end{itemize}
 		\item What is the probability that a unit in the sampling frame is included in the sample?
 			\begin{itemize}
-				\item<2-> $p_{Danish} = \frac{900}{90,000} = .01$
+				\item<2-> $p_{native} = \frac{900}{90,000} = .01$
 				\item<2-> $p_{Imm} = \frac{100}{10,000} = .01$
 			\end{itemize}
 		\item<3-> Design weight for all units is $w = 1/p = 100$
@@ -840,24 +963,24 @@
 }
 
 \frame{
-	\frametitle{Design Weights: Stratified Sample}
-	\begin{itemize}\itemsep0.75em
+	\frametitle{{\normalsize Design Weights: Stratified Sample}}
+	\begin{itemize}\itemsep0.5em
 		\item Imagine sampling frame of 100,000 units
 		\begin{itemize}
-			\item 90,000 Danes \& 10,000 Immigrants
+			\item 90,000 Native-born \& 10,000 Immigrants
 		\end{itemize}
 		\item Sample size will be 1,000 (disproportionate allocation)
 		\begin{itemize}
-			\item 500 Danes \& 500 Immigrants
+			\item 500 Native-born \& 500 Immigrants
 		\end{itemize}
 		\item What is the probability that a unit in the sampling frame is included in the sample?
 		\begin{itemize}
-			\item<2-> $p_{Danish} = \frac{500}{90,000} = .0056$
+			\item<2-> $p_{Native} = \frac{500}{90,000} = .0056$
 			\item<2-> $p_{Imm} = \frac{500}{10,000} = .05$
 		\end{itemize}
 		\item<3-> Design weights differ across units: 
 			\begin{itemize}
-				\item $w_{Danish} = 1/p_{Danish} = 178.57$
+				\item $w_{Native} = 1/p_{Danish} = 178.57$
 				\item $w_{Imm} = 1/p_{Imm} = 20$
 			\end{itemize}
 		\item<3-> Disproportionate allocation is not \textit{self-weighting}
@@ -866,7 +989,7 @@
 
 \frame{
 	\frametitle{Design Weights: Cluster Sample}
-	\begin{itemize}\itemsep0.75em
+	\begin{itemize}\itemsep0.5em
 		\item Imagine sampling frame of 1000 units in 5 clusters of varying sizes
 		\item Sample size will be 10 each from 3 clusters
 		\item What is the probability that a unit in the sampling frame is included in the sample?
@@ -885,7 +1008,7 @@
 
 \frame{
 	\frametitle{Nonresponse Weights}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Correct for nonresponse
 		\item Require knowledge of nonrespondents on variables that have been measured for respondents
 		\item Requires data are \textit{missing at random}
@@ -899,15 +1022,15 @@
 
 \frame{
 	\frametitle{Nonresponse Weights: Example}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep1em
 		\item Imagine immigrants end up being less likely to respond\footnote{{\scriptsize This refers to a lower RR in this particular survey sample, not in general.}}
 			\begin{itemize}
-				\item $RR_{Danish} = 1.0$
+				\item $RR_{Native} = 1.0$
 				\item $RR_{Imm} = 0.8$
 			\end{itemize}
 		\item<2-> Using weighting classes:
 			\begin{itemize}
-				\item $w_{rr,Danish} = 1/1 = 1$
+				\item $w_{rr,Native} = 1/1 = 1$
 				\item $w_{rr,Imm} = 1/0.8 = 1.25$
 			\end{itemize}
 		\item<2-> Can generalize to multiple variables and strata
@@ -936,8 +1059,8 @@
 		\begin{tabular}{lrrlr}
 			\hline
 			Group             & Pop. & Sample & Rep.                &              Weight \\ \hline
-			Danish, Female    &  .45 &     .5 & \onslide<2->{Over}  & \onslide<3->{0.900} \\
-			Danish, Male      &  .45 &     .4 & \onslide<2->{Under} & \onslide<4->{1.125} \\
+			Native, Female    &  .45 &     .5 & \onslide<2->{Over}  & \onslide<3->{0.900} \\
+			Native, Male      &  .45 &     .4 & \onslide<2->{Under} & \onslide<4->{1.125} \\
 			Immigrant, Female &  .05 &    .07 & \onslide<2->{Over}  & \onslide<5->{0.714} \\
 			Immigrant, Male   &  .05 &    .03 & \onslide<2->{Under} & \onslide<6->{1.667}\\  \hline
 		\end{tabular}
@@ -947,7 +1070,7 @@
 
 \frame{
 	\frametitle{Post-Stratification}
-	\begin{itemize}\itemsep2em
+	\begin{itemize}\itemsep0.5em
 		\item Should only be done after correcting for sampling design
 		\item Strata must be large ($n>15$)
 		\item Need accurate population-level stratum sizes
@@ -961,12 +1084,201 @@
 }
 
 
-\subsection{Weighted Analyses}
-\frame{\tableofcontents[currentsubsection]}
+\frame{
+\frametitle{Weighted Analyses}
+
+\begin{itemize}
+\item We can analyze data that \textit{should be} weighted without the weights, but they are no longer mathematically representative of the larger population
+\item Using the weights is the way to make population-representative claims from survey data
+\item Most statistics can be modified to use weights, e.g.:\\
+	\begin{itemize}
+	\item Unweighted mean: $\frac{1}{n}\sum_{i=1}^{n} x_i$
+	\item Weighted mean: $\frac{1}{n}\sum_{i=1}^{n} x_i * w_i$
+	\end{itemize}
+\end{itemize}
+}
 
 
 
+\section{Response Rates}
+\frame{\tableofcontents[currentsection]}
 
+\frame{
+    \frametitle{Response Rates}
+    \begin{itemize}\itemsep1em
+        \item Why do we care?
+        \item<2-> Survey Error
+            \begin{itemize}
+                \item<2-> Variance
+                \item<2-> Bias
+            \end{itemize}
+        \item<3-> Sample size calculations (and design effects) are based on completed interviews
+        \item<4-> Cost, time, and effort
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Response Rates}
+    \begin{itemize}
+        \item Imagine we need $n=1000$
+        \item How many attempts to obtain that sample:\\
+        \vspace{1em}
+        \begin{tabular}{l r}\toprule
+        Response Rate & Needed Attempts\\ \midrule
+        1.00 & 1000 \\
+        0.75 & 1333 \\
+        0.50 & 2000 \\
+        0.25 & 4000 \\
+        0.10 & 10,000 \\ \bottomrule
+        \end{tabular}
+    \end{itemize}
+}
+
+
+\frame{
+	\frametitle{Response Rate}
+	\begin{itemize}\itemsep1em
+		\item Interviews divided by eligibles
+		\item $RR = \frac{I}{E}$
+		\item Challenges
+    		\begin{itemize}
+        		\item Unknown eligibility
+        		\item Partial interviews
+        		\item Non-probability samples
+        		\item Complex survey designs
+    		\end{itemize}
+        \item Cooperation Rate (I's divided by contacts)
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Disposition Codes}
+
+	Every attempt to interview someone needs to be categorized into a ``disposition code''. The usual codes fall into four broad categories:
+
+	\begin{itemize}\itemsep1em
+		\item Interviews
+		\item Refusals
+		\item Unknowns
+		\item Ineligibles
+	\end{itemize}
+}
+
+\frame<1>[label=codes]{
+	\frametitle{Disposition Codes}
+	\begin{itemize}\itemsep1em
+		\item Complete Interview (I)
+		\item Partial Interview (P)
+		\item Non-interviews
+    		\begin{itemize}
+        		\item Refusal (R)
+        		\item Non-contact (NC)
+        		\item Other (O)
+    		\end{itemize}
+		\item<2> Unknowns (U)
+		\item<2> Ineligibles
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{What is a refusal?}
+	\begin{itemize}\itemsep1em
+		\item<1-> How do categorize a respondent as a refusal?
+		\item<2-> When can we try to convert an apparent refusal?
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{What is a refusal?}
+	\begin{itemize}\itemsep0.5em
+		\item<1-> ``I don't want to participate.''
+		\item<2-> ``I'm too busy to do this right now.''
+		\item<3-> ``What do I get for my time?''
+		\item<4-> (Hang-up phone without saying anything.)
+		\item<5-> ``Okay, but I only have 5 minutes.''
+		\item<6-> ``My husband can do it if you call back.''
+		\item<7-> ``How did you get my number?''
+		\item<8-> ``Go f' yourself.''
+	\end{itemize}
+}
+
+
+\againframe{codes}
+
+\frame{
+	\frametitle{Eligibility}
+	\begin{itemize}\itemsep1em
+		\item<1-> Why would an ineligible unit be in our sample?
+		\item<2-> How do we determine ineligibility?
+		\item<3-> What do we do with ``unknowns''?
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Response Rates\footnote{Note: Simplified slightly}}
+	Without accounting for eligibility of unknowns:
+	\begin{itemize}\itemsep0.5em
+		\item $RR1 = \frac{I}{(I + P) + (R + NC) + U}$
+		\item $RR2 = \frac{I + P}{(I + P) + (R + NC) + U}$
+	\end{itemize}
+
+	\vspace{1em}
+
+	Accounting for eligibility of unknowns:
+    \begin{itemize}\itemsep0.5em
+		\item $RR3 = \frac{I}{(I + P) + (R + NC) + (e*U)}$
+		\item $RR4 = \frac{I + P}{(I + P) + (R + NC) + (e*U)}$
+		\vspace{0.5em}
+		\item $e$ is estimated Pr(eligible) among unknowns
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Refusal Rates}
+	\begin{itemize}\itemsep1em
+		\item Related to response rate
+		\item Numerator is refusals
+		\item E.g., $REF1 = \frac{R}{(I + P) + (R + NC) + U}$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Complex Survey Designs}
+	\begin{itemize}\itemsep1em
+		\item Stratified Sampling (unequal allocation)
+    		\begin{itemize}
+        		\item Sums of codes weighted by $\frac{1}{p}$
+        		\item $p$ is probability of selection
+        		\item May want to report stratum-specific rates
+    		\end{itemize}
+    	\item Multi-stage sampling (e.g., cluster sampling)
+        	\begin{itemize}
+            	\item RR is product of cluster cooperation and within-cluster response rate
+        	\end{itemize}
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Internet Surveys}
+	\begin{itemize}\itemsep1em
+		\item For \textit{probability-based samples}, RR is a product of:
+    		\begin{itemize}
+        		\item Recruitment Rate (RR for panel enrollment)
+        		\item Completion Rate (RR for specific survey)
+        		\item Profile Rate (in some cases)
+        		\item E.g., if Recruitment Rate is 30\% and Completion Rate is 80\%, $RR = 0.3 * 0.8 =$ 24\%
+    		\end{itemize}
+    	\item For \textit{non-probability samples}, RR is undefined
+        	\begin{itemize}
+            	\item No sampling involved (so no denominator)
+            	\item If from panel, report Completion Rate
+            	\item If fully opt-in, there's nothing you can do
+        	\end{itemize}
+	\end{itemize}
+}
 
 
 
