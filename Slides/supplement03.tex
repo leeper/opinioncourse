@@ -449,6 +449,21 @@ $\widehat{SE}_{SATE} = \sqrt{\frac{\widehat{Var}(Y_0)}{N_0} + \frac{\widehat{Var
 
 }
 
+
+\frame{
+	\frametitle{$t$-statistic}
+	\begin{itemize}\itemsep1em
+	\item A measure of how large a coefficient is relative to our uncertainty about its size
+	\item Typically used to test a formal null hypothesis:\\
+		\begin{itemize}\itemsep1em
+		\item No effect null: $t_{\hat{\beta_1}} = \frac{\hat{\beta_1}}{SE_{\hat{\beta_1}}}$
+		\item Any other null: $\frac{\hat{\beta_1} - \alpha}{SE_{\hat{\beta_1}}}$, where $\alpha$ is our null hypothesis effect size
+		\end{itemize}
+	\item<2-> Note: The $t$-statistic from a $t$-test of mean-difference is the same as the $t$-statistic from a $t$-test on an OLS slope for a dummy covariate
+	\end{itemize}
+}
+
+
 \frame{
 \frametitle{Statistical Significance II}
 \begin{itemize}
@@ -457,9 +472,9 @@ $\widehat{SE}_{SATE} = \sqrt{\frac{\widehat{Var}(Y_0)}{N_0} + \frac{\widehat{Var
 	\item A two-group t-test (in R: \texttt{t.test()})
 	\item A regression of the outcome on an indicator for treatment group (in R: \texttt{lm(y ~ tr)})
 	\end{itemize}
-\item (See regression slides to understand the math involved)
 \end{itemize}
 }
+
 
 
 \frame{
