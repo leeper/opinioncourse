@@ -7,7 +7,7 @@
 *.aux
 *.log
 *.out
-*.synctex.gz
+*.synctex*
 *.bbl
 *.blg
 *.nav
@@ -17,6 +17,7 @@
 *.mtc*
 *.stc*
 *.bib.bak
+*.vrb
 
 # files to ignore #
 FinalExam.*
