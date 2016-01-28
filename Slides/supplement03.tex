@@ -1,6 +1,6 @@
 \input{preamble}
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{shapes,arrows,decorations}
 
 \title{Methods Supplementary Lecture 3:\\Experimentation}
 
@@ -557,7 +557,7 @@ $Power = \phi\left( \frac{|\mu_1 - \mu_0|\sqrt{N}}{2\sigma} - \phi^{-1}\left( 1 
 
 \frame{
 \begin{center}
-\includegraphics[height=\textwidth]{images/power}
+\includegraphics[height=.8\textwidth]{images/power}
 \end{center}
 }
 
@@ -601,9 +601,9 @@ $Power = \phi\left( \frac{|\mu_1 - \mu_0|\sqrt{N}}{2\sigma} - \phi^{-1}\left( 1 
 \frametitle{Asymmetric Noncompliance}
 \begin{itemize}
 \item If noncompliance only occurs in one group, it is \textit{asymmetric}
-\item We can ignore non-compliance and analyze data ``as-assigned'', but this ``intention to treat'' effect will underestimate our effects because some people were not treated as assigned\\
+\item We can ignore non-compliance and analyze the ``intention to treat'' effect, which will underestimate our effects because some people were not treated as assigned\\
 	$ITT = \overline{Y}_1 - \overline{Y}_0$
-\item We can use ``instrumental variables'' analysis and estimate the ``local average treatment effect'' (LATE) for those that complied with treatment:\\
+\item We can use ``instrumental variables'' to estimate the ``local average treatment effect'' (LATE) for those that complied with treatment:\\
 	$LATE = \frac{ITT}{Percent Compliant}$
 \item We can ignore randomization and analyze data ``as-treated'', but this makes our study no longer an experiment
 \end{itemize}
