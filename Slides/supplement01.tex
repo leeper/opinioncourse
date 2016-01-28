@@ -15,7 +15,175 @@
 \section{Populations}
 \frame{\tableofcontents[currentsection]}
 
-\frame{\frametitle{}}
+\subsection{Representativeness}
+\frame{\tableofcontents[currentsubsection, subsectionstyle=show/shaded, sectionstyle=show/hide]}
+
+\frame{
+	\frametitle{Inference Population}
+	\begin{itemize}\itemsep2em
+		\item We want to speak to a population
+		\item But what population is it?
+		\item<2-> Example: ``The UK population''
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Population Census}
+	\begin{itemize}\itemsep2em
+		\item All population units are in study
+		\item<2-> History of national censuses
+			\begin{itemize}
+				\item<2-> Denmark 1769--1970 (sporadic)
+				\item<2-> U.S. 1790 (decennial)
+				\item<2-> India 1871 (decennial)
+			\end{itemize}
+		\item<3-> Other kinds of census
+			\begin{itemize}
+				\item<3-> Citizen registry
+				\item<3-> Commercial, medical, government records
+				\item<3-> ``Big data''
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Advantages and Disadvantages}
+	\begin{itemize}\itemsep2em
+		\item Advantages
+			\begin{itemize}
+				\item<2-> Perfectly representative
+				\item<2-> Sample statistics are population parameters
+			\end{itemize}
+		\item Disadvantages
+			\begin{itemize}
+				\item<3-> Costs
+				\item<3-> Feasibility
+				\item<3-> Need
+			\end{itemize}		
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Representativeness}
+	\begin{itemize}\itemsep2em
+		\item What does it mean for a sample to be representative?
+		\item<2-> Different conceptions of representativeness:
+			\begin{itemize}
+			\item Design-based: A sample is representative because of how it was drawn (e.g., randomly)
+			\item Demographic-based: A sample is representative because it resembles in the population in some way (e.g., same proportion of women in sample and population, etc.)
+			\item Expert judgement: A sample is representative as judged by an expert who deems it ``fit for purpose''
+			\end{itemize}
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Obtaining Representativeness}
+	\begin{itemize}\itemsep2em
+		\item<1-> Quota sampling (common prior to the 1940s)
+		\item<2-> Simple random sampling
+		\item<3-> Advanced survey designs
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Convenience Samples}
+	\begin{itemize}\itemsep2em
+		\item<1-> What is a convenience sample?
+		\item<2-> Different types:
+			\begin{itemize}
+				\item<2-> Passive/opt-in
+				\item<2-> Sample of convenience (not a sample per se)
+				\item<2-> Sample matching
+				\item<2-> Online panels
+			\end{itemize}
+		\item<3-> ``Purposive'' samples (common in qualitative studies)
+	\end{itemize}
+}
+
+\subsection{Sampling Frames}
+\frame{\tableofcontents[currentsubsection, subsectionstyle=show/shaded, sectionstyle=show/hide]}
+
+\frame{
+	\frametitle{Sampling Frames}
+	\begin{itemize}\itemsep2em
+		\item Enumeration (listing) of all units eligible for sample selection
+		\item Two flavors:
+			\begin{itemize}
+				\item Random sample from an ordered list
+				\item Systematic sampling from a randomized list
+			\end{itemize}
+		\item Building a sampling frame
+			\begin{itemize}
+				\item Combine existing lists
+				\item Canvass/enumerate from scratch
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Big considerations}
+	\begin{itemize}\itemsep2em
+		\item Coverage!
+			\begin{itemize}
+				\item Undercoverage
+				\item Overcoverage
+			\end{itemize}
+		\item<2-> What is a unit?
+		\item<3-> Clustering
+		\item<4-> Overlap between units
+		\item<5-> List maintenance
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Multi-frame Designs}
+	\begin{itemize}\itemsep2em
+		\item Construct one sample from multiple sampling frames
+		\item E.g., ``Dual-frame'' (landline and mobile)
+		\item Analytically complicated
+			\begin{itemize}
+				\item Overlap of frames
+				\item Sample probabilities in each frame
+			\end{itemize} 
+	\end{itemize}
+}
+
+
+\subsection{Sampling without a Frame}
+\frame{\tableofcontents[currentsubsection, subsectionstyle=show/shaded, sectionstyle=show/hide]}
+
+\frame{
+	\frametitle{Sampling without a Sampling Frame}
+	\begin{itemize}\itemsep2em
+		\item Sometimes we have a population that can be sampled but not (easily) enumerated in full
+		\item<2-> Examples
+			\begin{itemize}
+				\item<2-> Protest attendees
+				\item<3-> Streams (e.g., people buying groceries)
+				\item<4-> Points in time
+			\end{itemize}
+		\item<5-> Population is the sampling frame
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Rare or ``hidden'' populations}
+	\begin{itemize}\itemsep2em
+		\item Big concern: coverage!
+		\item<2-> Solutions?
+			\begin{itemize}
+				\item<3-> Snowball sampling
+				\item<3-> Informant sampling
+				\item<3-> Targeted sampling
+				\item<3-> Respondent-driven sampling
+			\end{itemize}
+	\end{itemize}
+}
+
+
+
 
 
 \section{Parameters and Estimates}
@@ -25,22 +193,779 @@
 
 
 
+
+
 \section{Simple Random Sampling}
 \frame{\tableofcontents[currentsection]}
 
-\frame{\frametitle{}}
+\frame{
+	\frametitle{Simple Random Sampling (SRS)}
+	\begin{itemize}\itemsep2em
+		\item Advantages
+			\begin{itemize}
+				\item Simplicity of sampling
+				\item Simplicity of analysis
+			\end{itemize}
+		\item Disadvantages
+			\begin{itemize}
+				\item Need sampling frame and units without any structure
+				\item Possibly expensive
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Sample Estimates from an SRS}
+	\begin{itemize}\itemsep2em
+		\item Each unit in frame has equal probability of selection
+		\item Sample statistics are unweighted
+		\item Variances are easy to calculate
+		\item Easy to calculate sample size need for a particular variance
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Sample mean}
+	\begin{equation}
+	\bar{y} = \frac{1}{n}\sum_{i=1}^{n}y_i
+	\end{equation}
+	where $y_i = $ value for a unit, and\\
+	$n = $ sample size
+	
+	\begin{equation}
+	SE_{\bar{y}} = \sqrt{(1-f)\frac{s^2}{n}}
+	\end{equation}
+	where $f = $ proportion of population sampled,\\
+	$s^2 = $ sample variance, and\\
+	$n = $ sample size
+}
+
+\frame{
+	\frametitle{Sample proportion}
+	\begin{equation}
+	\bar{y} = \frac{1}{n}\sum_{i=1}^{n}y_i
+	\end{equation}
+	where $y_i = $ value for a unit, and\\
+	$n = $ sample size
+	
+	\begin{equation}
+	SE_{\bar{y}} = \sqrt{\frac{(1-f)}{(n-1)}p(1-p)}
+	\end{equation}
+	where $f = $ proportion of population sampled,\\
+	$p = $ sample proportion, and\\
+	$n = $ sample size
+}
+
+\frame{
+	\frametitle{Estimating sample size}
+	\begin{itemize}
+		\item Imagine we want to conduct a political poll
+		\item We want to know what percentage of the public will vote for which coalition/party
+		\item How big of a sample do we need to make a relatively precise estimate of voter support?
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Estimating sample size}
+	\begin{equation}
+		Var(p) = (1-f)\frac{p(1-p)}{n-1}
+	\end{equation}
+	
+	Given the large population:	
+	\begin{equation}
+		Var(p) = \frac{p(1-p)}{n-1}
+	\end{equation}
+	
+	\vspace{1em}
+	Need to solve the above for $n$.
+	\begin{equation}
+	\only<2->{n = \frac{p(1-p)}{v(p)} = \frac{p(1-p)}{SE^2}}
+	\end{equation}
+}
+
+\frame{
+	\frametitle{Estimating sample size}
+    Determining sample size requires:
+    	\begin{itemize}
+    		\item A possible value of $p$
+    		\item A desired precision (SE)
+    	\end{itemize}
+	\vspace{1em}
+	If support for each coalition is evenly matched ($p = 0.5$):
+	\begin{equation}
+	n = \frac{0.5(1-0.5)}{SE^2} = \frac{0.25}{SE^2}
+	\end{equation}
+}
+
+\frame{
+	\frametitle{Estimating sample size}
+	What precision (margin of error) do we want?
+	\begin{itemize}
+		\item +/- 2 percentage points: $SE = 0.01$
+			\begin{equation}
+			n = \frac{0.25}{0.01^2} = \frac{0.25}{0.0001} = 2500
+			\end{equation}
+		\item<2-> +/- 5 percentage points: $SE = 0.025$
+			\begin{equation}
+			n = \frac{0.25}{0.000625} = 400
+			\end{equation}
+		\item<3-> +/- 0.5 percentage points: $SE = 0.0025$
+			\begin{equation}
+			n = \frac{0.25}{0.00000625} = 40,000
+			\end{equation}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Important considerations}
+	\begin{itemize}\itemsep1em
+		\item Required sample size depends on $p$ and $SE$
+		\item<2-> In large populations, population size is irrelevant
+		\item<3-> In small populations, precision is influenced by the proportion of population sampled
+		\item<4-> In anything other than an SRS, sample size calculation is more difficult
+		\item<5-> Much political science research assumes SRS even though a more complex design is actually used
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Sampling Error}
+	\begin{itemize}\itemsep2em
+		\item Definition? Reasons why a sample estimate may not match the population parameter
+		\item<2-> Unavoidable!
+		\item<3-> Sources of sampling error:
+			\begin{itemize}
+				\item Sampling
+				\item Sample size
+				\item Unequal probabilities of selection
+				\item Non-Stratification
+				\item Cluster sampling
+			\end{itemize}
+	\end{itemize}
+}
 
 
 \section{Complex Survey Design}
 \frame{\tableofcontents[currentsection]}
 
-\frame{\frametitle{}}
+\frame{
+	\frametitle{Simple Random Sampling (SRS)}
+	\begin{itemize}\itemsep2em
+		\item Advantages
+			\begin{itemize}
+				\item Simplicity of sampling
+				\item Simplicity of analysis
+			\end{itemize}
+		\item Disadvantages
+			\begin{itemize}
+				\item Need complete sampling frame
+				\item Possibly expensive
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Stratified Sampling}
+	\begin{itemize}\itemsep2em
+		\item What is it?
+		\item Why do we do?
+		\item<2-> Most useful when subpopulations are:
+		    \begin{enumerate}
+		    \item identifiable in advance
+		    \item differ from one another
+		    \item have low within-stratum variance
+		    \end{enumerate}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Stratified Sampling}
+	\begin{itemize}\itemsep2em
+		\item Advantages
+			\begin{itemize}
+				\item<2-> Avoid certain kinds of sampling errors
+				\item<2-> Representative samples of subpopulations
+				\item<2-> Often, lower variances (greater precision of estimates)
+			\end{itemize}
+		\item<3-> Disadvantages
+			\begin{itemize}
+				\item<4-> Need complete sampling frame
+				\item<4-> Possibly (more) expensive
+				\item<4-> No advantage if strata are similar
+				\item<4-> Analysis is more potentially more complex than SRS
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Outline of Process}
+	\begin{enumerate}\itemsep1em
+		\item Identify our population
+		\item Construct a sampling frame
+		\item Identify variables we already have that are related to our survey variables of interest
+		\item Stratify or subset or sampling frame based on these characteristics
+		\item Collect an SRS (of some size) within each stratum
+		\item Aggregate our results
+	\end{enumerate}
+}
+
+\frame{
+	\frametitle{Estimates from a stratified sample}
+	\begin{itemize}\itemsep2em
+		\item Within-strata estimates are calculated just like an SRS
+		\item Within-strata variances are calculated just like an SRS
+		\vspace{1em}
+		\item Sample-level estimates are weighted averages of stratum-specific estimates
+		\item Sample-level variances are weighted averages of strataum-specific variances
+	\end{itemize}
+}
 
 
-\section{Weights}
+\frame{
+	\frametitle{Design effect}
+	\begin{itemize}\itemsep2em
+        \item What is it?
+		\item<2-> Ratio of variances in a design against a same-sized SRS
+		\item<3-> $d^2 = \frac{Var_{stratified}(y)}{Var_{SRS}(y)}$
+		\item<4-> Possible to convert design effect into an \textit{effective sample size}:
+		\item<4-> $n_{effective} = \frac{n}{d}$
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{How many strata?}
+	\begin{itemize}\itemsep2em
+		\item How many strata can we have in a stratified sampling plan?
+		\item<2-> As many as we want, up to the limits of sample size
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{How do we allocate sample units to strata?}
+	\begin{itemize}\itemsep2em
+		\item Proportional allocation
+		\item Optimal precision
+		\item Allocation based on stratum-specific precision objectives
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Example Setup}
+	\begin{itemize}\itemsep2em
+		\item Interested in individual-level rate of crime victimization in Denmark
+		\item We think rates differ among native-born and immigrant populations
+		\item Assume immigrants make up 12\% of population
+		\item Compare uncertainty from different designs ($n=1000$)
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{SRS}
+	\begin{itemize}\itemsep1em
+		\item Assume equal rates across groups ($p=0.10$)
+		\item Overall estimate is just $\frac{Victims}{n}$
+		\item $SE(p) = \sqrt{\frac{p(1-p)}{n-1}}$
+		\item $SE(p) = \sqrt{\frac{0.09}{999}} = 0.0095$
+		\item<2-> SEs for subgroups (native-born and immigrants)?
+		\item<3-> What happens if we don't get any immigrants in our sample?
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Proportionate Allocation I}
+	\begin{itemize}\itemsep0.75em
+		\item Assume equal rates across groups
+		\item Sample 880 native-born and 120 immigrant individuals
+		\item $SE(p) = \sqrt{Var(p)}$, where
+		    \begin{itemize}\itemsep0.75em
+		    \item $Var(p) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{p_h(1-p_h)}{n_h - 1}$
+		    \item $Var(p) = (\frac{0.09}{879})(.88^2) + (\frac{0.09}{119})(.12^2)$
+		    \item $SE(p) = 0.0095$
+		    \end{itemize}
+		\item Design effect: $d^2 = \frac{0.0095^2}{0.0095^2} = 1$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Proportionate Allocation I}
+	\begin{itemize}\itemsep0.75em
+		\item Note that in this design we get different levels of uncertainty for subgroups
+		\item $SE(p_{native}) = \sqrt{\frac{p(1-p)}{879}} = \sqrt{\frac{0.09}{879}} = 0.010$
+		\item $SE(p_{imm}) = \sqrt{\frac{p(1-p)}{119}} = \sqrt{\frac{0.09}{119}} = 0.028$
+	\end{itemize}
+}
+
+
+
+\frame{
+	\frametitle{Proportionate Allocation IIa}
+	\begin{itemize}\itemsep2em
+		\item Assume different rates across groups (immigrants higher risk)
+		\item $p_{native}=0.1$ and $p_{imm}=0.3$ (thus $p_{pop} = 0.124$)
+		\item $Var(p) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{p_h(1-p_h)}{n_h - 1}$
+		\item $Var(p) = (\frac{0.09}{879})(.88^2) + \frac{0.21}{119})(.12^2))$
+		\item $SE(p) = 0.01022$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Proportionate Allocation IIa}
+	\begin{itemize}\itemsep2em
+        \item $SE(p) = 0.01022$
+		\item Compare to SRS:
+		    \begin{itemize}
+		        \item $SE(p) = \sqrt{\frac{0.124(1-0.124)}{n-1}} = 0.0104$
+		    \end{itemize}
+		\item Design effect: $d^2 = \frac{0.01022^2}{0.0104^2} = 0.9657$
+		\item $n_{effective} = \frac{n}{sqrt(d^2)} = 1017$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Proportionate Allocation IIa}
+	\begin{itemize}\itemsep2em
+        \item Subgroup variances are still different
+        \item $SE(p_{native}) = \sqrt{\frac{p(1-p)}{879}} = \sqrt{\frac{.09}{879}} = 0.010$
+        \item $SE(p_{imm}) = \sqrt{\frac{p(1-p)}{119}} = sqrt{\frac{.21}{119}} = 0.040$
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Proportionate Allocation IIb}
+	\begin{itemize}\itemsep2em
+		\item Assume different rates across groups (immigrants lower risk)
+		\item $p_{native}=0.3$ and $p_{imm}=0.1$ (thus $p_{pop} = 0.276$)
+		\item $Var(p) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{p_h(1-p_h)}{n_h - 1}$
+		\item $Var(p) = (\frac{0.21}{879})(.88^2) + \frac{0.09}{119})(.12^2))$
+		\item $SE(p) = 0.014$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Proportionate Allocation IIb}
+	\begin{itemize}\itemsep2em
+		\item $SE(p) = 0.014$
+		\item Compare to SRS:
+		    \begin{itemize}
+		        \item $SE(p) = \sqrt{\frac{0.276(1-0.276)}{n-1}} = 0.0141$
+		    \end{itemize}
+		\item Design effect: $d^2 = \frac{0.014^2}{0.0141^2} = 0.9859$
+		\item $n_{effective} = \frac{n}{sqrt(d^2)} = 1007$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Proportionate Allocation IIa}
+	\begin{itemize}\itemsep2em
+        \item Subgroup variances are still different
+        \item $SE(p_{native}) = \sqrt{\frac{p(1-p)}{879}} = \sqrt{\frac{.21}{879}} = 0.0155$
+        \item $SE(p_{imm}) = \sqrt{\frac{p(1-p)}{119}} = sqrt{\frac{.09}{119}} = 0.0275$
+	\end{itemize}
+}
+
+
+
+\frame{
+	\frametitle{Proportionate Allocation IIc}
+	\begin{itemize}\itemsep2em
+		\item Look at same design, but a different survey variable (household size)
+		\item Assume: $\bar{y}_{native}=4$ and $\bar{Y}_imm=6$ (thus $\bar{Y}_{pop} = 4.24$)
+		\item Assume: $Var(Y_{native}) = 1$ and $Var(Y_imm) = 3$ and $Var(Y_{pop}) = 4$
+		\item $Var(\bar{y}) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{s_h^2}{n_h}$
+		\item $SE(\bar{y}) = \sqrt{\frac{1^2}{880}(.88^2) + \frac{3^2}{120}(.12^2)} = 0.0443$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Proportionate Allocation IIc}
+	\begin{itemize}\itemsep2em
+		\item $SE(\bar{y}) = 0.0443$
+		\item Compare to SRS:
+		    \begin{itemize}
+		        \item $SE(\bar{y}) = \sqrt{\frac{s^2}{n}} = \sqrt{4/1000} = 0.0632$
+		    \end{itemize}
+		\item Design effect: $d^2 = \frac{0.0443^2}{0.0632^2} = 0.491$
+		\item $n_{effective} = \frac{n}{sqrt(d^2)} = 1427$
+		\item<2-> Why is $d^2$ so much larger here?
+	\end{itemize}
+}
+
+
+
+\frame{
+	\frametitle{Disproportionate Allocation I}
+	\begin{itemize}\itemsep1em
+        \item Previous designs obtained different precision for subgroups
+		\item Design to obtain stratum-specific precision (e.g., $SE(p_h) = 0.02$)
+		\item $n_h = \frac{p(1-p)}{v(p)} = \frac{p(1-p)}{SE^2}$
+		\item $n_{native} = \frac{0.09}{0.02^2} = 225$
+		\item $n_{imm} = \frac{0.21}{0.02^2} = 525$
+		\item $n_{total} = 225 + 525 = 750$
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Disproportionate Allocation II}
+	\begin{itemize}\itemsep2em
+		\item Neyman optimal allocation
+		\item How does this work?
+		    \begin{itemize}
+		        \item Allocate cases to strata based on within-strata variance
+		        \item Only works for one variable at a time
+		        \item Need to know within-strata variance
+		    \end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Disproportionate Allocation II}
+	\begin{itemize}\itemsep1em
+		\item Assume big difference in victimization
+		\item $p_{native}=0.01$ and $p_{imm}=0.50$  (thus $p_{pop} = 0.0688$)
+		\item Allocate according to: $n_h = n \frac{W_h S_h}{\sum_{h=1}^{H} W_h S_h}$
+		\item $\sum_{h=1}^{H} W_h S_h = (0.88 * 0.0099) + (0.12 * 0.25) = 0.0387$
+		\item $n_{native} = 1000 \frac{0.0087}{0.0387} = 225$
+		\item $n_{imm} = 1000 \frac{0.03}{0.0387} = 775$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Disproportionate Allocation II}
+	\begin{itemize}\itemsep2em
+		\item $SE(p_{native}) = \sqrt{\frac{p(1-p)}{225}} = \sqrt{\frac{0.0099}{225}} = 0.00663$
+		\item $SE(p_{imm}) = \sqrt{\frac{p(1-p)}{775}} = \sqrt{\frac{.25}{775}} = 0.01796$
+		\item $Var(p) = \sum_{h=1}^{H}(\frac{N_h}{N})^2 \frac{p_h(1-p_h)}{n_h - 1}$
+		\item $Var(p) = (\frac{0.0099}{225})(.88^2) + (\frac{0.25}{775})(.12^2)$
+		\item $SE(p) = 0.00622$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Disproportionate Allocation II}
+	\begin{itemize}\itemsep2em
+		\item $SE(p) = 0.00622$
+		\item Compare to SRS:
+		    \begin{itemize}
+		        \item $SE(p) = \sqrt{\frac{0.0688(1-0.0688)}{n-1}} = 0.008$
+		    \end{itemize}
+        \item Design effect: $d^2 = \frac{0.00622^2}{0.008^2} = 0.6045$
+        \item $n_{effective} = \frac{n}{sqrt(d^2)} = 1286$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Final Considerations}
+	\begin{itemize}\itemsep2em
+		\item Reductions in uncertainty come from creating homogeneous groups
+		\item Estimates of design effects are variable-specific
+		\item Sampling variance calculations do not factor in time, costs, or feasibility
+	\end{itemize}
+}
+
+
+\subsection{Cluster Sampling}
+\frame{\tableofcontents[currentsubsection]}
+
+\frame{
+	\frametitle{Cluster Sampling}
+	\begin{itemize}\itemsep2em
+		\item What is it?
+		\item Why do we do?
+		\item<2-> Most useful when:
+		    \begin{enumerate}
+		    \item Population has a clustered structure
+		    \item Unit-level sampling is expensive or not feasible
+            \item Clusters are similar
+		    \end{enumerate}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Cluster Sampling}
+	\begin{itemize}\itemsep2em
+		\item Advantages
+			\begin{itemize}
+				\item<2-> Cost savings!
+				\item<2-> Capitalize on clustered structure
+			\end{itemize}
+		\item<3-> Disadvantages
+			\begin{itemize}
+				\item<4-> Units tend to cluster for complex reasons (self-selection)
+				\item<4-> Major increase in uncertainty if clusters differ from each other
+				\item<4-> Complex to design (and possibly to administer)
+				\item<4-> Analysis is much more complex than SRS or stratified sample
+			\end{itemize}
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Cluster Sampling}
+	\begin{itemize}\itemsep2em
+		\item Number of stages
+			\begin{itemize}
+				\item One-stage sampling
+				\item Two- or more-stage sampling
+			\end{itemize}
+		\item Number of clusters
+		\item Sample size w/in clusters
+		\item Everything depends on variability of clusters
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Sampling Variance for Cluster Sampling}
+	\begin{itemize}\itemsep2em
+		\item Sampling variance depends on \textit{between}-cluster variation:\\
+		$Var(\bar{y}) = (\frac{1-f}{a})(\frac{1}{a-1})(\sum_{\alpha=1}^{a}(\bar{y}_{\alpha} - \bar{y})^2)$
+		\item When \textit{between}-cluster variance is high, \textit{within}-cluster variance is likely to be low
+			\begin{itemize}
+				\item ``Cluster homogeneity''
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Design Effect for Cluster Sampling}
+	\begin{itemize}\itemsep2em
+		\item Cluster samples almost always less \textit{statistically} efficient than SRS
+		\item Design Effect depends on cluster homogeneity:
+		\begin{itemize}\itemsep1em
+			\item $d^2 = \frac{Var_{clustered}(y)}{Var_{SRS}(y)}$
+			\item $d^2 = 1 + (n_{cluster}-1)roh$
+		\end{itemize}
+		\item \textit{roh} (\textit{intraclass correlation coefficient}):
+		\begin{itemize}
+			\item Proportion of unit-level variance that is between-clusters
+			\item Generally positive and small (about 0.00 to 0.10)
+		\end{itemize}
+	\end{itemize}
+}
+
+
+\subsection{Weights}
 \frame{\tableofcontents[currentsection]}
 
-\frame{\frametitle{}}
+\frame{
+	\frametitle{Goal of Survey Research}
+	\begin{itemize}\itemsep2em
+		\item The goal of survey research is to estimate population-level quantities (e.g., means, proportions, totals)
+		\item Samples estimate those quantities with uncertainty (sampling error)
+		\item Sample estimates are unbiased if they match population quantities
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Realities of Survey Research}
+	\begin{itemize}\itemsep1em
+		\item Sample may not match population for a variety of reasons:
+			\begin{itemize}
+				\item Due to constraints on design
+				\item Due to sampling frame coverage
+				\item Due to intentional over/under-sampling
+				\item Due to nonresponse
+				\item Due to sampling error
+			\end{itemize}
+		\item<2-> Weights can be used to ``correct'' a sample
+		\item<3-> Weighting is never perfect
+			\begin{itemize}
+				\item Limited to work with observed variables
+				\item Rarely have good knowledge of coverage, nonresponse, or sampling error
+				\item Weighting can increase sampling variance
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Three Kinds of Weights}
+	\begin{itemize}\itemsep2em
+		\item Design Weights
+		\item Nonresponse Weights
+		\item Post-Stratification Weights
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Design Weights}
+	\begin{itemize}\itemsep2em
+		\item Address design-related unequal probability of selection into a sample
+		\item Applied to \textit{complex survey designs}:
+			\begin{itemize}
+				\item Disproportionate allocation stratified sampling
+				\item Oversampling of subpopulations
+				\item Cluster sampling
+				\item Combinations thereof
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Design Weights: Simple Random Sampling}
+	\begin{itemize}\itemsep1em
+		\item Imagine sampling frame of 100,000 units
+		\item Sample size will be 1,000 
+		\item What is the probability that a unit in the sampling frame is included in the sample?
+		\item<2-> $p = \frac{1000}{100,000} = .01$
+		\item<3-> Design weight for all units is $w = 1/p = 100$
+		\item<3-> SRS is \textit{self-weighting}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Design Weights: Stratified Sample}
+	\begin{itemize}\itemsep1em
+		\item Imagine sampling frame of 100,000 units
+			\begin{itemize}
+				\item 90,000 Danes \& 10,000 Immigrants
+			\end{itemize}
+		\item Sample size will be 1,000 (proportionate allocation)
+			\begin{itemize}
+				\item 900 Danes \& 100 Immigrants
+			\end{itemize}
+		\item What is the probability that a unit in the sampling frame is included in the sample?
+			\begin{itemize}
+				\item<2-> $p_{Danish} = \frac{900}{90,000} = .01$
+				\item<2-> $p_{Imm} = \frac{100}{10,000} = .01$
+			\end{itemize}
+		\item<3-> Design weight for all units is $w = 1/p = 100$
+		\item<3-> Proportionate allocation is \textit{self-weighting}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Design Weights: Stratified Sample}
+	\begin{itemize}\itemsep0.75em
+		\item Imagine sampling frame of 100,000 units
+		\begin{itemize}
+			\item 90,000 Danes \& 10,000 Immigrants
+		\end{itemize}
+		\item Sample size will be 1,000 (disproportionate allocation)
+		\begin{itemize}
+			\item 500 Danes \& 500 Immigrants
+		\end{itemize}
+		\item What is the probability that a unit in the sampling frame is included in the sample?
+		\begin{itemize}
+			\item<2-> $p_{Danish} = \frac{500}{90,000} = .0056$
+			\item<2-> $p_{Imm} = \frac{500}{10,000} = .05$
+		\end{itemize}
+		\item<3-> Design weights differ across units: 
+			\begin{itemize}
+				\item $w_{Danish} = 1/p_{Danish} = 178.57$
+				\item $w_{Imm} = 1/p_{Imm} = 20$
+			\end{itemize}
+		\item<3-> Disproportionate allocation is not \textit{self-weighting}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Design Weights: Cluster Sample}
+	\begin{itemize}\itemsep0.75em
+		\item Imagine sampling frame of 1000 units in 5 clusters of varying sizes
+		\item Sample size will be 10 each from 3 clusters
+		\item What is the probability that a unit in the sampling frame is included in the sample?
+			\begin{itemize}
+				\item $p = n_{clusters}/N_{clusters} * 1/n_{cluster} = \frac{3}{5} * 1/n_{cluster}$
+			\end{itemize}
+		\item<3-> Design weights differ across units: 
+		\begin{itemize}
+			\item Clusters are equally likely to be sampled
+			\item Probability of selection within cluster varies with cluster size
+		\end{itemize}
+		\item<3-> Cluster sampling is rarely \textit{self-weighting}
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Nonresponse Weights}
+	\begin{itemize}\itemsep2em
+		\item Correct for nonresponse
+		\item Require knowledge of nonrespondents on variables that have been measured for respondents
+		\item Requires data are \textit{missing at random}
+		\item Two common methods
+			\begin{itemize}
+				\item Weighting classes
+				\item Propensity score subclassification
+			\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Nonresponse Weights: Example}
+	\begin{itemize}\itemsep2em
+		\item Imagine immigrants end up being less likely to respond\footnote{{\scriptsize This refers to a lower RR in this particular survey sample, not in general.}}
+			\begin{itemize}
+				\item $RR_{Danish} = 1.0$
+				\item $RR_{Imm} = 0.8$
+			\end{itemize}
+		\item<2-> Using weighting classes:
+			\begin{itemize}
+				\item $w_{rr,Danish} = 1/1 = 1$
+				\item $w_{rr,Imm} = 1/0.8 = 1.25$
+			\end{itemize}
+		\item<2-> Can generalize to multiple variables and strata
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Post-Stratification}
+	\begin{itemize}\itemsep1em
+		\item Correct for nonresponse, coverage errors, and sampling errors
+		\item<2-> Reweight sample data to match population distributions
+			\begin{itemize}
+				\item Divide sample and population into strata
+				\item Weight units in each stratum so that the weighted sample stratum contains the same proportion of units as the population stratum does
+			\end{itemize}
+		\item<3-> There are numerous other related techniques
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Post-Stratification: Example}
+	\begin{itemize}\itemsep1em
+		\item Imagine our sample ends up skewed on immigration status and gender relative to the population\\
+		\vspace{1em}
+		\small
+		\begin{tabular}{lrrlr}
+			\hline
+			Group             & Pop. & Sample & Rep.                &              Weight \\ \hline
+			Danish, Female    &  .45 &     .5 & \onslide<2->{Over}  & \onslide<3->{0.900} \\
+			Danish, Male      &  .45 &     .4 & \onslide<2->{Under} & \onslide<4->{1.125} \\
+			Immigrant, Female &  .05 &    .07 & \onslide<2->{Over}  & \onslide<5->{0.714} \\
+			Immigrant, Male   &  .05 &    .03 & \onslide<2->{Under} & \onslide<6->{1.667}\\  \hline
+		\end{tabular}
+		\item PS weight is just $w_{ps} = N_l / n_l$
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Post-Stratification}
+	\begin{itemize}\itemsep2em
+		\item Should only be done after correcting for sampling design
+		\item Strata must be large ($n>15$)
+		\item Need accurate population-level stratum sizes
+		\item Only useful if stratifying variables are related to key constructs of interest		
+		\item<2-> This is the basis for inference in non-probability samples
+		\begin{itemize}
+			\item Probability samples make design-based inferences
+			\item Non-probability samples post-stratify to obtain descriptive representativeness
+		\end{itemize}
+	\end{itemize}
+}
+
+
+\subsection{Weighted Analyses}
+\frame{\tableofcontents[currentsubsection]}
+
+
+
 
 
 
