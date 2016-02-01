@@ -864,18 +864,981 @@
 
 
 
-
-
-\section{Analysis of Complex Surveys}
+\section{Generalized Linear Models}
 \frame{\tableofcontents[currentsection]}
 
 \frame{\frametitle{}}
+\frame{
+    \frametitle{Non-continuous Outcomes}
+    \begin{enumerate}\itemsep1em
+    \item Why shouldn't we use OLS for a non-continuous outcome variable?
+    \item<2-> What do we do instead?
+        \begin{itemize}
+        \item<3-> Use a generalized linear model (GLM)
+        \end{itemize}
+    \end{enumerate}
+}
+
+
+\frame{
+    \frametitle{Regression on a Latent Variable}
+    \begin{itemize}\itemsep1em
+    \item Consider a binary outcome $y$ (e.g., voting)
+    \item OLS provides a nonsensical fit to the outcome
+    \item Think about the problem as a ``latent'' outcome ($y\ast$) that manifests in two observed categories
+        \begin{itemize}
+        \item As $y\ast$ increases, $Pr(Y=1) \rightarrow 1$
+        \item As $y\ast$ decreases, $Pr(Y=1) \rightarrow 0$
+        \end{itemize}
+    \item We do not observe $y\ast$, only $y$
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Estimation in GLM}
+    \begin{itemize}\itemsep1em
+    \item In OLS, we estimate: $\hat{y} = \beta_0 + \beta_1 x + e$
+    \item This represents the conditional mean of $y$
+    \item In a GLM, we estimate: $\hat{y}\ast = \beta_0 + \beta_1 x + e$\\
+    where $y\ast$ is a transformation of $y$
+    \item This is also a prediction of the conditional mean of $y$
+    \item<2-> How do we transform $y$ to $y\ast$?
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Model Specification}
+    \begin{enumerate}\itemsep1em
+    \item<1-> Complete set of conditioning variables
+    \item<2-> Correctly specified model
+    \item<3-> Choice of error distribution
+    \item<4-> Link function
+    \end{enumerate}
+}
+
+\frame{
+	\frametitle{Error Distribution}
+	\begin{itemize}\itemsep1em
+	\item To estimate a linear model using OLS, no distributional assumption is needed
+	\item We can use Maximum Likelihood Estimation to obtain identical coefficient estimates as OLS by assuming errors are Normally distributed
+    	\begin{itemize}
+    	\item $\dfrac{1}{\sigma\sqrt{2\pi}} e^{-\dfrac{(x-\mu)^2}{2\sigma^2}}$
+    	\end{itemize}
+	\item For any GLM, we must assume the population distribution of the errors
+    	\begin{itemize}
+    	\item In almost all cases, an \textit{exponential family} distribution
+    	\item i.e., a bell-shaped distribution that is not Normal
+    	\end{itemize}
+	\end{itemize}
+}
+
+
+\frame{
+    \frametitle{Link Function}
+    \begin{itemize}\itemsep2em
+    \item $y\ast = X\beta = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots$
+    \item \textbf{Link function}: $g(\mu) = X\beta$
+        \begin{itemize}
+        \item Transforms $y$ to $y\ast$
+        \end{itemize}
+    \item \textbf{Inverse link function}: $\mu = g^{-1}(X\beta)$
+        \begin{itemize}
+        \item Transforms $y\ast$ back to $y$
+        \end{itemize}
+    \end{itemize}
+}
+
+
+\begin{frame}[fragile]
+    \frametitle{Inverse Link Function}
+    
+    \begin{itemize}
+    \item This plot displays $g^{-1}(0.75x)$, where $g^{-1}$ is the inverse logit link.
+    \end{itemize}
+    
+    \begin{center}
+    \begin{tikzpicture}[yscale=3.5, xscale=0.9]
+    \draw [thin, step=0.1, lightgray] (-5,0) grid (5,1);
+    \draw [thick, gray] (-5,0) grid (5,1);
+    \node[right] () at (5,-5) {x};
+    \node[right] () at (5,0) {$x$};
+    \node[above] () at (-5,1) {$\Pr(y=1|x)$};
+    \foreach \x in {-5,...,5} {
+        \node[below] () at (\x,0) {\small \x};
+    }
+    \foreach \y in {0.0,0.2,0.4,0.6,0.8,1.0} {
+    \node[left] () at (-5,\y) {\small \y};
+    }
+    % paste0("(", -5:5, ",", round(plogis(0.75*(-5:5)),4), ")", collapse = " -- ")
+    \draw [very thick, blue] (-5,0.023) -- (-4,0.0474) -- (-3,0.0953) -- (-2,0.1824) -- (-1,0.3208) -- (0,0.5) -- (1,0.6792) -- (2,0.8176) -- (3,0.9047) -- (4,0.9526) -- (5,0.977);
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{From $x$ to Linear Prediction ($y\ast$)}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.6]
+    \draw [thin, step=0.1, lightgray] (-5,-5) grid (5,5);
+    \draw [thick, gray] (-5,-5) grid (5,5);
+    \node[right] () at (5,-5) {$x$};
+    \node[above] () at (-5,5) {$y\ast$};
+    \foreach \x in {-5,...,5} {
+        \node[below] () at (\x,-5) {\footnotesize \x};
+    }
+    \foreach \y in {-5,...,5} {
+    \node[left] () at (-5,\y) {\footnotesize \y};
+    }
+    % paste0("(", -5:5, ",", round(0.75*(-5:5),4), ")", collapse = " -- ")
+    \draw [very thick, blue] (-5,-3.75) -- (-4,-3) -- (-3,-2.25) -- (-2,-1.5) -- (-1,-0.75) -- (0,0) -- (1,0.75) -- (2,1.5) -- (3,2.25) -- (4,3) -- (5,3.75);
+    \node[right,blue] () at (5,3.75) {$0 + 0.75x$};
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{From $y\ast$ to $Pr(y=1)$}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.75]
+    \draw [thin, step=0.1, lightgray] (-5,-1) grid (5,2);
+    \draw [thick, gray] (-5,-1) grid (5,2);
+    \node[right] () at (5,-1) {$y\ast$};
+    \node[above] () at (-5,2) {\small $\Pr(y=1|x)$};
+    \foreach \x in {-5,...,5} {
+        \node[below] () at (\x,-1) {\footnotesize \x};
+    }
+    \foreach \y in {-1,...,2} {
+    \node[left] () at (-5,\y) {\footnotesize \y};
+    }
+    % paste0("(", -5:5, ",", round(plogis(0.75*(-5:5)),4), ")", collapse = " -- ")
+    \draw [very thick, blue] (-5,0.023) -- (-4,0.0474) -- (-3,0.0953) -- (-2,0.1824) -- (-1,0.3208) -- (0,0.5) -- (1,0.6792) -- (2,0.8176) -- (3,0.9047) -- (4,0.9526) -- (5,0.977);
+    \node[right,blue] () at (5,1) {\small $g^{-1}(0 + 0.75x)$};
+    \end{tikzpicture}
+    \end{center}
+    
+    \begin{itemize}
+    \item Function is monotonic
+    \item There is a \textit{cutpoint} in $y\ast$ where $\Pr(y) = 0.5$
+    \item It is symmetric above and below the cutpoint
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Putting it Together}
+    \vspace{-1.5em}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.6]
+    
+    % Pr(y)
+    \draw [thin, step=0.1, lightgray] (-12,-5) grid (-8,5);
+    \draw [thick, gray] (-12,-5) grid (-8,5);
+    \node[left,rotate=90] () at (-8,-5) {\footnotesize 0.00};
+    \node[left,rotate=90] () at (-9,-5) {\footnotesize 0.25};
+    \node[left,rotate=90] () at (-10,-5) {\footnotesize 0.50};
+    \node[left,rotate=90] () at (-11,-5) {\footnotesize 0.75};
+    \node[left,rotate=90] () at (-12,-5) {\footnotesize 1.00};
+    \foreach \y in {-5,...,5} {
+        \node[below,rotate=90] () at (-8,\y) {\footnotesize \y};
+    }
+    \node[right,rotate=90] () at (-8,5) {$y\ast$};
+    \node[above right,rotate=90] () at (-12,-5) {\footnotesize $\Pr(y=1|x)$};
+    % paste0("(", -(8 + 4*round(plogis(0.75*(-5:5)),4)), ",", -5:5, ")", collapse = " -- ")
+    \draw [very thick, blue] (-8.092,-5) -- (-8.1896,-4) -- (-8.3812,-3) -- (-8.7296,-2) -- (-9.2832,-1) -- (-10,0) -- (-10.7168,1) -- (-11.2704,2) -- (-11.6188,3) -- (-11.8104,4) -- (-11.908,5);
+        
+    % y*
+    \draw [thin, step=0.1, lightgray] (-5,-5) grid (5,5);
+    \draw [thick, gray] (-5,-5) grid (5,5);
+    \node[right] () at (5,-5) {$x$};
+    \node[above] () at (-5,5) {$y\ast$};
+    \foreach \x in {-5,...,5} {
+        \node[below] () at (\x,-5) {\footnotesize \x};
+    }
+    \foreach \y in {-5,...,5} {
+        \node[left] () at (-5,\y) {\footnotesize \y};
+    }
+    % paste0("(", -5:5, ",", round(0.75*(-5:5),4), ")", collapse = " -- ")
+    \draw [very thick, blue] (-5,-3.75) -- (-4,-3) -- (-3,-2.25) -- (-2,-1.5) -- (-1,-0.75) -- (0,0) -- (1,0.75) -- (2,1.5) -- (3,2.25) -- (4,3) -- (5,3.75);
+    %\node[right,blue] () at (5,3.75) {$0 + 0.75x$};
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+\frame{
+	\frametitle{Choosing a Link Function}
+	\begin{itemize}\itemsep1em
+	\item Based on expected distribution of the error term of $y\ast$
+	\item Choice heavily influenced by convention rather than empirics
+	\item Choice of link adds \textit{model dependence}!
+		\begin{itemize}
+		\item Expected influence of $x$ on $y$ now depends on choice of link
+		\item Different link functions can yield different substantive and statistical results
+		\item Generally, results are similar
+		\end{itemize}
+	\end{itemize}
+}
+
+
+\frame{
+    \frametitle{Common Link Functions}
+    \begin{center}
+    {\renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{p{1in} p{1in} p{1in}}
+    \textit{Name} & \textit{Link} & \textit{Inverse} \\ \hline
+    Identity & $\mu$ & $y\ast$ \\
+    Logit & $\ln\dfrac{\mu}{1-\mu}$ & $\dfrac{1}{1+e^{-y\ast}}$ \\
+    Probit & $\Phi^{-1}(\mu)$ & $\Phi(y\ast)$ \\
+    \hline
+    \end{tabular}
+    }
+    \end{center}
+    
+    \begin{itemize}
+    \item These are common for categorical outcomes
+    \item Other types of outcomes will use different link functions
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Beyond Binary Outcomes}
+    \begin{itemize}\itemsep1em
+    \item The generalized linear model works for all kinds of outcomes, not just continuous or binary
+    \item Consider, for example, a multi-category, ordered outcome variable
+    \item In an \textit{ordered logit} model, we imagine a latent variable $y\ast$ and multiple cutpoints between categories of $y$
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Maximum Likelihood Estimation}
+    \begin{itemize}\itemsep1em
+    \item The \textit{generalized linear model} is a way of describing complex regression models
+    \item Unlike OLS, there is no closed-form mathematical solution to GLM
+        \begin{itemize}
+        \item Recall a linear model can be expressed as a GLM
+        \end{itemize}
+    \item GLMs involve the big additional assumption of a distribution for the error term
+    \item Maximum likelihood estimation is a way of estimating the GLM that makes use of that error distribution
+    \end{itemize}    
+}
+
+\frame{
+    \frametitle{Maximum Likelihood Estimation}
+    \begin{itemize}\itemsep1em
+    \item Choose an error distribution (which is described by various parameters)
+    \item Select parameters as starting values
+    \item Give a \textit{probability} of seeing each observation in our sample data given that distribution
+    \item Combine those probabilities (i.e., likelihoods)
+        \begin{itemize}
+        \item Multiply the likelihoods
+        \item Add the log-likelihoods
+        \end{itemize}
+    \item Repeat and pick the best guess from all of those that we test
+    \end{itemize}
+}
+
+
+% assumptions
+
+
+
+\subsection{Interpreting GLMs}
+\frame{\tableofcontents[currentsection]}
+
+\frame{
+    \frametitle{Coefficients}
+    \begin{itemize}\itemsep1em
+    \item Coefficients express effect of $x$ on $y\ast$
+    \item In logistic regression, this is a statement about the odds-ratio:
+        $\hat{\beta} = \dfrac{\frac{p_1}{1-p_1}}{\frac{p_0}{1-p_0}}$
+    \item Coefficients are hard to interpret \textit{substantively}
+    \item Statistical significance is similar to OLS
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Predicted Outcomes}
+	\begin{itemize}\itemsep1em
+	\item In OLS, fitted values from the estimated regression equation are values of $y$
+	\item In GLMs, fitted values are expressed for $y\ast$
+	\item To interpret logit or probit, we transform to predicted probabilities
+	\end{itemize}
+}
+
+\frame{
+    \frametitle{Predicted Outcomes}
+	\begin{itemize}\itemsep1em
+	\item Definition: According to our coefficient estimates, what is $\Pr(\hat{y} = 1|X)$?
+	\item To calculate this, we:
+    	\begin{enumerate}
+    	\item Calculate a fitted value on the latent/linear scale
+    	\item Plug that fitted value into the inverse link function
+    	\end{enumerate}
+    \item In Stata, use \texttt{margins} and \texttt{predict}
+        \begin{itemize}
+        \item Probabilities are the default
+        \item Use the \texttt{, xb} option for linear predictions
+        \end{itemize}
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Marginal Effects}
+    \begin{itemize}\itemsep1em
+    \item A marginal effect refers to one of two quantities:
+        \begin{itemize}
+        \item For continuous variables: the partial derivative of the regression equation with respect to a specific variable
+        \item For categorical variables: the difference $\Pr(y=1|x=1) - \Pr(y=1|x=0)$
+        \end{itemize}
+    \item In an OLS (with no interactions or other complex terms), the marginal effect is the coefficient itself
+    \item In GLMs, this is more complicated
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Review: Partial Derivatives}
+    \begin{itemize}\itemsep1em
+    \item The partial derivative is the \textit{instantaneous} slope (or \textit{tangent}) of a line
+    \item With one $x$ variable, this is just the slope of the line
+    \item With > 1 $x$ variable, this is the conditional slope of the regression surface
+        \begin{itemize}
+        \item We hold other variables at some value see a ``slice'' of the regression surface
+        \item The marginal effect is the slope of the slice
+        \end{itemize}
+    \end{itemize}
+}
+
+
+\frame{
+	\frametitle{Simple regression surface}
+	\begin{center}
+	\begin{tikzpicture}
+	    \draw[thick,->] (0,0,0) -- (6,0,0) node[anchor=north east]{$x$};
+	    \draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+	    \draw[thick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$z$};
+	    \filldraw[draw=red,fill=red!20,opacity=0.5]
+	        (0,2,0) -- (0,0,4) -- (5,-2,4) -- (5,0,0) -- cycle;
+	    \draw<1> (3,3,0) node {$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 X + \hat{\beta}_2 Z$};
+        \draw<2> (3,3,0) node {$\dfrac{\partial y}{\partial Z} = \hat{\beta}_2$};
+	    \draw<2>[thick, red] (0,2,0) -- (0,0,4);
+	    \draw<3> (3,3,0) node {$\dfrac{\partial y}{\partial X} = \hat{\beta}_1$};
+	    \draw<3>[thick, blue] (0,2,0) -- (5,0,0);
+	\end{tikzpicture}
+	\end{center}
+}
+
+
+
+\frame{
+    \frametitle{Graphing Activity (cont.)}
+    \begin{itemize}\itemsep1em
+    \item Do graphing activity \# 4
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Discrete Changes}
+    \begin{itemize}\itemsep1em
+    \item Marginal effects are \textit{instantaneous changes}
+    \item This makes sense for continuous variables
+    \item For categorical (factor) variables, we often instead calculate a discrete change\\
+        \begin{itemize}\itemsep1em
+        \item $Pr(y=1|x=1) - Pr(y=1|x=0)$
+        \item Marginal effect and discrete change are the same in OLS
+        \end{itemize}
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Graphing Activity (cont.)}
+    \begin{itemize}\itemsep1em
+    \item Do graphing activity \# 5
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Interaction Terms}
+    \begin{itemize}\itemsep1em
+    \item Due to the link function transformation, the marginal effect of $x$ depends on the value of $x$ and all other covariates
+    \item This creates \textit{implicit} interactions
+    \item We still have to include \textit{explicit} interaction terms to estimate heterogeneous effects (i.e., effect moderation)
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Graphing Activity (cont.)}
+    \begin{itemize}\itemsep1em
+    \item Do graphing activities \# 6--7
+    \end{itemize}
+}
+
+
+\frame{
+	\frametitle{Logit vs. Probit}
+	\begin{itemize}\itemsep1em
+	\item<1-> Both constrain a continuous $y\ast$ to (0,1)
+	\item<2-> Probabilities are symmetric
+	\item<3-> Logit allows us to estimate odds-ratios
+	\item<4-> Logit is maybe slightly more common in political science for what are probably just historical reasons
+	\end{itemize}
+}
+
+\frame{
+    \frametitle{Graphing Activity (cont.)}
+    \begin{itemize}\itemsep1em
+    \item Do graphing activity \# 8
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Language of Interpretation}
+    \begin{itemize}\itemsep1em
+    \item How do we describe a marginal effect in OLS?
+    \item<2-> In a binary outcome model, we use different language\\
+    \item<3-> The substantive importance of an effect may depend on the level of $\Pr(y)$ at which it occurs\\
+        \begin{itemize}\itemsep1em
+        \item<4-> Small effect at $\Pr(y) = 0.01$ vs. $\Pr(y) = 0.48$
+        \item<5-> Large positive effect when $\Pr(y)$ is always $> 0.6$
+        \end{itemize}
+    \item<6-> Substantive importance depends on variability and \textit{stickiness} of $x$
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Summarizing Marginal Effects}
+    \begin{itemize}\itemsep1em
+    \item We need to decide the values for all covariates that we will use in summarizing the marginal effect of our focal variable
+    \item If our equation is: $y = g^{-1}(\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots)$
+    \item And we want to know the marginal effect of $x_1$, we need to hold $x_2$ at some specified value(s)
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{3 Common Marginal Effect Summaries}
+    \begin{enumerate}\itemsep2em
+    \item Marginal Effects at the Mean (MEMs)
+    \item Marginal Effects at Representative Values (MERs)
+    \item Average Marginal Effects (AMEs)
+    \end{enumerate}
+}
+
+
+\frame{
+    \frametitle{MEM}
+    \begin{itemize}\itemsep1em
+    \item We are interested in the ME of $x_1$
+    \item We hold all other covariates at their respective means
+    \item For example, we interested in the ME of \textit{knowledge}, we hold \textit{education} at its mean
+    \item<2-> Does this make sense for categorical values (e.g., gender)?
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{MERs}
+    \begin{itemize}\itemsep1em
+    \item The means of the covariates may not be meaningful
+    \item We hold those covariates at various interesting values
+        \begin{itemize}
+        \item ME of $x$ for a high-school educated female
+        \item ME of $x$ for a university-educated male
+        \item etc.
+        \end{itemize}
+    \item Helpful because we may also be interested in $\Pr(y=1)$ for these cases
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{AMEs}
+    \begin{itemize}\itemsep1em
+    \item We may not only be interested in MEs at particular values
+    \item We may want a summary measure of the effect of $x$ for our sample as a whole
+    \item The \textit{average marginal effect} calculates the MER for every observation in our data, then averages those ME values
+    \item This is Stata's default behavior when using:\\ \texttt{margins, dydx(*)}
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{AMEs: An Example}
+    \begin{itemize}
+    \item Model effects of gender \& education on trust
+    \item Calculate ME for each observation
+    \item Average to obtain AME
+    \end{itemize}
+    
+    \visible<2->{
+    \begin{center}
+    \begin{tabular}{lllrr}
+    Obs. & Gender & Degree & $ME(Gender)$ & $ME(Degree)$ \\
+    \hline 
+    1 & 1 & 1 & 0.10 & 0.25 \\
+    2 & 1 & 1 & 0.10 & 0.25 \\
+    3 & 1 & 0 & 0.20 & 0.15 \\
+    4 & 0 & 1 & 0.30 & -0.25 \\
+    5 & 0 & 0 & 0.10 & -0.40 \\
+    \hline 
+    AME & -- & -- & \only<3->{0.16} & \only<4->{0.00} \\
+    \hline 
+    \end{tabular}
+    \end{center}
+    }
+}
+
+\frame{
+    \frametitle{Statistical Uncertainty}
+    \begin{itemize}\itemsep1em
+    \item Always express statistical uncertainty for:
+        \begin{itemize}
+        \item Coefficients
+        \item Predicted probabilities
+        \item Marginal effects
+        \end{itemize}
+    \item Significance of coefficients and marginal effects may vary
+    \item Marginal effects may only differ from 0 on a subset of the range of $x$
+    \item Be cautious about extrapolation
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Aside: Discrete Effects}
+    \begin{itemize}\itemsep1em
+    \item Discrete effects can also be calculated for continuous variables
+    \item Requires choosing a substantively meaningful change in $x$
+    \item \textbf{Caution!} Not necessary equal:\\
+        \begin{itemize}\itemsep1em 
+        \item $\Pr(y = 1|x = 5) - \Pr(y = 1|x = 1)$
+        \item ME at $x = 5$ (MER)
+        \item ME at $x = 1$ (MER)
+        \item ME at $x = 3$ (AME/MEM)
+        \end{itemize}
+    \end{itemize}
+}
+
+\begin{frame}[fragile]
+    \frametitle{Discrete and Marginal Effects}
+    \vspace{-1.5em}
+    \begin{center}
+    \begin{tikzpicture}[yscale=3.5, xscale=0.9]
+    \draw [thin, step=0.1, lightgray] (0,0) grid (10,1);
+    \draw [thin, gray] (0,0) grid (10,1);
+    \node[right] () at (10,0) {\small $x$};
+    \node[above] () at (0,1) {\small $\Pr(y=1|x)$};
+    \foreach \x in {0,...,10} {
+        \node[below] () at (\x,0) {\footnotesize \x};
+    }
+    \foreach \y in {0.0,0.2,0.4,0.6,0.8,1.0} {
+    \node[left] () at (0,\y) {\footnotesize \y};
+    }
+    % paste0("(", seq(0,10,by=0.5), ",", round(plogis(-5 + 1.5*(seq(0,10,by=0.5))),4), ")", collapse = " -- ")
+    \draw [thick, black] (0,0.0067) -- (0.5,0.0141) -- (1,0.0293) -- (1.5,0.0601) -- (2,0.1192) -- (2.5,0.2227) -- (3,0.3775) -- (3.5,0.5622) -- (4,0.7311) -- (4.5,0.852) -- (5,0.9241) -- (5.5,0.9627) -- (6,0.982) -- (6.5,0.9914) -- (7,0.9959) -- (7.5,0.9981) -- (8,0.9991) -- (8.5,0.9996) -- (9,0.9998) -- (9.5,0.9999) -- (10,1);
+    
+    % discrete change
+    % plogis(-5 + (1.5 * 1))
+    % plogis(-5 + (1.5 * 5))
+    \draw<2> [red] (1,0.0293) -- (5,0.0293);
+    \draw<2> [red] (5,0.0293) -- (5,0.9241);
+    \draw<2> [very thick, red] (1,0.0293) -- (5,0.9241);
+    \node<2>[right,red] () at (5, 0.5) {$\Delta x$};
+    \node<2>[above,red] () at (3, 0) {$\Delta x$};
+    
+    % ME at x = 1
+    % dlogis(-5 + (1.5 * 1))
+    \draw<3> [very thick, blue] (0,0) -- (10,0.2845);
+    
+    % ME at x = 5
+    % dlogis(-5 + (1.5 * 5))
+    \draw<4> [very thick, green] (0,0.5736) -- (10,1.2746);
+    
+    % ME at x = 3
+    % dlogis(-5 + (1.5 * 3))
+    \draw<5> [very thick, purple] (1,-0.242) -- (5,0.99);
+        
+    
+    \end{tikzpicture}
+    \end{center}
+    
+    \vspace{-2em}
+    
+    {\small
+    \begin{itemize}
+    \item<2-6> Discrete change: 0.9241 - 0.0293 = 0.8948
+    \item<3-6> ME at $x = 1$: 0.0285
+    \item<4-6> ME at $x = 5$: 0.0701
+    \item<5-6> ME at $x = 3$: 0.2350
+    \end{itemize}
+    }
+    
+\end{frame}
+
+\frame{
+    \frametitle{Language of Interpretation}
+    \begin{itemize}\itemsep0.5em
+    \item \textbf{Discrete effect}: A change in $x$ from $a$ to $b$ results in an increase in the predicted probability that $y$ equals 1 of 0.89, which is a substantively large and statistically significant effect.
+    \item \textbf{Marginal effect}: The marginal effect of $x$ on the probability that $y$ = 1 when $x$ equals $a$ is 0.07, which is a large and statistically significant effect. The predicted probability of $y$ at this point is only 0.03, however, suggesting $x$ may be substantively unimportant for cases with this value of $x$.
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Interpretation: Hobolt}
+    \begin{itemize}\itemsep1em
+    \item Recall the Hobolt article from last week
+    \item What is her research question? What is her theory?
+    \item What is the test of that theory?
+    \item How does she interpret the results?
+    \end{itemize}
+}
+
+
+
+\frame{
+    \frametitle{Summary}
+    \begin{itemize}\itemsep1em
+    \item Many ways to summarize GLMs
+        \begin{itemize}
+        \item Coefficients
+        \item Predicted probabilities
+        \item Marginal effects
+        \item Discrete effects
+        \end{itemize}
+    \item<2-> Graphs help interpretation considerably
+    \item<3-> There's no single correct way of summarizing a complex model
+    \end{itemize}
+}
+
+
 
 
 \section{Panel Studies and Regression}
 \frame{\tableofcontents[currentsection]}
 
 \frame{\frametitle{}}
+
+% panel surveys in concept
+% contrast with repeated cross-sections
+
+% talk about panel regression
+% multi-level modeling
+
+
+
+
+
+
+\frame{
+    \frametitle{Pooled Estimator}
+    \begin{itemize}\itemsep1em
+    \item $y_{it} = \beta_0 + \beta_1 x_{it} + \dots + \epsilon_{it}$
+    \item Ignores panel structure (interdependence)
+    \item Ignores heterogeneity between units
+    \item But, we can actually easily estimate and interpret this model!
+    \item Estimation uses ``generalized estimating equations'' (GEE)
+    \item Note: Also called \textit{population-averaged} model
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Pooled Estimator}
+    \begin{itemize}\itemsep1em
+    \item Continuous outcomes:\\
+        $y_{it} = \beta_0 + \beta_1 x_{it} + \dots + \epsilon_{it}$
+    \item Binary outcomes:\\
+        $y_{it}\ast = \beta_0 + \beta_1 x_{it} + \dots + \epsilon_{it}$\\
+        $y_{it} = 1$ if $y_{it}\ast > 0$, and 0 otherwise
+    \item Link functions are the same in panel as in cross-sectional
+        \begin{itemize}
+        \item Logit
+        \item Probit
+        \end{itemize}
+    \item Use clustered standard errors
+    \end{itemize}
+}
+
+
+
+
+
+\frame{
+    \frametitle{Respecting the Panel Structure}
+    \begin{itemize}\itemsep1em
+    \item With a panel structure, $\epsilon_{it}$ can be decomposed into two parts:
+        \begin{itemize}
+        \item $\upsilon_{it}$
+        \item $u_i$
+        \end{itemize}
+    \item If we assume $u_i$ is unrelated to $X$: fixed effects
+    \item If we allow a correlation: random effects
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Fixed Effects Estimator}
+    \begin{itemize}\itemsep1em
+    \item This gives us:\\
+        \begin{equation}
+        \begin{array}{ll}
+        y_{it} & = \beta_{0} + \beta_1 x_{it} + \dots + \upsilon_{it} + u_i\\
+        y_{it} & = \beta_{0i}d_{it} + \beta_1 x_{it} + \dots + \upsilon_{it}
+        \end{array}
+        \end{equation}
+    \item Varying intercepts (one for each unit)
+    \item Can generalize to other specifications (e.g., fixed period effects)
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Fixed Effects Estimator}
+    \begin{itemize}\itemsep1em
+    \item Fixed effects terms absorb all time-invariant between-unit heterogeneity
+    \item Effects of time-invariant variables cannot be estimated
+    \item Each unit is its own control (``within'' estimation)
+    \item Two ways to estimate this:
+        \begin{itemize}
+        \item Unconditional maximum likelihood
+        \item Conditional maximum likelihood
+        \end{itemize}
+    \item Both are problematic
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Fixed Effects Estimator}
+    \begin{itemize}\itemsep1em
+    \item Unconditional maximum likelihood
+        \begin{itemize}
+        \item From OLS: dummy variables for each unit
+        \item Number of parameters to estimate increases with sample size
+        \item For logit/probit: \textit{incidental parameters problem}
+        \item Estimate become inconsistent
+        \end{itemize}
+    \item Conditional maximum likelihood
+        \begin{itemize}
+        \item From OLS: ``De-meaned'' data to avoid estimating unit-specific intercepts
+        \item For logit: condition on $Pr(Y_i=1)$ across all $t$ periods
+        \item Does not work for probit!
+        \end{itemize}
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Conditional MLE}
+    \begin{itemize}\itemsep1em
+    \item Estimates only based on units that change in $Y$
+    \item Effects of time-invariant variables are not estimable
+    \item Observations with time-invariant outcome are dropped
+    \item<2-> Estimation of two-wave panel using fixed-effects logistic regression is same as a pooled logistic regression where the outcome is direction of change regressed on time-differenced explanatory variables
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Fixed Effects Estimator}
+    \begin{itemize}\itemsep1em
+    \item Interpretation is difficult
+    \item Use \texttt{predict} to get fitted values on the latent scale
+    \item \texttt{margins, dydx()} is also problematic
+        \begin{itemize}
+        \item Use \texttt{, predict(xb)} to obtain log-odds marginal effects
+        \item Use \texttt{, predict(pu0)} to assume fixed effect is zero
+        \item Neither of those is the default
+        \end{itemize}
+    \end{itemize}
+}
+
+
+
+\frame{
+    \frametitle{Random Effects Estimator}
+    \begin{itemize}\itemsep1em
+    \item If we are willing to assume that unit-specific error term is uncorrelated with other variables
+    \item Why might this not be the case?
+    \item<2-> Pooled estimator also makes this assumption
+    \item<2-> But that estimator ignores panel structure (non-independence)
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Estimation hell!}
+    \begin{itemize}\itemsep0.5em
+    \item<2-> Due to \textit{incidental parameters problem} we cannot consistently estimate both the regression coefficients and the unit-specific effects
+    \item<3-> We have to make some assumptions about the unit-specific error terms
+    \item<3-> But assumptions get us to a likelihood function that can only be maximized via \textit{integration} of a complicated function
+    \item<3-> Quadrature (a form of numerical approximation of an integral) is therefore used (costly!)
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Random Effects Estimator}
+    \begin{itemize}\itemsep1em
+    \item Can be used with logit or probit
+    \item Interpretation is messy because unit-specific error terms are unobserved
+    \item Thus marginal effects calculation must make an assumption of about the random effects:
+        \begin{itemize}
+        \item Predict log-odds: \texttt{margins, dydx(*)}
+        \item Assume they are 0: \texttt{, predict(pu0)}
+        \end{itemize}
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Random versus Fixed Effects}
+    \begin{itemize}\itemsep1em
+    \item Different assumptions
+    \item Very different estimation strategies
+        \begin{itemize}
+        \item These are consequential for interpretation
+        \end{itemize}
+    \item Use Hausman test to decide between estimators:
+        {\small
+        \begin{alltt}
+        xtlogit \dots, fe\\
+        estimates store \textit{fixed}\\
+        xtlogit \dots, re\\
+        estimates store \textit{random}\\
+        hausman \textit{fixed} \textit{random}
+        \end{alltt}
+        }
+    \item Use FE if $H_0$ rejected
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Reminder!}
+    \begin{itemize}\itemsep1em
+    \item Some outcomes are binary but are constant before and after an ``event''
+        \begin{itemize}
+        \item Individual graduates from university
+        \item Country transitions to democracy
+        \end{itemize}
+    \item We can analyze these using binary outcome panel models \textit{or} using event-history methods from last week
+    \item Either might be appropriate, depending on the research question, hypothesis, and data
+    \end{itemize}
+}
+
+
+
+\frame{
+    \frametitle{Ordered Outcome Models}
+    \begin{itemize}\itemsep1em
+    \item Estimators exist, but only random effects is implemented in Stata
+        \begin{itemize}
+        \item Logit and probit available
+        \end{itemize}
+    \item Other possible analysis strategies:
+        \begin{itemize}\itemsep0.5em
+        \item Use a linear panel specification (\texttt{xtreg})
+        \item Estimate a pooled model (\texttt{ologit}/\texttt{oprobit}) with clustered SEs
+        \item Recode categories to binary and use \texttt{xtlogit}
+        \item Use a mixed effects specification (\texttt{meologit}/\texttt{meoprobit})
+        \end{itemize}
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Count Outcome Models}
+    \begin{itemize}\itemsep1em
+    \item Count outcome models are somewhat easier to estimate than binary outcome models
+    \item Still have pooled, fixed effects, and random effects strategies
+    \item As in cross-sectional data, prefer negative binomial regression over Poisson regression when there is \textit{overdispersion}
+    \item Methods using unconditional maximum likelihood (fixed effects) are computationally expensive
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Interpreting Count Models}
+    \begin{itemize}\itemsep1em
+    \item Predict the linear/latent scale:\\
+        \texttt{margins, predict(xb)}
+    \item Predict outcomes, assuming fixed/random effect is zero:\\
+        \texttt{margins, predict(nu0)}
+    \item With RE, assuming random effect is zero:\\
+        \texttt{margins, predict(pr0(\textit{n}))}, where \texttt{\textit{n}} is number of events
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Interpreting Count Models}
+    \begin{itemize}\itemsep1em
+    \item Coefficients can be translated into \textit{incidence rate ratios} using \texttt{, irr} option in Stata
+    \item This is sort of like the odds-ratio interpretation for binary outcome models
+    \item Meaning: a unit change in $x$ produces a change in the incidence rate for the outcome
+        \begin{itemize}
+        \item If $IRR > 1$: unit change in $x$ increases rate of $y$
+        \item If $IRR < 1$: unit change in $x$ decreases rate of $y$
+        \end{itemize}
+    \item May be helpful, may not. You can choose for yourself.
+    \end{itemize}
+}
+
+
+\frame{
+    \frametitle{Standard Errors}
+    \begin{itemize}\itemsep1em
+    \item Standard errors can be complicated
+    \item For pooled model, use standard errors clustered by unit
+        \begin{itemize}
+        \item \texttt{vce(robust)}
+        \item \texttt{vce(cluster id)}
+        \end{itemize}
+    \item For random effects, you may want bootstrapped standard errors
+    \item Always check for robustness
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Interpretation: Quick Review}
+    \begin{itemize}\itemsep1em
+    \item Usual rules don't apply
+    \item Estimation via an MLE variant usually means marginal effects are undefined
+    \item Depending on model specification, predicted values may also be \textit{conditional}
+    \item We have to make further assumptions to create an interpretable quantity of interest from the model
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Intepretation: Trade-offs}
+    \begin{itemize}\itemsep1em
+    \item Analytic trade-off between model choice and interpretability
+    \item Pooled estimates are interpretable in conventional ways, but use assumptions
+        \begin{itemize}
+        \item Ignores panel structure
+        \item No unobserved confounding/heterogeneity
+        \end{itemize}
+    \item Other models are harder to estimate and interpret, but may be more ``correct,'' though:
+        \begin{itemize}
+        \item RE assumes heterogeneity is not confounding
+        \item FE disallows effects of time-invariant variables
+        \end{itemize}
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Mixed Effects}
+    \begin{itemize}\itemsep1em
+    \item We can also estimate mixed effects models for non-linear outcomes
+    \item This works more or less as with linear outcomes
+        \begin{itemize}
+        \item Binary: \texttt{melogit}, \texttt{meprobit}
+        \item Ordered: \texttt{meologit}, \texttt{meoprobit}
+        \item Count: \texttt{mepoisson}, \texttt{menbreg}
+        \item Linear: \texttt{mixed}
+        \end{itemize}
+    \item Estimation and interpretation is similar to hierarchical linear models
+    \end{itemize}
+
+}
+
 
 
 
