@@ -620,14 +620,6 @@
 }
 
 
-\frame{
-	\frametitle{Example: Englebert}
-	\begin{itemize}\itemsep2em
-	\item What is his research question?
-	\item What is his theory? What does the graph look like?
-	\item What is his analysis?
-	\end{itemize}
-}
 
 
 \frame{
@@ -686,8 +678,6 @@
 \againframe<4-6>{what}
 
 \againframe{causalgraph}
-
-\frame{\frametitle{Questions about specification?}}
 
 \frame{
 	\frametitle{Multivariate Regression Interpretation}
@@ -835,32 +825,6 @@
 	\item Units: none (range 0 to $\infty$)
 	\end{itemize}
 }
-
-\begin{frame}[fragile,label=statareg]
-\scriptsize
-\begin{columns}
-    \column{\dimexpr\paperwidth-20pt}
-\begin{verbatim}
-. reg growth lcon
-
-      Source |       SS       df       MS              Number of obs =      44
--------------+------------------------------           F(  1,    42) =    0.09
-       Model |  .000038348     1  .000038348           Prob > F      =  0.7615
-    Residual |  .017255198    42  .000410838           R-squared     =  0.0022
--------------+------------------------------           Adj R-squared = -0.0215
-       Total |  .017293546    43  .000402175           Root MSE      =  .02027
-
-------------------------------------------------------------------------------
-      growth |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
--------------+----------------------------------------------------------------
-        lcon |  -.0017819   .0058325    -0.31   0.761    -.0135524    .0099886
-       _cons |   .0158988   .0390155     0.41   0.686    -.0628376    .0946353
-------------------------------------------------------------------------------
-
-\end{verbatim}
-    
-\end{columns}
-\end{frame}
 
 
 
@@ -1235,13 +1199,6 @@
 
 
 \frame{
-    \frametitle{Graphing Activity (cont.)}
-    \begin{itemize}\itemsep1em
-    \item Do graphing activity \# 4
-    \end{itemize}
-}
-
-\frame{
     \frametitle{Discrete Changes}
     \begin{itemize}\itemsep1em
     \item Marginal effects are \textit{instantaneous changes}
@@ -1251,13 +1208,6 @@
         \item $Pr(y=1|x=1) - Pr(y=1|x=0)$
         \item Marginal effect and discrete change are the same in OLS
         \end{itemize}
-    \end{itemize}
-}
-
-\frame{
-    \frametitle{Graphing Activity (cont.)}
-    \begin{itemize}\itemsep1em
-    \item Do graphing activity \# 5
     \end{itemize}
 }
 
@@ -1272,14 +1222,6 @@
 
 
 \frame{
-    \frametitle{Graphing Activity (cont.)}
-    \begin{itemize}\itemsep1em
-    \item Do graphing activities \# 6--7
-    \end{itemize}
-}
-
-
-\frame{
 	\frametitle{Logit vs. Probit}
 	\begin{itemize}\itemsep1em
 	\item<1-> Both constrain a continuous $y\ast$ to (0,1)
@@ -1287,13 +1229,6 @@
 	\item<3-> Logit allows us to estimate odds-ratios
 	\item<4-> Logit is maybe slightly more common in political science for what are probably just historical reasons
 	\end{itemize}
-}
-
-\frame{
-    \frametitle{Graphing Activity (cont.)}
-    \begin{itemize}\itemsep1em
-    \item Do graphing activity \# 8
-    \end{itemize}
 }
 
 \frame{
@@ -1485,18 +1420,6 @@
     \item \textbf{Marginal effect}: The marginal effect of $x$ on the probability that $y$ = 1 when $x$ equals $a$ is 0.07, which is a large and statistically significant effect. The predicted probability of $y$ at this point is only 0.03, however, suggesting $x$ may be substantively unimportant for cases with this value of $x$.
     \end{itemize}
 }
-
-
-\frame{
-    \frametitle{Interpretation: Hobolt}
-    \begin{itemize}\itemsep1em
-    \item Recall the Hobolt article from last week
-    \item What is her research question? What is her theory?
-    \item What is the test of that theory?
-    \item How does she interpret the results?
-    \end{itemize}
-}
-
 
 
 \frame{
@@ -1697,17 +1620,7 @@
         \begin{itemize}
         \item These are consequential for interpretation
         \end{itemize}
-    \item Use Hausman test to decide between estimators:
-        {\small
-        \begin{alltt}
-        xtlogit \dots, fe\\
-        estimates store \textit{fixed}\\
-        xtlogit \dots, re\\
-        estimates store \textit{random}\\
-        hausman \textit{fixed} \textit{random}
-        \end{alltt}
-        }
-    \item Use FE if $H_0$ rejected
+	\item Common practice is to estimate multiple specifications
     \end{itemize}
 }
 
@@ -1736,48 +1649,11 @@
         \end{itemize}
     \item Other possible analysis strategies:
         \begin{itemize}\itemsep0.5em
-        \item Use a linear panel specification (\texttt{xtreg})
-        \item Estimate a pooled model (\texttt{ologit}/\texttt{oprobit}) with clustered SEs
-        \item Recode categories to binary and use \texttt{xtlogit}
-        \item Use a mixed effects specification (\texttt{meologit}/\texttt{meoprobit})
+        \item Use a linear panel specification
+        \item Estimate a pooled model with clustered SEs
+        \item Recode categories to binary and use
+        \item Use a mixed effects specification
         \end{itemize}
-    \end{itemize}
-}
-
-
-\frame{
-    \frametitle{Count Outcome Models}
-    \begin{itemize}\itemsep1em
-    \item Count outcome models are somewhat easier to estimate than binary outcome models
-    \item Still have pooled, fixed effects, and random effects strategies
-    \item As in cross-sectional data, prefer negative binomial regression over Poisson regression when there is \textit{overdispersion}
-    \item Methods using unconditional maximum likelihood (fixed effects) are computationally expensive
-    \end{itemize}
-}
-
-\frame{
-    \frametitle{Interpreting Count Models}
-    \begin{itemize}\itemsep1em
-    \item Predict the linear/latent scale:\\
-        \texttt{margins, predict(xb)}
-    \item Predict outcomes, assuming fixed/random effect is zero:\\
-        \texttt{margins, predict(nu0)}
-    \item With RE, assuming random effect is zero:\\
-        \texttt{margins, predict(pr0(\textit{n}))}, where \texttt{\textit{n}} is number of events
-    \end{itemize}
-}
-
-\frame{
-    \frametitle{Interpreting Count Models}
-    \begin{itemize}\itemsep1em
-    \item Coefficients can be translated into \textit{incidence rate ratios} using \texttt{, irr} option in Stata
-    \item This is sort of like the odds-ratio interpretation for binary outcome models
-    \item Meaning: a unit change in $x$ produces a change in the incidence rate for the outcome
-        \begin{itemize}
-        \item If $IRR > 1$: unit change in $x$ increases rate of $y$
-        \item If $IRR < 1$: unit change in $x$ decreases rate of $y$
-        \end{itemize}
-    \item May be helpful, may not. You can choose for yourself.
     \end{itemize}
 }
 
@@ -1824,21 +1700,19 @@
 }
 
 \frame{
-    \frametitle{Mixed Effects}
+    \frametitle{Mixed Effects/\\Hierarchical Models}
     \begin{itemize}\itemsep1em
     \item We can also estimate mixed effects models for non-linear outcomes
-    \item This works more or less as with linear outcomes
-        \begin{itemize}
-        \item Binary: \texttt{melogit}, \texttt{meprobit}
-        \item Ordered: \texttt{meologit}, \texttt{meoprobit}
-        \item Count: \texttt{mepoisson}, \texttt{menbreg}
-        \item Linear: \texttt{mixed}
-        \end{itemize}
-    \item Estimation and interpretation is similar to hierarchical linear models
-    \end{itemize}
+    \item This can be easier analytically than other panel model specifications
+    \item These models also make sense when you have data that have a true hierarchical structure (such as persons within times within countries)
+	\end{itemize}
 
 }
 
+
+\frame{}
+
+\frame{\tableofcontents}
 
 
 
