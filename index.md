@@ -18,7 +18,7 @@ You can find an outline of the course objectives, schedule for the course, and a
 ---
 ## Schedule and Slides ##
 
-A tentative schedule is below:
+A final schedule is below:
 
  - Week 1 (Jan. 15): Public Opinion and Democracy
  - Week 2 (Jan. 22): What are opinions?
@@ -55,9 +55,9 @@ There are three problem sets for the course, which are designed to assess studen
 
 | Problem Set | Assigned | Due Date |
 |-------------|----------|----------|
-| [Micro Analysis](Assignments/ProblemSet1.html) | Jan. 22 | Jan. 26 |
-| [Macro Analysis](Assignments/ProblemSet2.html) | Jan. 29 | Feb. 2 |
-| [Experimentation](Assignments/ProblemSet3.html) | Feb. 5 | Feb. 9 |
+| [Micro Analysis](Assignments/ProblemSet1.html), [Slides](Slides/supplement01.pdf) | Jan. 22 | Jan. 26 |
+| [Macro Analysis](Assignments/ProblemSet2.html), [Slides](Slides/supplement02.pdf) | Jan. 29 | Feb. 2 |
+| [Experimentation](Assignments/ProblemSet3.html), [Slides](Slides/supplement03.pdf) | Feb. 5 | Feb. 9 |
 
 In each problem set, students will answer a series of short prompts about methods of public opinion research and provide simple analyses (using the statistical software of their choice) using data provided by the instructor. This is useful primarily for gauging students' competence with these methods, which may be necessary for the exam, and for the instructor to possibly prepare additional instruction on these topics as needed.
 
