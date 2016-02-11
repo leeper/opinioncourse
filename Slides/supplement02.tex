@@ -3,7 +3,7 @@
 \usetikzlibrary{shapes,arrows}
 \usetikzlibrary{decorations.pathreplacing}
 
-\title{Methods Supplementary Lecture 2:\\Survey Analysis}
+\title{Methods Supplementary Lecture 2:\\More Survey Design and Analysis}
 
 \date[]{}
 
@@ -12,6 +12,454 @@
 \frame{\titlepage}
 
 \frame{\tableofcontents}
+
+
+\section{Basic Quantitative Analysis}
+\frame{\tableofcontents[currentsection]}
+
+
+\subsection{Opinion Questions}
+\frame{\tableofcontents[currentsection]}
+
+
+\frame{
+	\frametitle{Evaluative questions}
+	\begin{itemize}\itemsep1em
+		\item Name an object of evaluation
+		\item Possibly describe that object
+		\item Ask for a transformation of the evaluation onto a set of responses
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Question templates}
+
+	\small
+	
+	\begin{itemize}
+		\item Ratings
+			\begin{itemize}
+				\item Several varieties of rating scales
+			\end{itemize}
+		\item Scales/Thermometers
+		\item Agree-disagree
+		\item Forced choices
+		\item Open-ended
+		\item Rankings (note: need alternatives to rank against)
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Extended Example}
+	\begin{itemize}\itemsep1em
+		\item Public opinion survey in Great Britain
+		\item Construct: Opinion toward UK involvement in air strikes on Islamic State militants in Iraq and Syria
+		\item Think about strengths and weaknesses of each question
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Rating (bipolar)}}
+	Do you support or oppose Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria?
+	\begin{itemize}
+		\item Strongly support
+		\item Somewhat support
+		\item Neither support nor oppose
+		\item Somewhat oppose
+		\item Strongly oppose
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Rating (branching)}}
+	
+	\footnotesize
+	
+	Do you support or oppose Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria?
+	\begin{itemize}
+		\item Support
+		\item Neither support nor oppose
+		\item Oppose
+	\end{itemize}
+	\vspace{1em}
+	Would you say that you strongly [support|oppose] or somewhat [support|oppose] Great Britain's participation?
+	\begin{itemize}
+		\item Strongly
+		\item Somewhat
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Rating (bipolar)}}
+	Are you favourable or unfavourable toward Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria?
+	\begin{itemize}
+		\item Very favourable
+		\item Somewhat favourable
+		\item Neither favourable nor unfavourable
+		\item Somewhat unfavourable
+		\item Strongly unfavourable
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Rating (unipolar)}}
+	To what extent do you support Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria?
+	\begin{itemize}
+		\item Strongly
+		\item Moderately
+		\item Somewhat
+		\item Not at all
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Rating (unipolar)}}
+	How favourable are you toward Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria?
+	\begin{itemize}
+		\item Extremely favourable
+		\item Very favourable
+		\item Moderately favourable
+		\item Somewhat favourable
+		\item Not at all favourable
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Numbered Scale}}
+	
+	\small
+	
+	On a scale from 1 to 5, with 1 being ``strongly oppose'' and 5 being ``strongly support,'' to what extent do you support Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria?
+	\begin{enumerate}
+		\item Strongly oppose
+		\item 
+		\item 
+		\item 
+		\item Strongly support
+	\end{enumerate}
+}
+
+\frame{
+	\frametitle{{\large Example: Thermometer}}
+	
+	\footnotesize
+	
+	We would like to get your feelings toward some of political policies. Please rate your support for the policy using something we call the feeling thermometer. Ratings between 50 degrees and 100 degrees mean that you feel favourable and warm toward the policy. Ratings between 0 degrees and 50 degrees mean that you don't feel favourable toward the policy. You would rate the policy at the 50 degree mark if you don't feel particularly favourable or unfavourable toward.
+	
+	\vspace{1em}
+	Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria.
+	\begin{itemize}
+		\item 0--100 slider
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{{\normalsize Example: Agree/Disagree (bipolar)}}
+	To what extent do you agree with the following statement: I support Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria.
+	\begin{itemize}
+		\item Strongly agree
+		\item Somewhat agree
+		\item Neither agree nor disagree
+		\item Somewhat disagree
+		\item Strongly disagree
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\normalsize Example: Agree/Disagree (unipolar)}}
+	To what extent do you agree with the following statement: I support Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria.
+	\begin{itemize}
+		\item Agree completely
+		\item Agree to a large extent
+		\item Agree to a moderate extent
+		\item Agree a little bit
+		\item Agree not at all
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Forced choice}}
+	When thinking about Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria, which of the following comes closer to your opinion:
+	\begin{itemize}
+		\item Great Britain should participate in air strikes
+		\item Great Britain should not participate in air strikes
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\large Example: Open-ended}}
+	In your own words, how would you describe your opinion on Great Britain's participation in U.S.-led air strikes on Islamic State (IS) in Iraq and Syria?
+}
+
+
+\frame{
+	\frametitle{Additional Considerations}
+	\begin{itemize}\itemsep0.5em
+		\item How many response categories?
+		\item Middle category (presence and label)
+		\item ``no opinion'' and/or ``don't know'' options
+		\item Probe if ``no opinion'' or ``don't know''?
+		    \begin{itemize}
+                \item Encourage guessing?
+    		    \item Clarify/describe object of evaluation?
+		    \end{itemize}
+		\item Branching format?
+		\item Order of response categories
+		\item Changes based on survey mode
+	\end{itemize}
+}
+
+
+\subsection{Analyzing Opinion Measures}
+\frame{\tableofcontents[currentsection]}
+
+\frame{
+
+\frametitle{Common Statistics in Opinion Research}
+
+\begin{itemize}\itemsep1em
+\item Means
+\item Proportions
+\item Correlations
+\item Differences
+\item Regression coefficients 
+\end{itemize}
+
+}
+
+
+
+% means
+
+% proportions
+
+% correlation
+
+
+\frame{
+	\frametitle{Sample mean}
+	\begin{equation}
+	\bar{y} = \frac{1}{n}\sum_{i=1}^{n}y_i
+	\end{equation}
+	where $y_i = $ value for a unit, and\\
+	$n = $ sample size
+	
+	\begin{equation}
+	SE_{\bar{y}} = \sqrt{(1-f)\frac{s^2}{n}}
+	\end{equation}
+	where $f = $ proportion of population sampled,\\
+	$s^2 = $ sample (element) variance, and\\
+	$n = $ sample size
+}
+
+\frame{
+	\frametitle{Sample proportion}
+	\begin{equation}
+	\bar{y} = \frac{1}{n}\sum_{i=1}^{n}y_i
+	\end{equation}
+	where $y_i = $ value for a unit, and\\
+	$n = $ sample size
+	
+	\begin{equation}
+	SE_{\bar{y}} = \sqrt{\frac{(1-f)}{(n-1)}p(1-p)}
+	\end{equation}
+	where $f = $ proportion of population sampled,\\
+	$p = $ sample proportion, and\\
+	$n = $ sample size
+}
+
+
+
+\frame{
+\frametitle{Relationship}
+
+\begin{itemize}\itemsep1em
+\item<1-> Covariance:\\
+	$Cov(X,Y) = \sum_{i=1}^{n} \dfrac{(X_i - \bar{X})(Y_i - \bar{Y})}{n-1}$
+\item<2-> Correlation:\\
+	{\small $Corr(X,Y) = r_{x,y} = \sum_{i=1}^{n} \dfrac{(X_i - \bar{X})(Y_i - \bar{Y})}{(n-1)s_x s_y}$}
+\end{itemize}
+}
+
+
+
+
+
+
+% statistical significance
+% standard error
+% t-statistics
+% confidence interval
+% p-value
+
+
+
+
+\section{Hierarchical Data Collection}
+\frame{\tableofcontents[currentsection]}
+
+\frame{
+
+\frametitle{Hierarchical Data Collection}
+
+\begin{itemize}\itemsep1em
+\item Sampling is just a building block
+\item Various elements can be combined:
+	\begin{itemize}
+	\item Repeated, independent sampling
+	\item Repeated interviewing
+	\item Parallel sampling w/in different contexts
+	\item Experimentation (see Lecture 3)
+	\end{itemize}
+\item<2-> Big question: How do analyze complex data structures?
+\end{itemize}
+
+}
+
+\frame{
+	\frametitle{Research Questions}
+	
+	\begin{itemize}\itemsep1em
+	\item Sampling allows us to make claims about populations
+	\item Hierarchical data collection allows us to answer more complex research questions
+		\begin{itemize}
+		\item How does a population change?
+		\item How do populations compare (across space and time)?
+		\item How do individuals change?
+		\item How are multiple factors related? How do those relationships differ across space, time, geography, and individuals?
+		\end{itemize}
+	\item Not going to talk about qualitative or case comparisons
+	\end{itemize}
+}
+
+
+\subsection{Repeated Cross-Sections}
+\frame{\tableofcontents[currentsection]}
+
+\frame{
+\frametitle{Repeated Cross-Section}
+\begin{itemize}\itemsep1em
+\item Simplest elaboration of a single survey
+\item Draw multiple, independent samples at different points in time
+	\begin{itemize}
+	\item Note: in small populations, this can be complicated
+	\end{itemize}
+\item Useful for:
+	\begin{itemize}
+	\item Establishing trends/changes
+	\item Comparing multivariate relationships over time
+	\end{itemize}
+\end{itemize}
+}
+
+% example 1: election polling
+
+% example 1: BES CMS
+
+% technical aspects
+% notation
+
+\frame{
+
+\frametitle{Practical Considerations}
+
+\begin{itemize}\itemsep1em
+\item<2-> Are patterns of nonresponse consistent across periods?
+\item<3-> What happens if we want/need to change questions?
+\item<4-> What happens if we want/need to change sampling methods?
+\item<5-> What if we want to draw individual-level comparisons?
+\end{itemize}
+
+}
+
+
+
+\subsection{Survey Panels}
+\frame{\tableofcontents[currentsection]}
+
+\frame{
+\frametitle{Panel Studies}
+
+\begin{itemize}\itemsep1em
+\item A panel is a single cohort, observed at multiple points in time
+\item Synonyms: Within-subjects studies, longitudinal studies, cohort studies
+\item First use: Lazarsfeld and Fiske (1938)
+\end{itemize}
+
+}
+
+% example 1: classic election studies
+% actually have features of both panels and repeated cross-sections (the time-series element)
+
+\frame{
+\frametitle{Trade-offs}
+\begin{itemize}\itemsep1em
+\item<2-> Advantages
+	\begin{itemize}
+	\item Within-subjects comparisons
+	\item Statistical efficiency
+	\item Cost?
+	\end{itemize}
+\item<3-> Disadvantages
+	\begin{itemize}
+	\item Initial recruitment
+	\item Attrition (and incentivization)
+	\item Panel conditioning
+	\item Cost?
+	\end{itemize}
+\end{itemize}
+
+}
+
+\frame{
+
+\frametitle{Panels vs. Repeated Cross-Section}
+
+
+% contrast with repeated cross-sections
+
+
+}
+
+
+\frame{
+
+\frametitle{Panel Variants}
+
+\begin{itemize}\itemsep1em
+\item Rolling panel
+\item Replenishment samples
+\item Subpanels
+\item ``Online panels''
+\end{itemize}
+
+}
+
+
+\subsection{Multi-Level/Comparative Data}
+\frame{\tableofcontents[currentsection]}
+
+\frame{
+\frametitle{Multi-Level Data}
+
+\begin{itemize}\itemsep1em
+\item Multi-level data collection involves sampling within different geographical units
+\item Depending on research goal, this can be thought of as either stratified sampling or cluster sampling, or both
+	\begin{itemize}
+	\item Stratified sampling: Geography correlates with variables of interest and we desire large, representative samples within each geographical stratum
+	\item Cluster sampling: Goal is to make claims about ``super population'' and units are necessary for interviewing procedures
+	\end{itemize}
+\item Often used in cross-national comparative analyses
+\end{itemize}
+}
+
+% example 1: ESS
+
+% example 2: World Values Survey
+
+
+
 
 \section{Linear Regression Analysis}
 \frame{\tableofcontents[currentsection]}
@@ -96,8 +544,6 @@
 	\end{enumerate}
 }
 
-
-\frame{\frametitle{Questions about philosophical assumptions?}}
 
 \frame<1-5,2>[label=ways]{
 	\frametitle{Ways of Thinking About OLS}
@@ -421,8 +867,6 @@
 }
 
 \againframe<5-11>{scatter}
-
-\frame{\frametitle{Questions about OLS calculations?}}
 
 
 \frame[label=anygood]{
@@ -763,7 +1207,7 @@
 
 
 
-\section{Goodness-of-Fit}
+\subsection{Goodness-of-Fit}
 \frame{\tableofcontents[currentsection]}
 
 \frame{
@@ -1440,20 +1884,9 @@
 
 
 
-\section{Panel Studies and Regression}
+
+\subsection{Panel Regression}
 \frame{\tableofcontents[currentsection]}
-
-\frame{\frametitle{}}
-
-% panel surveys in concept
-% contrast with repeated cross-sections
-
-% talk about panel regression
-% multi-level modeling
-
-
-
-
 
 
 \frame{
