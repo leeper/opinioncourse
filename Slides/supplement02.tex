@@ -219,6 +219,7 @@
 \frametitle{Common Statistics in Opinion Research}
 
 \begin{itemize}\itemsep1em
+\item Counts (tabulation)
 \item Means
 \item Proportions
 \item Correlations
@@ -229,12 +230,25 @@
 }
 
 
+\frame{
 
-% means
+	\frametitle{Tabulation}
+	
+	\small
+	
+	\begin{itemize}\itemsep0.5em
+	\item Tabulation is simply the counting of numbers of observed values of a given variable, or the combination of values across multiple variables
+	\item In practice, we almost always translate these to proportions
+		\begin{itemize}
+		\item For rare subgroups, we might be interested in counts (e.g., number of drug users, etc.)
+		\end{itemize}
+	\item<2-> In complex surveys, these tabulations have to be weighted
+		\begin{itemize}
+		\item In practice, almost always done using specialized software
+		\end{itemize}
+	\end{itemize}
 
-% proportions
-
-% correlation
+}
 
 
 \frame{
@@ -270,29 +284,233 @@
 }
 
 
+\frame{
+
+	\frametitle{Making comparisons}
+	\begin{itemize}\itemsep1em
+	\item Differences of means
+	\item Differences of proportions
+	\item Correlation between variables
+	\item Regression estimates
+	\end{itemize}
+}
+
 
 \frame{
-\frametitle{Relationship}
+	\frametitle{Mean Difference}
+	\begin{itemize}\itemsep1em
+	\item We might expect two means to differ
+	    \begin{itemize}
+		\item Means for two subgroups (e.g., mean and women)
+		\item Means across two areas (e.g., England and Scotland)
+		\item Means at two times (e.g., pre- and post-election)
+		\end{itemize}
+	\item We calculate this as a simple difference of subgroup means:\\
+		$\beta = \dfrac{\sum_{i=1}^{n_1} x_{i1}}{n_1} - \dfrac{\sum_{i=1}^{n_0} x_{i0}}{n_0} $
+	\end{itemize}
 
-\begin{itemize}\itemsep1em
-\item<1-> Covariance:\\
-	$Cov(X,Y) = \sum_{i=1}^{n} \dfrac{(X_i - \bar{X})(Y_i - \bar{Y})}{n-1}$
-\item<2-> Correlation:\\
-	{\small $Corr(X,Y) = r_{x,y} = \sum_{i=1}^{n} \dfrac{(X_i - \bar{X})(Y_i - \bar{Y})}{(n-1)s_x s_y}$}
-\end{itemize}
+}
+
+
+\frame{
+
+\begin{center}
+\includegraphics[height=\textheight]{images/meandifference}
+\end{center}
+}
+
+
+\frame{
+	\frametitle{Significance}
+	
+	\begin{itemize}\itemsep1em
+	\item Is this difference large?
+	\item We can speak about that in two ways:
+		\begin{itemize}
+		\item Is the difference substantively large?
+		\item Is the difference larger than we would expect?
+		\end{itemize}
+	\item<2-> To answer the second question requires two pieces of information:
+		\begin{itemize}
+		\item A \textit{null} expectation for the difference, $H_0$
+		\item An understanding of how likely we are to see a difference this large given that null expectation
+		\end{itemize}
+	\end{itemize}
+
+}
+
+\frame{
+	\frametitle{$t$-statistic}
+	
+	\small
+	
+	\begin{enumerate}\itemsep0.5em
+	\item State a null expectation
+		\begin{itemize}
+		\item ``No difference'' null: $t_{\hat{\beta_1}} = \frac{\hat{\beta_1}}{SE_{\hat{\beta_1}}}$
+		\item Any other null: $\frac{\hat{\beta_1} - H_0}{SE_{\hat{\beta_1}}}$, where $H_0$ is our null hypothesis value
+		\end{itemize}
+	\item Assessment of variability under null comes from SE
+		\begin{itemize}
+		\item Inherent (element) variance of our data
+		\item Sample size
+		\item Sampling procedures
+		\end{itemize}
+	\item Effect is ``statistically significant'' if the probability of seeing a $t$-statistic this large or larger is small
+	\end{enumerate}
+}
+
+\frame{
+
+\begin{center}
+\includegraphics[height=\textheight]{images/twotailed}
+\end{center}
+}
+
+\frame{
+
+\begin{center}
+\includegraphics[height=\textheight]{images/onetailed}
+\end{center}
+
+}
+
+
+\frame{
+
+We consider a difference ``statistically significant'' when it differs more from our null expectation than the variation in sample statistics we would expect to observe across repeated samples from a population where our null hypothesis was true (in this case, where there was actually no difference between the groups).
+
+}
+
+% In other words, the sample statistic is so unusual for a the population from which we --- under the null hypothesis --- believe that the data are drawn from, that we decide that the data are actually drawn from a population with a different population mean. That's the essence of statistical hypothesis testing.
+
+
+\frame{
+
+	\frametitle{Common Misconceptions}
+	
+	The $p$-value is not:
+	
+	\begin{itemize}
+	\item The probability that a hypothesis is true or false
+	\item A reflection of our confidence or certainty about the result
+	\item The probability that the true mean is in any particular range of values
+	\item A statement about the importance or substantive size of the effect
+	\end{itemize}
+
 }
 
 
 
+\frame{}
+
+
+\frame{
+
+\frametitle{{\large Assessing Measurement Quality}}
+
+\begin{enumerate}\itemsep1em
+\item Conceptual clarity
+\item Construct validity
+	\begin{itemize}
+	\item Convergent validity
+	\item Divergent validity
+	\end{itemize}
+\item Accuracy and precision
+\end{enumerate}
+
+}
+
+\frame{
+\frametitle{Assessing Measures I}
+
+\begin{itemize}\itemsep1em
+\item Conceptual clarity is about knowing what we want to measure
+\item Sloppy concepts make for bad measures
+	\begin{itemize}
+	\item Ambiguity % multiple meanings or multiple labels
+	\item Vagueness % concept without a definition
+	\end{itemize}
+\item<2-> Revise concept definition as needed
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Assessing Measures II}
+
+\begin{itemize}\itemsep0.5em
+\item Construct validity is the degree to which a variable measures a concept
+\item<2-> Construct validity is \textbf{high} if a variable is a measure of the concept we care about
+\item<3-> Construct validity is \textbf{low} if a variable is actually a measure of something else
+\end{itemize}
+}
+
+% sources: bad concept definition; totally inappropriate measures (using income to measure weight); measure becomes the concept (actual income is replaced by self-reported income)
+
+\frame{
+
+\frametitle{{\large Assessing Construct Validity}}
+
+\begin{itemize}\itemsep1em
+\item Multiple measures!
+\item Look for:
+	\begin{itemize}
+	\item Convergence (Convergent validity)
+	\item Discrimination (Discriminant validity)
+	\end{itemize}
+\item<2-> For example, the multi-trait, multi-method matrix
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Accuracy and Precision}
+{\small Synonyms: accurate, true, correct, unbiased, valid}\\
+{\small Synonyms: precise, certain, exact, specific, low variance}\\
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{images/accuracyprecision}
+\end{center}
+
+\vspace{-1em}
+{\tiny \href{https://commons.wikimedia.org/wiki/File:Reliability_and_validity.svg}{Image Source: Wikimedia}, Nevit Dilmen}
+}
 
 
 
-% statistical significance
-% standard error
-% t-statistics
-% confidence interval
-% p-value
+\frame{
+	\frametitle{Scaling}
+	\begin{itemize}\itemsep0.5em
+	\item Improve precision (and accuracy) by combining multiple noisy measures
+	\item Common methods
+		\begin{itemize}
+		\item Simple sum or average
+		\item Factor analysis
+		\item Item response theory models
+		\end{itemize}
+	\item In survey context, typically use prepared, time-optimized batteries of items
+	\end{itemize}
+}
 
+
+\frame{
+	\frametitle{Cronbach's $\alpha$}
+	\begin{itemize}\itemsep1em
+	\item Scaling only makes sense if variables ``go together''
+		\begin{itemize}
+		\item We can assess them \textit{pairwise} by looking at correlations between variables
+		\item But it's helpful to have a way to assess the scale as a whole
+		\end{itemize}
+	\item Definition:
+		$\alpha = \dfrac{ N \bar{c} }{ \bar{v} + (N-1) \bar{c} }$
+		\begin{itemize}
+		\item N: number of items
+		\item $\bar{c}$: average covariance of items
+		\item $\bar{v}$: average variance of items
+		\end{itemize}
+	\end{itemize}
+}
 
 
 
@@ -319,6 +537,8 @@
 
 \frame{
 	\frametitle{Research Questions}
+	
+	\small
 	
 	\begin{itemize}\itemsep1em
 	\item Sampling allows us to make claims about populations
@@ -353,12 +573,41 @@
 \end{itemize}
 }
 
-% example 1: election polling
+\frame{
+	\frametitle{Example: Election Polling}
+	\begin{itemize}\itemsep1em
+	\item Commonly used to study elections
+	\item Highly inconsistent procedures
+		\begin{itemize}
+		\item Varying sample sizes
+		\item Varying sampling procedures
+		\item Varying question wordings
+		\item Irregular field periods
+		\end{itemize}
+	\item Some examples:
+		\begin{itemize}
+		\item \href{http://elections.huffingtonpost.com/pollster}{Pollster}
+		\item \href{http://lordashcroftpolls.com/}{Lord Ashcroft Polls}
+		\end{itemize}
+	\end{itemize}
+}
 
-% example 1: BES CMS
+\frame{
+	\frametitle{Example: BES CMS}
+	\begin{itemize}\itemsep1em
+	\item Continuous Monitoring Study
+	\item Procedures
+		\begin{itemize}
+		\item Monthly interviewing 2004--Present
+		\item Modest sample sizes
+		\item Very short questionnaire
+		\end{itemize}
+	\item Inspired ``rolling thunder'' study of 2015 campaign
+	\item Data: \url{http://www.bes2009-10.org/cms-data.php}
+	\end{itemize}
+}
 
-% technical aspects
-% notation
+
 
 \frame{
 
@@ -389,8 +638,37 @@
 
 }
 
-% example 1: classic election studies
-% actually have features of both panels and repeated cross-sections (the time-series element)
+\frame{
+	\frametitle{{\normalsize Ex: ``Classic'' Election Studies}}
+	\begin{itemize}\itemsep1em
+	\item ``Columbia School'': Lazarsfeld et al. (1948) and Berelson et al. (1954)%\footnote{Lazarsfeld, P. F.; Berelson, B. R. \& Gaudet, H. (1948), \textit{The People's Choice: How the Voter Makes up His Mind in a Presidential Campaign}, Columbia University Press. Berelson, B. R.; Lazarsfeld, P. F. \& McPhee, W. N. (1954), \textit{Voting: A Study of Opinion Formation in a Presidential Campaign}, The University of Chicago Press.}
+	\item Empaneled small samples (less than n=1000)
+	\item Measured vote intentions and other factors multiple times
+	\item Largely found that campaigns didn't matter
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{{\normalsize Ex: Modern Election Studies}}
+	\begin{itemize}\itemsep1em
+	\item American National Election Studies 
+		\begin{itemize}
+		\item Collected biennially (or more) since 1948
+		\item Questionnaire is basically unchanged
+		\item Most years have pre/post interviews
+		\item Profound source of data, survey innovations, \& experiments
+		\item \url{http://electionstudies.org/}
+		\end{itemize}
+	\item National Annenberg Election Survey
+		\begin{itemize}
+		\item Five-wave panels during 2004 and 2008 U.S. Presidential elections
+		\item Online and telephone interviewing
+		\item Intended to mimic ``classic'' studies
+		\item \href{http://www.annenbergpublicpolicycenter.org/political-communication/naes/}{Click for more info}
+		\end{itemize}
+	\end{itemize}
+}
+
 
 \frame{
 \frametitle{Trade-offs}
@@ -414,13 +692,31 @@
 
 \frame{
 
-\frametitle{Panels vs. Repeated Cross-Section}
-
-
-% contrast with repeated cross-sections
-
-
+	\frametitle{Statistical Advantages I}
+	
+	\begin{itemize}
+	\item Independent samples\footnote{Note: We \textit{do not} actually need the raw data to calculate this.}
+	   \begin{align*}
+	   \beta &= \dfrac{\sum_{i=1}^{n_1} x_{i1}}{n_1} - \dfrac{\sum_{i=1}^{n_0} x_{i0}}{n_0} \\
+	   SE_{\beta} &= \sqrt{\dfrac{s_1^2}{n_1} + \dfrac{s_0^2}{n_0}}
+	   \end{align*}
+	\end{itemize}
 }
+
+\frame{
+
+	\frametitle{Statistical Advantages II}
+	
+	\begin{itemize}
+	\item Paired samples\footnote{Note: We \textit{do} need the raw data to calculate this.}
+		 \begin{align*}
+		 \beta &= \dfrac{\sum_{i=1}^{n} (x_{i1} - x_{i0})}{n} \\
+		 SE_{\beta} &= \sqrt{\dfrac{{s_{Diff}}^2}{n}}
+		 \end{align*}
+	\item Standard error for paired samples decreases as correlation between $t_0$ and $t_1$ observations increases.
+	\end{itemize}
+}
+
 
 
 \frame{
@@ -436,6 +732,7 @@
 
 }
 
+\frame{}
 
 \subsection{Multi-Level/Comparative Data}
 \frame{\tableofcontents[currentsection]}
@@ -454,14 +751,52 @@
 \end{itemize}
 }
 
-% example 1: ESS
+\frame{
 
-% example 2: World Values Survey
+	\frametitle{{\normalsize Ex: European Social Survey}}
+	
+	\begin{itemize}\itemsep1em
+	\item Biennial cross-sectional survey conducted since 2001
+		\begin{itemize}
+		\item Currently round 8 in field
+		\end{itemize}
+	\item Implemented in parallel across \href{http://www.europeansocialsurvey.org/about/participating_countries.html}{most European countries}
+	\item Extremely high quality
+		\begin{itemize}
+		\item CAPI interviewing
+		\item Probability based samples
+		\item Precise translation
+		\end{itemize}
+	\item \url{http://www.europeansocialsurvey.org/}
+	\end{itemize}
+}
+
+
+\frame{
+
+	\frametitle{{\normalsize Ex: World Values Survey}}
+	
+	\begin{itemize}\itemsep1em
+	\item Periodic survey since 1985
+		\begin{itemize}
+		\item Currently planning Wave 8 for 2016--2018
+		\item Long field period (2+ years)
+		\item Approximately 100 countries
+		\end{itemize}
+	\item Well-conducted
+		\begin{itemize}
+		\item CAPI or CATI interviewing
+		\item Mostly probability samples
+		\item More cross-national protocol variations than ESS
+		\end{itemize}
+	\item {\footnotesize \url{http://www.worldvaluessurvey.org/wvs.jsp}}
+	\end{itemize}
+}
 
 
 
 
-\section{Linear Regression Analysis}
+\section{Regression Analysis}
 \frame{\tableofcontents[currentsection]}
 
 
@@ -500,40 +835,6 @@
 	\end{itemize}
 }
 
-\frame{
-	\frametitle{An Example}
-	\begin{itemize}
-	\item We want to know $\bar{Y}$ (population mean)
-	\item Our \textit{estimator} is the sample mean formula which produces the sample \textit{estimate} $\bar{y}$:
-		\begin{equation}
-		\bar{y} = \frac{1}{n}\sum_{i=1}^{n}y_i
-		\end{equation}
-	\item The \textit{sampling variance} is our uncertainty:
-	\begin{equation}
-	Var(\bar{y}) = \frac{s^2}{n}
-	\end{equation}
-	where $s^2 = $ sample element variance
-	\end{itemize}
-}
-
-\frame{
-	\frametitle{Uncertainty}
-	\begin{itemize}\itemsep1em
-		\item We never know $\theta$
-		\item Our $\hat{\theta}$ is an estimate that may not equal $\theta$
-			\begin{itemize}
-    			\item Unbiased due to \textbf{Law of Large Numbers}
-    			\item For $\bar{y}$: $N(Y, \sigma^2) $
-			\end{itemize}
-    	\item The size of sampling variance depends on:
-    		\begin{itemize}
-        		\item Element variance
-        		\item Sample size!
-    		\end{itemize}
-    	\item Note: $SE(\bar{y}) = \sqrt{Var(\bar{y})}$
-    	\item We may want to know $\hat{\theta}$ per se, but we are mostly interested in it as an estimate of $\theta$
-	\end{itemize}
-}
 
 \frame{
 	\frametitle{Causal Inference}
@@ -542,6 +843,54 @@
 	\item<3-> Plus, philosophical assumptions
 	\item<4-> Plus, randomization \textit{or} perfectly specified model
 	\end{enumerate}
+}
+
+
+
+\subsection{OLS}
+\frame{\tableofcontents[currentsection]}
+
+
+\frame{
+\frametitle{Relationship}
+
+\begin{itemize}\itemsep1em
+\item<1-> Covariance:\\
+	$Cov(X,Y) = \sum_{i=1}^{n} \dfrac{(X_i - \bar{X})(Y_i - \bar{Y})}{n-1}$
+\item<2-> Pearson's Correlation:\\
+	{\small $Corr(X,Y) = r_{x,y} = \sum_{i=1}^{n} \dfrac{(X_i - \bar{X})(Y_i - \bar{Y})}{(n-1)s_x s_y}$}
+\end{itemize}
+}
+
+
+\frame{
+
+\frametitle{Correlation is linear!}
+
+\includegraphics[width=\textwidth]{images/correlation}
+
+\vspace{1em}
+{\footnotesize Source: \href{https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg}{Wikimedia}}
+}
+
+
+\frame{
+
+	\frametitle{Analyzing Complex Surveys}
+	
+	\small
+	
+	\begin{itemize}\itemsep1em
+	\item There's a saying: ``Every simple random survey is simple in the same way, but every complex survey is complex in its own way.''
+	\item<2-> Statistics courses will almost always assume simple random sampling
+	\item<3-> Any sample that is not self-weighting requires more complicated \textit{estimators} that account for varying weights
+	\item<4-> Don't try to do this by hand
+		\begin{itemize}
+ 		\item \href{http://www.stata.com/manuals13/svy.pdf}{Stata \texttt{svy} module}
+ 		\item \href{https://cran.r-project.org/web/packages/survey/index.html}{R \texttt{survey} package}
+		\end{itemize}
+	\end{itemize}
+
 }
 
 
@@ -877,7 +1226,7 @@
    		\item Causally valid theory
    		\item Linear relationship between $X$ and $Y$
    		\item $X$ is measured without error
-   		\item No missing data (or MCAR; see Lecture 5)
+   		\item No missing data (or MCAR)
    		\item No confounding
 	\end{enumerate}
 }
@@ -899,7 +1248,7 @@
 }
 
 \frame{
-	\frametitle{Coefficient Interpretation Activity}
+	\frametitle{Coefficient Interpretation}
 	\begin{itemize}\itemsep1em
 	\item Four types of variables:
 		\begin{enumerate}
@@ -968,18 +1317,9 @@
     	\item Not necessarily a problem
     	\item If \textit{random} (i.e., uncorrelated with $x$), it costs us precision
     	\item If \textit{systematic}, who knows?!
-    	\item If \textit{censored}, see Lectures 11 and/or 12
 	\end{itemize}
 }
 
-
-\frame{
-	\frametitle{Missing Data}
-	\begin{itemize}\itemsep1em
-	\item Missing data can be a big problem
-	\item We will discuss it in Lecture 5
-	\end{itemize}
-}
 
 \frame{
 	\frametitle{Confounding (Selection Bias)}
@@ -1150,7 +1490,7 @@
 \frame{
 	\frametitle{From Line to Surface II}
 	\begin{center}
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale=0.7]
 	    \draw[thick,->] (0,0,0) -- (6,0,0) node[anchor=north east]{$x$};
 	    \draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
 	    \draw<1> (3,3,0) node {$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 X$};
@@ -1232,7 +1572,10 @@
 
 \frame{
 	\frametitle{Coefficient of Determination ($R^2$)}
-	\begin{itemize}\itemsep1em
+	
+	\small
+	
+	\begin{itemize}\itemsep0.5em
 	\item Definition: $R^2 = \hat{r}_{x,y}^2 = \frac{SSE}{SST} = 1 - \frac{SSR}{SST}$
 	\item Interpretation: How much of the total variation in $y$ is explained by the model?
 	\item But, $R^2$ increases simply by adding more variables
@@ -1243,7 +1586,7 @@
 
 \frame{
 	\frametitle{Standard Error of the Regression (SER)}
-	\begin{itemize}\itemsep1em
+	\begin{itemize}\itemsep0.5em
 	\item ``Root mean squared error'' or just $\sigma$
 	\item Definition: $\hat{\sigma} = \sqrt{\frac{SSR}{n-p}}$, where $p$ is number of parameters estimated
 	\item Interpretation: How far, on average, are the observed $y$ values from their corresponding fitted values $\hat{y}$
@@ -1272,10 +1615,11 @@
 
 
 
-\section{Generalized Linear Models}
+\subsection{Generalized Linear Models}
 \frame{\tableofcontents[currentsection]}
 
-\frame{\frametitle{}}
+
+
 \frame{
     \frametitle{Non-continuous Outcomes}
     \begin{enumerate}\itemsep1em
@@ -1326,6 +1670,9 @@
 
 \frame{
 	\frametitle{Error Distribution}
+	
+	\small
+	
 	\begin{itemize}\itemsep1em
 	\item To estimate a linear model using OLS, no distributional assumption is needed
 	\item We can use Maximum Likelihood Estimation to obtain identical coefficient estimates as OLS by assuming errors are Normally distributed
@@ -1384,9 +1731,9 @@
 \end{frame}
 
 \begin{frame}[fragile]
-    \frametitle{From $x$ to Linear Prediction ($y\ast$)}
+    \frametitle{{\normalsize From $x$ to Linear Prediction ($y\ast$)}}
     \begin{center}
-    \begin{tikzpicture}[scale=0.6]
+    \begin{tikzpicture}[scale=0.5]
     \draw [thin, step=0.1, lightgray] (-5,-5) grid (5,5);
     \draw [thick, gray] (-5,-5) grid (5,5);
     \node[right] () at (5,-5) {$x$};
@@ -1434,10 +1781,10 @@
 
 
 \begin{frame}[fragile]
-    \frametitle{Putting it Together}
+    \frametitle{{\normalsize Putting it Together}}
     \vspace{-1.5em}
     \begin{center}
-    \begin{tikzpicture}[scale=0.6]
+    \begin{tikzpicture}[scale=0.5]
     
     % Pr(y)
     \draw [thin, step=0.1, lightgray] (-12,-5) grid (-8,5);
@@ -1535,7 +1882,7 @@
 
 \frame{
     \frametitle{Maximum Likelihood Estimation}
-    \begin{itemize}\itemsep1em
+    \begin{itemize}\itemsep0.5em
     \item Choose an error distribution (which is described by various parameters)
     \item Select parameters as starting values
     \item Give a \textit{probability} of seeing each observation in our sample data given that distribution
@@ -1625,7 +1972,7 @@
 \frame{
 	\frametitle{Simple regression surface}
 	\begin{center}
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale=0.7]
 	    \draw[thick,->] (0,0,0) -- (6,0,0) node[anchor=north east]{$x$};
 	    \draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
 	    \draw[thick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$z$};
@@ -1677,7 +2024,7 @@
 
 \frame{
     \frametitle{Language of Interpretation}
-    \begin{itemize}\itemsep1em
+    \begin{itemize}\itemsep0.5em
     \item How do we describe a marginal effect in OLS?
     \item<2-> In a binary outcome model, we use different language\\
     \item<3-> The substantive importance of an effect may depend on the level of $\Pr(y)$ at which it occurs\\
@@ -1792,7 +2139,7 @@
     \item Discrete effects can also be calculated for continuous variables
     \item Requires choosing a substantively meaningful change in $x$
     \item \textbf{Caution!} Not necessary equal:\\
-        \begin{itemize}\itemsep1em 
+        \begin{itemize}\itemsep0.5em 
         \item $\Pr(y = 1|x = 5) - \Pr(y = 1|x = 1)$
         \item ME at $x = 5$ (MER)
         \item ME at $x = 1$ (MER)
@@ -1859,6 +2206,9 @@
 
 \frame{
     \frametitle{Language of Interpretation}
+    
+    \small
+    
     \begin{itemize}\itemsep0.5em
     \item \textbf{Discrete effect}: A change in $x$ from $a$ to $b$ results in an increase in the predicted probability that $y$ equals 1 of 0.89, which is a substantively large and statistically significant effect.
     \item \textbf{Marginal effect}: The marginal effect of $x$ on the probability that $y$ = 1 when $x$ equals $a$ is 0.07, which is a large and statistically significant effect. The predicted probability of $y$ at this point is only 0.03, however, suggesting $x$ may be substantively unimportant for cases with this value of $x$.
@@ -1890,8 +2240,27 @@
 
 
 \frame{
+
+	\frametitle{Analyzing panel data}
+	\begin{itemize}\itemsep1em
+	\item Pooled analysis
+	\item Fixed or random effects panel regression
+		\begin{itemize}
+		\item Both OLS-like and GLM-like approaches possible
+		\end{itemize}
+	\item Mixed effects models
+		\begin{itemize}
+		\item A generalization of random effects models
+		\item Also works as framework for other hierarchical data structures (e.g., cross-national datasets)
+		\end{itemize}
+	\end{itemize}
+
+}
+
+
+\frame{
     \frametitle{Pooled Estimator}
-    \begin{itemize}\itemsep1em
+    \begin{itemize}\itemsep0.5em
     \item $y_{it} = \beta_0 + \beta_1 x_{it} + \dots + \epsilon_{it}$
     \item Ignores panel structure (interdependence)
     \item Ignores heterogeneity between units
@@ -1957,12 +2326,12 @@
     \item Fixed effects terms absorb all time-invariant between-unit heterogeneity
     \item Effects of time-invariant variables cannot be estimated
     \item Each unit is its own control (``within'' estimation)
-    \item Two ways to estimate this:
+    \item For GLMs, two ways to estimate this:
         \begin{itemize}
-        \item Unconditional maximum likelihood
+        \item Unconditional maximum likelihood, or
         \item Conditional maximum likelihood
+	    \item Both are problematic
         \end{itemize}
-    \item Both are problematic
     \end{itemize}
 }
 
@@ -1987,7 +2356,10 @@
 
 \frame{
     \frametitle{Conditional MLE}
-    \begin{itemize}\itemsep1em
+    
+    \small
+    
+    \begin{itemize}\itemsep0.5em
     \item Estimates only based on units that change in $Y$
     \item Effects of time-invariant variables are not estimable
     \item Observations with time-invariant outcome are dropped
@@ -1998,13 +2370,11 @@
 \frame{
     \frametitle{Fixed Effects Estimator}
     \begin{itemize}\itemsep1em
-    \item Interpretation is difficult
-    \item Use \texttt{predict} to get fitted values on the latent scale
-    \item \texttt{margins, dydx()} is also problematic
+    \item For linear outcomes, interpret like OLS
+    \item For GLMs, interpretation is difficult because of the particulars of model estimation. You can:
         \begin{itemize}
-        \item Use \texttt{, predict(xb)} to obtain log-odds marginal effects
-        \item Use \texttt{, predict(pu0)} to assume fixed effect is zero
-        \item Neither of those is the default
+        \item In logit: predicted log-odds or log-odds marginal effects
+        \item In any GLM: assume fixed effect is zero
         \end{itemize}
     \end{itemize}
 }
@@ -2021,27 +2391,21 @@
     \end{itemize}
 }
 
-\frame{
-    \frametitle{Estimation hell!}
-    \begin{itemize}\itemsep0.5em
-    \item<2-> Due to \textit{incidental parameters problem} we cannot consistently estimate both the regression coefficients and the unit-specific effects
-    \item<3-> We have to make some assumptions about the unit-specific error terms
-    \item<3-> But assumptions get us to a likelihood function that can only be maximized via \textit{integration} of a complicated function
-    \item<3-> Quadrature (a form of numerical approximation of an integral) is therefore used (costly!)
-    \end{itemize}
-}
 
 \frame{
     \frametitle{Random Effects Estimator}
     \begin{itemize}\itemsep1em
-    \item Can be used with logit or probit
-    \item Interpretation is messy because unit-specific error terms are unobserved
-    \item Thus marginal effects calculation must make an assumption of about the random effects:
-        \begin{itemize}
-        \item Predict log-odds: \texttt{margins, dydx(*)}
-        \item Assume they are 0: \texttt{, predict(pu0)}
-        \end{itemize}
-    \end{itemize}
+    \item Very straightforward for continuous outcomes
+	    \begin{itemize}
+	    \item Interpretation is just like fixed effects, basically
+	    \item Focus on predicted outcomes and/or marginal effects
+	    \end{itemize}
+    \item Can be used with GLMs
+	    \begin{itemize}
+	    \item Interpretation is messy because unit-specific error terms are unobserved
+	    \item Marginal effects either on latent scale or assume random effects are zero
+	    \end{itemize}
+	\end{itemize}
 }
 
 
@@ -2051,50 +2415,21 @@
     \item Different assumptions
     \item Very different estimation strategies
         \begin{itemize}
-        \item These are consequential for interpretation
+        \item These are consequential for interpretation for non-continuous outcomes
         \end{itemize}
-	\item Common practice is to estimate multiple specifications
-    \end{itemize}
-}
-
-
-\frame{
-    \frametitle{Reminder!}
-    \begin{itemize}\itemsep1em
-    \item Some outcomes are binary but are constant before and after an ``event''
-        \begin{itemize}
-        \item Individual graduates from university
-        \item Country transitions to democracy
-        \end{itemize}
-    \item We can analyze these using binary outcome panel models \textit{or} using event-history methods from last week
-    \item Either might be appropriate, depending on the research question, hypothesis, and data
-    \end{itemize}
-}
-
-
-
-\frame{
-    \frametitle{Ordered Outcome Models}
-    \begin{itemize}\itemsep1em
-    \item Estimators exist, but only random effects is implemented in Stata
-        \begin{itemize}
-        \item Logit and probit available
-        \end{itemize}
-    \item Other possible analysis strategies:
-        \begin{itemize}\itemsep0.5em
-        \item Use a linear panel specification
-        \item Estimate a pooled model with clustered SEs
-        \item Recode categories to binary and use
-        \item Use a mixed effects specification
-        \end{itemize}
+	\item Common practice is to estimate multiple specifications and compare
     \end{itemize}
 }
 
 
 \frame{
     \frametitle{Standard Errors}
-    \begin{itemize}\itemsep1em
-    \item Standard errors can be complicated
+    
+    \small
+    
+    \begin{itemize}\itemsep0.5em
+    \item For continuous outcomes: Works same way as OLS but typically you will cluster by unit/observation
+    \item For GLMs, standard errors can be complicated
     \item For pooled model, use standard errors clustered by unit
         \begin{itemize}
         \item \texttt{vce(robust)}
@@ -2102,16 +2437,6 @@
         \end{itemize}
     \item For random effects, you may want bootstrapped standard errors
     \item Always check for robustness
-    \end{itemize}
-}
-
-\frame{
-    \frametitle{Interpretation: Quick Review}
-    \begin{itemize}\itemsep1em
-    \item Usual rules don't apply
-    \item Estimation via an MLE variant usually means marginal effects are undefined
-    \item Depending on model specification, predicted values may also be \textit{conditional}
-    \item We have to make further assumptions to create an interpretable quantity of interest from the model
     \end{itemize}
 }
 
@@ -2133,15 +2458,31 @@
 }
 
 \frame{
-    \frametitle{Mixed Effects/\\Hierarchical Models}
-    \begin{itemize}\itemsep1em
-    \item We can also estimate mixed effects models for non-linear outcomes
-    \item This can be easier analytically than other panel model specifications
+    \frametitle{{\normalsize Mixed Effects/\\Hierarchical Models}}
+    
+    \small
+    
+    \begin{itemize}\itemsep0.5em
+    \item We can also estimate mixed effects models for both continuous and non-continuous outcomes
+    \item This can be easier analytically than other panel model specifications for non-continuous outcomes
     \item These models also make sense when you have data that have a true hierarchical structure (such as persons within times within countries)
+    \item Good resource: Gelman, A. and Hill, J., 2006. \textit{Data analysis using regression and multilevel/hierarchical models}. Cambridge University Press.
 	\end{itemize}
 
 }
 
+
+\frame{
+
+\frametitle{Final thought: Weights?}
+
+	\begin{itemize}\itemsep1em
+	\item But what about weights?
+	\item Weights have specialized use in regression modelling and any default regression modelling software is going to assume data come from an SRS
+	\item Use specialized software if using a complex survey design
+	\end{itemize}
+
+}
 
 \frame{}
 
