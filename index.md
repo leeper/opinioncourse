@@ -8,14 +8,12 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 This course is being conducted as an MSc seminar at the London School of Economics and Political Science during Lent Term 2016, primarily for students in the Political Science and Political Economy or Comparative Politics MSc programmes but it is open to students in other degree programmes, as well. [The course overview is available in the LSE Calendar](http://www.lse.ac.uk/resources/calendar/courseGuides/GV/2015_GV4J3.htm).
 
----
 ## Overview and Syllabus ##
 
 The purpose of this course is to explore issues related to public opinion, including what opinions are and how they are formed, what factors do and do not influence opinion development and change, how opinions drive citizens' political thinking and behaviour, and what implications these psychological processes have for the role of public opinions in democratic government. Students will leave the course with a thorough theoretical understanding of political opinions, their origins, and their possible effects through exposure to philosophical perspectives, contemporary case studies, and a broad set of empirical research. The course will challenge assumptions about what democracy is and how it works, explore what it means to be a good citizen in a contemporary democracy, and provide students with insight into how democratic governments can and should respond to the public's views. The focus will be on how citizens form political opinions, think and reason about policy debates, and act on their opinions, especially outside of elections, across a broad array of country contexts.
 
 You can find an outline of the course objectives, schedule for the course, and assigned readings in the [Syllabus](Syllabus/Syllabus.pdf).
 
----
 ## Schedule and Slides ##
 
 A final schedule is below:
@@ -31,7 +29,6 @@ A final schedule is below:
  - Week 9 (Mar. 11): Heuristics and cognitive biases
  - Weeks 10-11 (Mar. 18/25): Political Identity (and revision and feedback sessions)
 
----
 ## Weekly Questions and Writing Assignments ##
 
 The course will primarily involve student-led discussions with the exception of a few lecture elements surrounding methodological issues in public opinion research.
@@ -48,7 +45,6 @@ Reflection papers should be shared with the instructor and classmates via Moodle
 Class will start each week with these students discussing their papers. All students should read the papers before class.
 
 
----
 ## Problem Sets ##
 
 There are three problem sets for the course, which are designed to assess students' familiarity and competence with the basic (quantitative) methodological tools of public opinion research: experimental design and analysis, collection and analysis of original survey data, and the reanalysis of already collected survey (or survey-experimental) data. These problem sets are intended to prepare students for the methodological aspects of the exam.
@@ -61,12 +57,10 @@ There are three problem sets for the course, which are designed to assess studen
 
 In each problem set, students will answer a series of short prompts about methods of public opinion research and provide simple analyses (using the statistical software of their choice) using data provided by the instructor. This is useful primarily for gauging students' competence with these methods, which may be necessary for the exam, and for the instructor to possibly prepare additional instruction on these topics as needed.
 
----
 ## Reading Week Activities ##
 
 There will be no class meeting on February 19 (LT Week 6) due to Reading Week. By this point in the course, students should have an idea in mind for their final exam essay topic or even a relatively elaborated proposal for the exam paper. To obtain feedback on these ideas, students will be assigned to groups of 3-4 students. Groups will meet during Reading Week (at a time convenient for all involved) and provide peer feedback on these formulations. Written proposals should be distributed to group members in advance of the meetings.
 
----
 ## Exam ##
 
 *Due April 26, 2016 at 5pm*
