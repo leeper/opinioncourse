@@ -63,6 +63,6 @@ There will be no class meeting on February 19 (LT Week 6) due to Reading Week. B
 
 ## Exam ##
 
-*Due April 26, 2016 at 5pm*
+*Due Tuesday 25 April 2016 at 5:00pm*
 
 The exam for the course is an independent research paper of approximately 5,000 words that addresses an important political science question related to public opinion, political psychology, or political behavior, offers a theoretical contribution toward understanding that question, and reports the results of an empirical analysis to test that theory. The requirements for the empirical component are flexible and it can involve an original survey and/or experimental data collection, a pilot test of a proposed research design, qualitative data analysis (such as focus groups or semi-structured interviewing), the analysis of existing public opinion data, or a mix of these.
