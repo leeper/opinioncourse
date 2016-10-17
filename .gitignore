@@ -18,6 +18,14 @@
 *.stc*
 *.bib.bak
 *.vrb
+*.4ct
+*.4tc
+*.css
+*.dvi
+*.idv
+*.lg
+*.tmp
+*.xref
 
 # files to ignore #
 FinalExam.*
