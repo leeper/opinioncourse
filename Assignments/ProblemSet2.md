@@ -4,17 +4,17 @@ title: Problem Set 2
 ghurl: https://github.com/leeper/designcourse/tree/gh-pages
 ---
 
-# Problem Set 2: Macro Analysis #
+# Problem Set 2: Trends and Toplines
 
-## Purpose ##
+## Purpose
 
 The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: cross-sectional and panel regression analysis.
 
-## Overview ##
+## Overview
 
 You are asked to watch a short slidecast covering relevant material and then complete the following tasks. Questions regarding this material should be raised on the Moodle discussion board (https://moodle.lse.ac.uk/mod/forum/view.php?id=521541) or in instructor office hours.
 
-## Your Task ##
+## Your Task
 
  1. Thinking of different ways of designing public opinion research, define "cross-sectional design," "repeated cross-sectional design," and "panel design". Identify the advantages and disadvantages of each design.
  
@@ -66,11 +66,11 @@ You are asked to watch a short slidecast covering relevant material and then com
     d. If 15% of remaining respondents attrit (leave the panel) after each panel wave, how many respondents are left in wave 4? Briefly describe how you could (or would) deal with this attrition in practical or statistical ways.
  
 
-## Submission Instructions ##
+## Submission Instructions
 
-You should submit your problem set as a Word (.docx) document or PDF via Moodle.
+This problem set is self-assessed. A solution set is provided on the course website. 
 
-## Feedback ##
+## Feedback
 
-You will receive feedback within two weeks.
+If you would like feedback on your work, please ask the instructor.
 
