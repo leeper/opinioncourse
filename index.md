@@ -6,7 +6,7 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 # GV4J3: Public Opinion, Political Psychology, and Citizenship
 
-This course is being conducted as an MSc seminar at the London School of Economics and Political Science during Lent Term, primarily for students in the Political Science and Political Economy or Comparative Politics MSc programmes but it is open to students in other degree programmes, as well. [The course overview is available in the LSE Calendar](http://www.lse.ac.uk/resources/calendar/courseGuides/GV/2015_GV4J3.htm).
+This course is being conducted as an MSc seminar at the London School of Economics and Political Science during Lent Term, primarily for students in the Political Science and Political Economy or Comparative Politics MSc programmes but it is open to students in other degree programmes, as well. [The course overview is available in the LSE Calendar](http://www.lse.ac.uk/resources/calendar/courseGuides/GV/2016_GV4J3.htm).
 
 ## Overview and Syllabus
 
@@ -52,10 +52,10 @@ Given the combination of an assessed essay as the sole summative assessment, a r
 
 | Problem Set | Due Date |
 |-------------|----------|
-| [Interviewing](Assignments/ProblemSet1.html), [Slides](Slides/supplement01.pdf) | Jan. 17 |
-| [Trends and Toplines](Assignments/ProblemSet2.html), [Slides](Slides/supplement01.pdf) | Jan. 24 |
-| [Correlation and Regression](Assignments/ProblemSet3.html), [Slides](Slides/supplement02.pdf) | Jan. 31 |
-| [Experimentation](Assignments/ProblemSet4.html), [Slides](Slides/supplement03.pdf) | Feb. 7 |
+| [Interviewing](Assignments/ProblemSet1.html) | Jan. 17 |
+| [Trends and Toplines](Assignments/ProblemSet2.html) | Jan. 24 |
+| [Correlation and Regression](Assignments/ProblemSet3.html) | Jan. 31 |
+| [Experimentation](Assignments/ProblemSet4.html) | Feb. 7 |
 
 The problem sets take the form of "replication" activities, in which the data from a published research article is made available and students are asked to reproduce the results of the paper from the original data and explain the logical of the underlying methods. The problem sets are mandatory but are not marked. Please treat them as an opportunity to self-evaluate and learn and to approach the instructor with any hesitations you may have. Collaboration is allowed, but each student should submit an individual assignment. Marking rubrics will be provided.
 

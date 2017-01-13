@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Problem Set 3
-ghurl: https://github.com/leeper/designcourse/tree/gh-pages
+ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 ---
 
 # Problem Set 3: Correlation and Regression
@@ -70,9 +70,9 @@ You are asked to watch a short slidecast covering relevant material and then com
 
 ## Submission Instructions
 
-This problem set is self-assessed. A solution set is provided on the course website. 
+Please submit your answers as a PDF document via Moodle. It should be no more than 4 pages, single-spaced, in Times New Roman font size 12, on A4 paper with standard 2.54cm margins. This problem set is self-assessed. A solution set will be provided on the course website and the activity will be discussed in class.
 
 ## Feedback
 
-If you would like feedback on your work, please ask the instructor.
+Group feedback will be provided during class. If you would like more specific individual feedback on your work, please ask the instructor during office hours.
 
