@@ -18,16 +18,17 @@ You can find an outline of the course objectives, schedule for the course, and a
 
 A final schedule is below:
 
- - Week 1 (Jan. 15): Public Opinion and Democracy
- - Week 2 (Jan. 22): What are opinions?
- - Week 3 (Jan. 29): Measuring opinions
- - Week 4 (Feb. 5): Opinion dynamics and change
- - Week 5 (Feb. 12): Information and opinion responsiveness
+ - Week 1 (Jan. 13): Conceptualizations of "Public" "Opinion"
+ - Week 2 (Jan. 20): Voting Behaviour
+ - Week 3 (Jan. 27): What are attitudes?
+ - Week 4 (Feb. 3): Media and Social Influence
+ - Week 5 (Feb. 10): Motivated Reasoning
  - Week 6: Reading Week feedback sessions (see below)
- - Week 7 (Feb. 26): Predispositions and Constraint
- - Week 8 (Mar. 4): Motivated reasoning
- - Week 9 (Mar. 11): Heuristics and cognitive biases
- - Weeks 10-11 (Mar. 18/25): Political Identity (and revision and feedback sessions)
+ - Week 7 (Feb. 24): Attitude Strength and Attitude Change
+ - Week 8 (Mar. 3): Political Identity, Values, and Other Predispositions
+ - Week 9 (Mar. 9): Emotion and/or Cognition, Implicit and/or Explicit?
+ - Weeks 1 (Mar. 17): Judgement and Decision-Making I
+ - Week 11 (Mar. 24): Judgement and Decision-Making II; Conclusion
 
 ## Weekly Questions and Writing Assignments
 
