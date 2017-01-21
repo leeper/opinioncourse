@@ -8,69 +8,42 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 ## Purpose
 
-The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: cross-sectional and panel regression analysis.
-
-## Overview
-
-You are asked to watch a short slidecast covering relevant material and then complete the following tasks. Questions regarding this material should be raised on the Moodle discussion board (https://moodle.lse.ac.uk/mod/forum/view.php?id=521541) or in instructor office hours.
+The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: survey sampling and basic quantitative analysis of survey data.
 
 ## Your Task
 
- 1. Thinking of different ways of designing public opinion research, define "cross-sectional design," "repeated cross-sectional design," and "panel design". Identify the advantages and disadvantages of each design.
+ 1. In your own words, what makes a sample representative of a population? What are some different ways of thinking of representativeness? In public opinion research, when is it important for a sample of observations (e.g., survey respondents or interviewees) to be representative of a population?
  
- 2. Consider the following hypothetical data on attitudes toward the European Union (measured as 0=negative and 1=positive) in the UK and in Germany collected at two points in time:
+ 2. A key challenge in the collection of original survey data is obtaining a representative sample. The process of doing so typically involves creating a "sampling frame", which is a list of all members of the population from which you will sample a small number of individuals to interview. In practice, it is not possible to obtain a complete list of all members of a population, so sampling frames are constructed based upon close approximations. For example, to sample from the entire population of UK citizens, a researcher may create a list of all telephone numbers and randomly sample numbers to call. Or they may create a list of all households in the UK (based on local council lists) and contact a random sample of households.
  
-   - Germany, time 1: .70
-   - Germany, time 2: .80
-   - United Kingdom, time 1: .60
-   - United Kingdom, time 2: .40
-   
-   a. Assuming repeated cross-sectional surveys of n = 500 in each country at each point in time, what is the standard error of each estimate?
+ Both of these sampling frames involve problems of *coverage error*. Overcoverage is when a sampling frame includes units that are not from the target population, meaning that some people from outside the population might be included the research unintentionally. Undercoverage is when a sampling frame does not include all members of the target population, meaning some members of the population are entirely excluded from eligibility to participate in the research. In a few sentences, explain why these two sampling frames (telephone listing and list of all UK households) have both undercoverage and overcoverage. What consequences might overcoverage and undercoverage have for claims of representativeness of survey data? And how might overcoverage and undercoverage errors be addressed?
  
-   b. How much farther apart are the UK and Germany at time 2 than they were at time 1?
-   
-   c. Are the differences between the UK and Germany at each time point (i.e., separately for time 1 and time 2) statistically significant?
-   
-   d. If the data were instead collected from a panel (i.e., the same respondents interviewed twice), what additional information could we learn about opinion dynamics in the two countries? What would this tell us about the individual-level change in opinion (above and beyond the macro-level changes)?
+ 3. A response rate is a measure of what proportion of individuals that have been asked to participate in a research study agree to do so and complete the study. Imagine for instance a telephone survey, *respondents* are those individuals who have been asked to participate and complete the survey. *Nonrespondents* are those individuals who have been asked to participate but decline. In many cases there are also individuals that were never able to be contacted (e.g., never answered their phone when called) and are referred to by survey researchers as *unknowns*. The response rate is simply the number of respondents divided by the total number of respondents and nonrespondents; sometimes the unknowns are included in the denominator and sometimes not (because it is not known of those individuals were eligible or if, for example, those were non-working telephone numbers that were not connected to any individual), thus providing a range of possible response rates. A response rate of 1.0 means all individuals asked to complete a study do so. A response rate of 0.0 means all individuals asked to participate refused to do so. A second quality called Response Rate 2
  
- 3. Consider the following table reporting the results of a hypothetical regression of support for same-sex marriage rights (measured 1=strongly oppose to 7=strongly support) as a function of left-right political ideology (measured from 0=left to 1=right):
+ Now, imagine that 1000 respondents are recruited to participate in a survey and complete the interview, 1700 were invited to participate but chose not to participate, and 600 were invited but their eligibility for the study was unknown. What are the upper and lower bounds of the response rate for this study? Should we be concerned with this response rate? Explain why or why not.
  
-    |           | Coef. | SE  |
-    | --------- | ----- | --- |
-    | Ideology  | 2.5   | 0.7 |
-    | Intercept | 4.1   | 0.6 |
-    |           |       |     |
-    | R-squared | .32   |     |
-    |         n | 1500  |     |
+ 4. When sampling from a population, the goal is to make claims about population *parameters* (e.g., vote intention, support for a policy, etc.) based upon analysis of only the (limited) sample data. As such, estimates of population parameters generated from survey samples must be expressed with a measure of "uncertainty" that communicates how much the *sample estimate* might deviate from the true population parameter. This is often conveyed through a "margin of error", such as the number of individuals that intend to vote Labour in the next general election is "27% +/- 5% percentage points" where 27% is the sample estimate and 5% is the margin of error. In this case, the sample data suggest that the proportion of voters intending to vote Labour is between 0.22 (22%) and 0.32 (32%). For a "simple random sample" of a large population, the margin of error is primarily a function of sample size. For example, the margin of error of a proportion, p, is: MoE = 2*( sqrt(p * (1-p)) / n). As sample size increases, the margin of error decreases. Because we do not know the value of p, we can prospectively calculate this at the value that maximizes the margin of error, which is p=0.5.
  
-   a. In plain language, what relationship does ideology appear to have with support for same-sex marriage rights? Is this relationship substantively large or small?
-   
-   b. Is the relationship between ideology and same-sex marriage support statistically distinguishable from zero? (Show your work.)
-   
-   c. For what reasons might we hesitate to draw a causal inference from these data?
+ If one's goal is to estimate the proportion of the British population that supports the UK leaving the European Union, how large of a survey sample would be needed to estimate that proportion within +/- 0.02 (or 2 percentage points)? What about within +/- 0.005 (or 0.5 percentage points)? (Show your work.)
  
- 4. Imagine we are interested in knowing the effect of economic performance on support for the government, conditional on whether one's own party is in government. To test this a researcher collects monthly data on percentage GDP growth and, from a repeated cross-sectional survey over a ten-year period, an average feeling thermometer rating of government support (ranging from 0 to 100) separately by party (assume two parties: government and opposition).
+ 5. Researchers are often not only interested in collecting data about public opinion at one point in time or only for the population as a whole. Instead, often comparisons are made between subgroups and over-time comparisons are made about how aggregated public opinions have changed over time.
  
-    a. Describe the structure of the dataset. What is the unit of analysis? How many observations are there? What are the variables?
-    
-    a. Assuming economic performance and party identification are exogeneous, describe a regression model that would provide an estimate of the effect of of economic performance on the feeling thermometer for each group. How would you interpret the regression coefficients in each case?
+     a. If we are interested in comparing the vote intentions of two subgroups from a sample of 2000 respondents (where Group A has 1500 respondents and Group B has 500 respondents), how much larger is the margin of error for our estimate of the proportion of "leave" voters in Group B than Group A?
+     
+     b. If we find that the proportion of "leave" voters in Group A is 0.65 (or 65%) and the proportion of "leave" voters in Group B is 0.55 (or 55%), is this a *substantively* large or small difference? We would say this difference is *statistically significantly different from zero* if the difference between the proportion for group A, p_A, and the proportion for group B, p_B, is larger than the margin of error for the difference. The margin of error is given by: 2*( sqrt( ((p_A * (1-p_A)) / n_A) + ((p_B * (1-p_B)) / n_B) )) , where n_A and n_B are the number of respondents in group A and group B, respectively. How large is the margin of error? And does that MoE imply the difference in proportions is statistically significant or not?
+     
+     c. Another common comparison is to assess whether a sample estimate of a population parameter has changed over time. For example, we may want to assess whether support for "leave" or "remain" has increased or decreased since the last poll. Because we are only sampling from the population, some small changes will simply reflect "sampling error" (the chance variation in estimate due to sampling rather than conducting a population census). Imagine that we conduct two polls, each with a sample size of (n=2000), about one month apart from each other. In the first poll, we find that the proportion intending to vote "leave" is 0.43 and in the second poll we find that the proportion intending to vote "leave" is 0.52. Is this a substantively large change? Using the formula from (b) for comparing two proportions, is this change statistically significant?
+     
+     d. Just a note: If we conducted the two polls from (c) using the same set of respondents (i.e., we conducted the study as a panel), the margin of error would likely be smaller because the two sets of observations are not "independent". For this reason, it can be easier to statistically distinguish changes over-time from sampling noise in a panel design than from a "repeated cross-section design" like the one described in (c).
  
- 5. Consider a four-wave panel survey that begins with 2000 respondents. The goal of the study is to assess the relationship between economic uncertainty (measured as "high" or "low") and support for economic redistribution (measured on a 0-1 scale), measured at each panel wave.
-
-    a. Assuming no attrition, if we all respondents to all waves were pooled and analyzed together in a single regression model of opinion on economic uncertainty, what are we ignoring in our analysis? Can we consider the coefficient on economic uncertainty to be a causal effect?
-    
-    b. In the scenario in (a), what consequence does this approach have for the uncertainty surrounding our estimates?
-    
-    c. Another way to estimate the effect of uncertainty on support for redistribution is a fixed effects regression. In what ways would this approach improve our inference? In what ways would it limit us?
-    
-    d. If 15% of remaining respondents attrit (leave the panel) after each panel wave, how many respondents are left in wave 4? Briefly describe how you could (or would) deal with this attrition in practical or statistical ways.
+ 6. Not all samples are "simple random samples". In a simple random sample all all individuals in the sampling frame have an equal probability of being sampled. In *stratified sampling designs*, some individuals are more likely to be sampled ("oversampling") and others are less likely to be sampled ("undersampling"). This can be useful for obtaining large (and therefore precise estimates) of the characteristics of small population subgroups, but then requires *reweighting* the resulting data in order for it to be representative. (E.g., calculating the unweighted mean opinion of a stratified sample that includes an oversample of young people will suggest the population is closer to the views of younger people than it actually is; younger people would need to be weighted less when calculating a weighted mean in order for that estimate to be representative of the population). 
  
+ Consider a hypothetical survey of members of the population of England and Wales age 16 and over that is stratified by levels of education (i.e., three strata: those no qualifications, with some qualifications, and those with a university degree or greater). The census estimates of these population strata sizes are available from [the Office for National Statistics](http://www.ons.gov.uk/ons/rel/census/2011-census-analysis/local-area-analysis-of-qualifications-across-england-and-wales/info-highest-qualifications.html). If the sample strata are equally sized (i.e., the same number of individuals are sampled for interviewing in each stratum), which strata are being oversampled and which strata are being undersampled? As such, if the respondents from the "no qualifications" group were weighted 1, would the weights given to respondents in the "some qualifications" and "university degree or greater" categories be smaller or larger than 1?
 
 ## Submission Instructions
 
-Please submit your answers as a PDF document via Moodle. It should be no more than 4 pages, single-spaced, in Times New Roman font size 12, on A4 paper with standard 2.54cm margins. This problem set is self-assessed. A solution set will be provided on the course website and the activity will be discussed in class.
+Please submit your answers as a PDF document via Moodle. It should be single-spaced, in Times New Roman font size 12, on A4 paper with standard 2.54cm margins. This problem set is self-assessed. A solution set will be provided on the course website and the activity will be discussed in class.
 
 ## Feedback
 
 Group feedback will be provided during class. If you would like more specific individual feedback on your work, please ask the instructor during office hours.
-
