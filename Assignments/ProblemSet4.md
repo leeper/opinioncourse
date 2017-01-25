@@ -10,10 +10,6 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: experimental design and analysis.
 
-## Overview
-
-You are asked to watch a short slidecast covering relevant material and then complete the following tasks. Questions regarding this material should be raised on the Moodle discussion board (https://moodle.lse.ac.uk/mod/forum/view.php?id=521541) or in instructor office hours.
-
 ## Your Task
 
  1. In your own words, explain the "fundamental problem of causal inference" and how experiments provide a solution to that problem.
@@ -28,8 +24,6 @@ You are asked to watch a short slidecast covering relevant material and then com
    
    b. Assuming the t-statistic for the mean-difference is 1.76, should we consider this effect to be statistically large and distinguishable from zero?
    
-   c. Is the effect of this treatment larger or smaller than one from an earlier study with an effect size of Cohen's d = 0.40?
- 
  5. The statistical power of a two-sample t-test (which is, in essence, the power of a posttest-only, two-group experimental design) is influenced by four things: the size of each experimental group, the difference-in-means (i.e., difference in mean values of the outcome in the two groups), the variance of the outcome measure, and alpha (the significance level or "Type 1" error probability).
  
    a. If alpha (the Type 1 error probability) is 0.05, how often should we expect to find a "statistically significant" effect size when one is not present?

@@ -4,7 +4,7 @@ title: Problem Set 1
 ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 ---
 
-# Problem Set 1: Qualtitative Interviewing
+# Problem Set 1: Qualitative Interviewing
 
 ## Purpose
 

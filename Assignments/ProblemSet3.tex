@@ -2,9 +2,10 @@
 \printanswers
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
+\usepackage{booktabs}
 \usepackage{amsmath}
 
-\title{Problem Set 3: Experimentation}
+\title{Problem Set 3: Correlation and Regression}
 \date{}
 
 \begin{document}
@@ -14,7 +15,7 @@
 
 \section{Purpose}\label{purpose}
 
-The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: experimental design and analysis.
+The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: cross-sectional and panel regression analysis.
 
 \section{Overview}\label{overview}
 
@@ -23,140 +24,227 @@ You are asked to watch a short slidecast covering relevant material and then com
 \section{Your Task}\label{your-task}
 
 \begin{enumerate}
-\item  In your own words, explain the ``fundamental problem of causal inference'' and how experiments provide a solution to that problem.
+\item  Thinking of different ways of designing public opinion research,  define ``cross-sectional design,'' ``repeated cross-sectional  design,'' and ``panel design''. Identify the advantages and disadvantages of each design.
 
 \begin{solution}
-
-There are multiple ways to think about this.
-
-\begin{itemize}
-\item Randomized experiments do not allow us to see individual-level causal effects unless we assume unit homogeneity. In all other cases, randomization allows us to assess average causal effects of a treatment on an outcome.
-\item Randomized experiments randomly sample potential outcomes in an unbiased manner, allowing for estimation of an average treatment effect.
-\item Randomized experiments randomly expose one of multiple potential outcomes for each individual in the sample.
-\item Randomized experiments eliminate selection bias into treatment assignment.
-\item Randomized experiments eliminate confounding.
-\end{itemize}
-
-\end{solution}
-
-\item A researcher wants to understand how a televised party leaders debate affected citizens' vote intentions and considers two alternative research designs. The first design involves interviewing a representative sample of citizens, asking whether they watched the debate, and comparing vote intentions among viewers and non-viewers. The second design involves recruiting a non-representative sample of citizens into a laboratory session where one half of participants are randomly assigned to watch the debate and the other half is randomly assigned to watch a non-political program. Vote intentions are measured at the end of the laboratory session. Discuss the trade-offs involved in these designs, including what would be required to obtain an estimate of the causal effect of the debate on vote intentions in each design.
-
-\begin{solution}
-
-There are numerous trade-offs here and there is no correct answer. The first design is a population-based survey with no experimental component. The second design is a laboratory experiment involving a non-representative sample.
-
-The former design has claims to ``external'' validity because sample characteristics are unbiased estimates of population parameters. In attempting to infer causation, however, the design does not necessarily address selection bias: it does not induce debate viewing, so we cannot know why people watched the debate and whether any of those factors also explain vote intentions (e.g., some third variable explains both forms of political engagement). The measurement of vote intention occurs some time after the debate, possibly suggesting durability of any influence.
-
-The latter design has claims to ``internal'' validity because randomized assignment to debate viewing enables an estimation of an average causal effect of viewing the debate but that effect does not necessarily reflect the average effect in any population. The measurement of vote intentions occurs immediately. In both designs, this measurement of vote intention may not say anything about actual voting behavior.
-
-Both designs likely present other trade-offs: feasibility, cost, etc.
-
-\end{solution}
-
-\item How do we know if randomization ``worked''? In other words, how do we  know that experimental groups are identical to one another except for the difference in the experimentally manipulated variable?
-
-\begin{solution}
-There are two basic answers:
 
 \begin{enumerate}
-\item We don't. If we used a physical randomization process (i.e., something we ``know'' is truly random), then we do not check anything. Randomization creates balance in expectation and we are using a randomized process.
-\item Balance tests. We select a set of covariates that we think are important to have balance on and we perform something akin to a t-test for each variable using the treatment assignment variable as a right-hand side variable. If non of these tests indicate a significant difference in covariates, then the covariates are balanced and we say treatment randomization ``worked.''
+\item A \textit{cross-sectional design} is a survey design involving observation of a sample of units from a population at one point in time
+\item A \textit{repeated cross-sectional design} is a survey design involving observation of multiple, independent samples of units from a population at different points at time (typically using the same sampling design each time)
+\item A \textit{panel design} is a survey design involving observation of a single sample of units at multiple points in time, or equivalently multiple dependent samples at multiple points in time.
 \end{enumerate}
 
-The first appeals to ``design-based'' inference while the latter assumes that we have to demonstrate successful randomization rather than assume it by design.
+The advantages and disadvantages of each approach are numerous. Cross-sections are simple and relatively cheap and repeated cross-sections increase costs only on a per-interview basis (since the sampling frame and design are already established). Panels either reduce or increase costs relative to that approach depending on the relative costs of recruiting a new respondent versus retaining a former respondent. Panel attrition, however, is inevitable over long periods of time. Panel designs are the only approach that enables the assessment of within-subjects comparisons (though ``pseudo-panel'' techniques may provide reasonable estimates of this using matching algorithms to compare units across repeated cross-sections).
 
 \end{solution}
 
-\item Consider an experiment on 500 individuals in which one group is randomly assigned to read a treatment message from David Cameron support the ``Remain'' position in the upcoming European Union referendum and another group is assigned to a control condition that receives no information. Measures of opinions for the European Union are recorded for both groups on a 0 to 1 scale, with higher scores indicating greater favorability toward British membership in the European Union.
+\item Consider the following hypothetical data on attitudes toward the European Union (measured as 0=negative and 1=positive) in the UK and in Germany collected at two points in time:
 
-\begin{enumerate}
-\item Assuming the treatment group mean score was 0.68 and the control group mean score was .51, what is the average treatment effect? Is this substantively large or small?
-
-\begin{solution}
-
-The sample average treatment effect is simply the mean difference: $0.68 - 0.51 = 0.17$.
-
-Deciding whether this is large or small requires some kind of benchmark for comparison. We could say this is 17\% of the scale (from 0 to 1). Or, we could compare it to the standard deviation of the outcome to express a ``standardized mean-difference'' but that information is not provided here. Assuming the standard deviation were 0.4, then the effect size would be $\frac{0.17}{0.40} = 0.425$, and so forth.
-
-\end{solution}
-
-\item Assuming the t-statistic for the mean-difference is 1.76, should we consider this effect to be statistically large and distinguishable from zero?
-
-\begin{solution}
-
-Answering this question technically requires consulting a t-distribution. You can find one \href{https://en.wikipedia.org/wiki/Student\%27s_t-distribution#Table_of_selected_values}{on Wikipedia}. Given the very large sample size, use the $\infty$ row of the table. a $t$-statistic of this size is considered statistically distinguishable from zero in the case of a one-tailed test ($p<0.05$) but not in a two-tailed test ($p<0.10$). If we had a strong directional prediction that the treatment outcome would be higher than the control outcome, we could consider the one-tailed test appropriate but probably not otherwise.
-
-\end{solution}
-
-\item Is the effect of this treatment larger or smaller than one from an earlier study with an effect size of Cohen's d = 0.40?
-
-\begin{solution}
-
-Answering this question requires knowing the relationship between the mean-difference, Cohen's $d$ statistic, and the $t$-statistic. The mean-difference is simply the difference between each treatment group mean. Cohen's $d$ is simply the mean-difference over the pooled standard deviation of the outcome. The $t$-statistic is the same quantity over the standard error of the mean-difference. 
-
-To convert $t$ to $d$, simply calculate: $\dfrac{2t}{\sqrt{df}}$, where $df$ is degrees of freedom, which is simply $n_1 + n_2 - 2$. In this case, this is simply:
-
-\begin{equation}
-d = \dfrac{2t}{\sqrt{df}} = \dfrac{2 * 1.76}{\sqrt{500+500-2}} = 0.11
-\end{equation}
-
-In this case, the effect size in our experiment is much smaller than the effect size in the earlier study (0.40). Indeed, it is about 28\% as large.
-
-\end{solution}
-
-\end{enumerate}
-
-\item The statistical power of a two-sample t-test (which is, in essence, the power of a posttest-only, two-group experimental design) is influenced by four things: the size of each experimental group, the difference-in-means (i.e., difference in mean values of the outcome in the two groups), the variance of the outcome measure, and alpha (the significance level or ``Type 1'' error probability).
+	\begin{itemize}
+	\item Germany, time 1: .70
+	\item Germany, time 2: .80
+	\item United Kingdom, time 1: .60
+	\item United Kingdom, time 2: .40
+	\end{itemize}
 
 	\begin{enumerate}
-	\item If $\alpha$ (the Type 1 error probability) is 0.05, how often should we expect to find a ``statistically significant'' effect size when one is not present?
+	\item Assuming repeated cross-sectional surveys of n = 500 in each country at each point in time, what is the standard error of each estimate?
 	
 	\begin{solution}
 	
-	This is simply 0.05 or 5\% of the time.
+	Here we use the standard formulae for variance of a proportion. Given the large population, we can ignore the finite population correction.
+	
+	\begin{align*}
+	Var(p) = (1-f)\frac{p(1-p)}{n-1} = \frac{p(1-p)}{n-1}\\
+	Var(p_{1,\text{Germany}}) = \frac{0.7*0.3}{499}\\
+	SE_1 = 0.021\\
+	Var(p_{2,\text{Germany}}) = \frac{0.8*0.2}{499}\\
+	SE_2 = 0.018\\
+	 \\
+	Var(p_{1,\text{UK}}) = \frac{0.6*0.4}{499}\\
+	SE_1 = 0.022\\
+	Var(p_{2,\text{UK}}) = \frac{0.4*0.6}{499}\\
+	SE_2 = 0.022
+	\end{align*}
+	
+	We rely here on the observed proportions to calculate sampling variance and standard error rather than the maximum possible variance because the sample element variance, $s^2$ is treated as an estimate of the population element variance, $\sigma^2$, which is what actually determines sampling variance.
 	
 	\end{solution}
 	
-	\item If you increase the size of your treatment groups in an experiment while the expected effect size remains unchanged, what happens to the power of your experiment? Are you more or less likely to obtain a ``false negative'' result? What about ``false positives''?
+	\item How much farther apart are the UK and Germany at time 2 than they were at time 1?
 	
 	\begin{solution}
 	
-	The power of the test increases. Recall the definition of power:
+	Simple algebra:
 	
 	\begin{equation}
-	Power = \phi\left( \frac{|\mu_1 - \mu_0|\sqrt{N}}{2\sigma} - \phi^{-1}\left( 1 - \frac{\alpha}{2} \right) \right)
+	(0.80 - 0.40) - (0.70 - 0.60) = 0.30
 	\end{equation}
 	
-	Without worrying about all the details of the equation, note that sample size is in the numerator of the first term, so more observations means more power. This directly translates into a lower likelihood of false negatives ($1-\beta$) where power is denoted $\beta$.
-	
-	Technically, this is unrelated to the false positive rate, which is a function of the selected significance level, $\alpha$, only.
+	Germany and the UK are 30 percentage points further apart at time 2 than they were at time 1.
 	
 	\end{solution}
 	
-	\item Imagine we are expecting to find a small effect but we can only collect a small number of observations in our experiment, so the minimum detectable effect size in our study is larger than the effect size we would expect to observe given our theory. If our experiment reveals an effect that is statistically distinguishable from zero, what are the two possible interpretations of this result?
+	\item Are the differences between the UK and Germany at each time point (i.e., separately for time 1 and time 2) statistically significant?
 	
 	\begin{solution}
 	
-	\begin{enumerate}
-	\item The effect is actually larger than we expected.
-	\item The effect in our experiment is a massive overestimate.
-	\end{enumerate}
+	The calculation here require simply taking the difference in proportions over the standard error of the of the proportion for the combined samples. Because the sample sizes are the same, the calculation of the pooled standard error is pretty simple using the average level of support across the two countries at each point in time:s
 	
-	We cannot distinguish which alternative is correct.
+	\begin{align*}
+	SE_1 = sqrt(\dfrac{.65*.35}{1000}) = 0.015\\
+	SE_2 = sqrt(\dfrac{.60*.40}{1000}) = 0.0155
+	\end{align*}
+	
+	Time 1:
+	\begin{equation}
+	z = \dfrac{0.7 - 0.6}{0.015} = 6.67
+	\end{equation}
+	
+	Time 2:
+	\begin{equation}
+	z = \dfrac{0.8 - 0.4}{0.0155} = 25.81
+	\end{equation}
+		
+	Both of these $z$-statistics are extremely large such that $p<0.05$ so the between-country differences are statistically distinguishable from zero.
+		
+	\end{solution}
+	
+	\item If the data were instead collected from a panel (i.e., the same respondents interviewed twice), what additional information could we learn about opinion dynamics in the two countries? What would this tell us about the individual-level change in opinion (above and beyond the macro-level changes)?
+	
+	\begin{solution}
+	
+	If we collected a panel, we could additionally ascertain within-subjects changes over time. This would allow us to see whether individuals changed positions between time 1 and time 2. For example, between time 1 and time 2, the support in Germany changed from 0.7 to 0.8. This could be from 5\% of the population changing positions all in one direction or many more changing in either direction.
 	
 	\end{solution}
 	
 	\end{enumerate}
 
-\item Consider an experiment in which the effect of a treatment is measured using a single survey question. Assuming a given effect size, and that we cannot change $\alpha$ or the size of the experimental groups, what practical action can we do to increase the power of our experimental design?
+\item Consider the following table reporting the results of a hypothetical regression of support for same-sex marriage rights (measured 1=strongly oppose to 7=strongly support) as a function of left-right political ideology (measured from 0=left to 1=right):
 
-\begin{solution}
+\begin{center}
+  \begin{tabular}[c]{@{}lll@{}}
+  \toprule
+  & Coef. & SE\tabularnewline
+  \midrule
+  Ideology & 2.5 & 0.7\tabularnewline
+  Intercept & 4.1 & 0.6\tabularnewline
+  & &\tabularnewline
+  R-squared & .32 &\tabularnewline
+  n & 1500 &\tabularnewline
+  \bottomrule
+  \end{tabular}
+\end{center}
 
-The only thing we can change in this design is the variance of the outcome. One's immediate reaction might be that this is impossible, but that is not true. The easiest way to reduce the variance of an outcome is to create a more precise measure. That can be achieved by using multiple rather than a single item measure, creating a simple scale.
+	\begin{enumerate}
+	\item In plain language, what relationship does ideology appear to have with support for same-sex marriage rights? Is this relationship substantively large or small?
+	
+	\begin{solution}
+	
+	Conservative/right-wing ideology appears to be positively correlated with support for same-sex marriage rights. A full-domain shift from 0 to 1 on this scale is associated with an increase in support of 2.5 scale points on the 1 to 7 response scale. This is probably a substantively large increase given that support among those in the far left-wing is already 4.1 on that scale, making support about far-right ideologues 6.6.
+	
+	\end{solution}
+	
+	\item Is the relationship between ideology and same-sex marriage support statistically distinguishable from zero? (Show your work.)
+	
+	\begin{solution}
+	
+	To determine statistical significance, calculate the $t$-statistic:
+	
+	\begin{equation}
+	t = \dfrac{\beta}{SE_\beta} = \dfrac{2.5}{0.7} = 3.57
+	\end{equation}
+	
+	This is a large $t$-statistic and, given the sample size, represents a very small $p$-value ($p<0.05$).
+	
+	\end{solution}
+	
+	\item For what reasons might we hesitate to draw a causal inference from these data?
+	
+	\begin{solution}
+	
+	Two reasons come to mind. One is substantive: the relationship appears to be the opposite of what one would a priori expect (which is that left-wing ideologues would be more support of same sex marriage). The more technical reason is that this relationship is likely to be confounded by many factors, none of which are conditioned upon.
+	
+	\end{solution}
+	
+	\end{enumerate}
 
-If it is cheap to add additional questions (and it might not be, given the particular design), then adding questions in this way might be much more affordable than increasing sample size, given the dramatically declining marginal power of increasing sample size.
+\item Imagine we are interested in knowing the effect of economic performance on support for the government, conditional on whether one's own party is in government. To test this a researcher collects monthly data on percentage GDP growth and, from a repeated cross-sectional survey over a ten-year period, an average feeling thermometer rating of government support (ranging from 0 to 100) separately by party (assume two parties: government and opposition).
 
-\end{solution}
+  \begin{enumerate}
+  \item Describe the structure of the dataset. What is the unit of analysis? How many observations are there? What are the variables?
+  
+  \begin{solution}
+  
+  This is an aggregated dataset, so the unit of analysis is a party-month. There are $12*10 = 120$ periods and 2 observations per period for a total $n = 240$.
+  
+  \end{solution}
+  
+  \item Assuming economic performance and party identification are exogeneous, describe a regression model that would provide an estimate of the effect of economic performance on the feeling thermometer for each group. How would you interpret the regression  coefficients in each case?
+  
+  \begin{solution}
+  
+  To estimate the influence of party identification and economic performance, the regression model is simply:
+  
+  \begin{equation}
+  \text{Thermometer}_{t} = \beta_0 + \beta_1 \text{Government} + \beta_2 \text{GDP}_t + \beta_3 \text{Government} * \text{GDP}_t
+  \end{equation}
+  
+  The interpretation here would be that $\beta_0$ is the mean level of opposition support for the government when GDP growth is zero. $\beta_1$ is the mean level of government party support for the government when GDP growth is zero. $\beta_2$ is the effect of a one-percentage change in GDP on average thermometer ratings of opposition party supporters and $\beta_3$ is the corresponding effect for government party supporters.
+  
+  \end{solution}
+  
+  \end{enumerate}
+
+\item Consider a four-wave panel survey that begins with 2000 respondents. The goal of the study is to assess the relationship between economic uncertainty (measured as ``high'' or ``low'') and support for economic redistribution (measured on a 0-1 scale), measured at each panel wave.
+
+  \begin{enumerate}
+  \item Assuming no attrition, if all respondents to all waves were pooled and analyzed together in a single regression model of opinion on economic uncertainty, what are we ignoring in our analysis? Can we consider the coefficient on economic uncertainty to be a causal effect?
+  
+  \begin{solution}
+  
+  We are ignoring the fact that we have dependent observations, thereby ignoring unobserved heterogeneity (person-specific variations along unobserved dimensions).
+  
+  We should not consider this coefficient to be a causal effect.
+  
+  \end{solution}
+  
+  \item In the scenario in (a), what consequence does this approach have for the uncertainty surrounding our estimates?
+  
+  \begin{solution}
+  
+  By pooling observations, we effectively are inflating our sample size by 400\% and thus decreasing our sampling variances (and standard errors). We only have 2000 observations but we are basically pretending that we have $n=8000$.
+  
+  \end{solution}
+  
+  \item Another way to estimate the effect of uncertainty on support for redistribution is a fixed effects regression. In what ways would this approach improve our inference? In what ways would it limit us?
+  
+  \begin{solution}
+  
+  The fixed effects approach respects the panel structure and allows us to make within-subjects comparisons. Because fixed effects regression involves estimation of a person-specific ``effect'' (or deviation of the unit-specific over-time mean from the population global mean), we can account for all unobserved time-invariant variables without even needing to observe for them or estimate their influence. The challenge, then, is that we cannot estimate the influence of those time-invariant factors.
+  
+  \end{solution}
+  
+  \item If 15\% of remaining respondents attrit (leave the panel) after each panel wave, how many respondents are left in wave 4? Briefly describe how you could (or would) deal with this attrition in practical or statistical ways.
+  
+  \begin{solution}
+  
+  Calculating this requires simple algebra in the style of compounding interest:
+  
+  \begin{align}
+  n_{t1} = 2000\\
+  n_{t2} = 0.85 * 2000 = 1700\\
+  n_{t3} = 0.85 * 1700 = 1445\\
+  n_{t4} = 0.85 * 1445 = 1228\\
+  \end{align}
+  
+  Addressing this practical ways would involve attempting to retain some or all those who have left the panel. One could do this strategically by focusing on those most likely to leave the panel (e.g., if the lowest income groups leave at higher rates, selectively expending resources to retain these individuals compared to higher-income individuals who leave the panel). One could also try to recruit more committed panelists at $t1$ at the expense of representativeness. Another strategy would be to recruit replenishment samples or attempt to replace individuals in the panel with similar new recruits.
+  
+  Statistically, it might be possible to deal with attrition by either reweighting the remaining respondents (i.e., post-stratification) to match the original sample or the population, or to use data imputation techniques to impute the missing values.
+  
+  \end{solution}
+  
+  \end{enumerate}
 
 \end{enumerate}
 

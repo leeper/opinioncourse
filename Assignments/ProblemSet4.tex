@@ -1,0 +1,151 @@
+\documentclass[a4paper]{exam}
+\printanswers
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\title{Problem Set 4: Experimentation}
+\date{}
+
+\begin{document}
+
+\vspace{-4em}
+\maketitle
+
+\section{Purpose}\label{purpose}
+
+The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: experimental design and analysis.
+
+\section{Your Task}\label{your-task}
+
+\begin{enumerate}
+\item  In your own words, explain the ``fundamental problem of causal inference'' and how experiments provide a solution to that problem.
+
+\begin{solution}
+
+There are multiple ways to think about this.
+
+\begin{itemize}
+\item Randomized experiments do not allow us to see individual-level causal effects unless we assume unit homogeneity. In all other cases, randomization allows us to assess average causal effects of a treatment on an outcome.
+\item Randomized experiments randomly sample potential outcomes in an unbiased manner, allowing for estimation of an average treatment effect.
+\item Randomized experiments randomly expose one of multiple potential outcomes for each individual in the sample.
+\item Randomized experiments eliminate selection bias into treatment assignment.
+\item Randomized experiments eliminate confounding.
+\end{itemize}
+
+\end{solution}
+
+\item A researcher wants to understand how a televised party leaders debate affected citizens' vote intentions and considers two alternative research designs. The first design involves interviewing a representative sample of citizens, asking whether they watched the debate, and comparing vote intentions among viewers and non-viewers. The second design involves recruiting a non-representative sample of citizens into a laboratory session where one half of participants are randomly assigned to watch the debate and the other half is randomly assigned to watch a non-political program. Vote intentions are measured at the end of the laboratory session. Discuss the trade-offs involved in these designs, including what would be required to obtain an estimate of the causal effect of the debate on vote intentions in each design.
+
+\begin{solution}
+
+There are numerous trade-offs here and there is no correct answer. The first design is a population-based survey with no experimental component. The second design is a laboratory experiment involving a non-representative sample.
+
+The former design has claims to ``external'' validity because sample characteristics are unbiased estimates of population parameters. In attempting to infer causation, however, the design does not necessarily address selection bias: it does not induce debate viewing, so we cannot know why people watched the debate and whether any of those factors also explain vote intentions (e.g., some third variable explains both forms of political engagement). The measurement of vote intention occurs some time after the debate, possibly suggesting durability of any influence.
+
+The latter design has claims to ``internal'' validity because randomized assignment to debate viewing enables an estimation of an average causal effect of viewing the debate but that effect does not necessarily reflect the average effect in any population. The measurement of vote intentions occurs immediately. In both designs, this measurement of vote intention may not say anything about actual voting behavior.
+
+Both designs likely present other trade-offs: feasibility, cost, etc.
+
+\end{solution}
+
+\item How do we know if randomization ``worked''? In other words, how do we  know that experimental groups are identical to one another except for the difference in the experimentally manipulated variable?
+
+\begin{solution}
+There are two basic answers:
+
+\begin{enumerate}
+\item We don't. If we used a physical randomization process (i.e., something we ``know'' is truly random), then we do not check anything. Randomization creates balance in expectation and we are using a randomized process.
+\item Balance tests. We select a set of covariates that we think are important to have balance on and we perform something akin to a t-test for each variable using the treatment assignment variable as a right-hand side variable. If non of these tests indicate a significant difference in covariates, then the covariates are balanced and we say treatment randomization ``worked.''
+\end{enumerate}
+
+The first appeals to ``design-based'' inference while the latter assumes that we have to demonstrate successful randomization rather than assume it by design.
+
+\end{solution}
+
+\item Consider an experiment on 500 individuals in which one group is randomly assigned to read a treatment message from David Cameron support the ``Remain'' position in the upcoming European Union referendum and another group is assigned to a control condition that receives no information. Measures of opinions for the European Union are recorded for both groups on a 0 to 1 scale, with higher scores indicating greater favorability toward British membership in the European Union.
+
+\begin{enumerate}
+\item Assuming the treatment group mean score was 0.68 and the control group mean score was .51, what is the average treatment effect? Is this substantively large or small?
+
+\begin{solution}
+
+The sample average treatment effect is simply the mean difference: $0.68 - 0.51 = 0.17$.
+
+Deciding whether this is large or small requires some kind of benchmark for comparison. We could say this is 17\% of the scale (from 0 to 1). Or, we could compare it to the standard deviation of the outcome to express a ``standardized mean-difference'' but that information is not provided here. Assuming the standard deviation were 0.4, then the effect size would be $\frac{0.17}{0.40} = 0.425$, and so forth.
+
+\end{solution}
+
+\item Assuming the t-statistic for the mean-difference is 1.76, should we consider this effect to be statistically large and distinguishable from zero?
+
+\begin{solution}
+
+Answering this question technically requires consulting a t-distribution. You can find one \href{https://en.wikipedia.org/wiki/Student\%27s_t-distribution#Table_of_selected_values}{on Wikipedia}. Given the very large sample size, use the $\infty$ row of the table. a $t$-statistic of this size is considered statistically distinguishable from zero in the case of a one-tailed test ($p<0.05$) but not in a two-tailed test ($p<0.10$). If we had a strong directional prediction that the treatment outcome would be higher than the control outcome, we could consider the one-tailed test appropriate but probably not otherwise.
+
+\end{solution}
+
+\end{enumerate}
+
+\item The statistical power of a two-sample t-test (which is, in essence, the power of a posttest-only, two-group experimental design) is influenced by four things: the size of each experimental group, the difference-in-means (i.e., difference in mean values of the outcome in the two groups), the variance of the outcome measure, and alpha (the significance level or ``Type 1'' error probability).
+
+	\begin{enumerate}
+	\item If $\alpha$ (the Type 1 error probability) is 0.05, how often should we expect to find a ``statistically significant'' effect size when one is not present?
+	
+	\begin{solution}
+	
+	This is simply 0.05 or 5\% of the time.
+	
+	\end{solution}
+	
+	\item If you increase the size of your treatment groups in an experiment while the expected effect size remains unchanged, what happens to the power of your experiment? Are you more or less likely to obtain a ``false negative'' result? What about ``false positives''?
+	
+	\begin{solution}
+	
+	The power of the test increases. Recall the definition of power:
+	
+	\begin{equation}
+	Power = \phi\left( \frac{|\mu_1 - \mu_0|\sqrt{N}}{2\sigma} - \phi^{-1}\left( 1 - \frac{\alpha}{2} \right) \right)
+	\end{equation}
+	
+	Without worrying about all the details of the equation, note that sample size is in the numerator of the first term, so more observations means more power. This directly translates into a lower likelihood of false negatives ($1-\beta$) where power is denoted $\beta$.
+	
+	Technically, this is unrelated to the false positive rate, which is a function of the selected significance level, $\alpha$, only.
+	
+	\end{solution}
+	
+	\item Imagine we are expecting to find a small effect but we can only collect a small number of observations in our experiment, so the minimum detectable effect size in our study is larger than the effect size we would expect to observe given our theory. If our experiment reveals an effect that is statistically distinguishable from zero, what are the two possible interpretations of this result?
+	
+	\begin{solution}
+	
+	\begin{enumerate}
+	\item The effect is actually larger than we expected.
+	\item The effect in our experiment is a massive overestimate.
+	\end{enumerate}
+	
+	We cannot distinguish which alternative is correct.
+	
+	\end{solution}
+	
+	\end{enumerate}
+
+\item Consider an experiment in which the effect of a treatment is measured using a single survey question. Assuming a given effect size, and that we cannot change $\alpha$ or the size of the experimental groups, what practical action can we do to increase the power of our experimental design?
+
+\begin{solution}
+
+The only thing we can change in this design is the variance of the outcome. One's immediate reaction might be that this is impossible, but that is not true. The easiest way to reduce the variance of an outcome is to create a more precise measure. That can be achieved by using multiple rather than a single item measure, creating a simple scale.
+
+If it is cheap to add additional questions (and it might not be, given the particular design), then adding questions in this way might be much more affordable than increasing sample size, given the dramatically declining marginal power of increasing sample size.
+
+\end{solution}
+
+\end{enumerate}
+
+\section{Submission Instructions}\label{submission-instructions}
+
+Please submit your answers as a PDF document via Moodle. It should be no more than 4 pages, single-spaced, in Times New Roman font size 12, on A4 paper with standard 2.54cm margins. This problem set is self-assessed. A solution set will be provided on the course website and the activity will be discussed in class.
+
+\section{Feedback}\label{feedback}
+
+Group feedback will be provided during class. If you would like more specific individual feedback on your work, please ask the instructor during office hours.
+
+\end{document}
