@@ -10,39 +10,25 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 The purpose of this problem set is to assess your understanding of one key method of quantitative public opinion research: basic analysis of individual-level survey data.
 
+## Overview
+
+You should review the methodological material from Week 3, then apply the technique of regression analysis to empirical data set (the European Social Survey).
+
 ## Your Task
 
- 1. Consider the following table reporting the results of a hypothetical regression of support for same-sex marriage rights (measured 1=strongly oppose to 7=strongly support) as a function of left-right political ideology (measured from 0=left to 1=right):
+ 1. The structure of this problem set is slightly different from Problem Sets 1 and 2 in that it is a "lab" activity to give you a sense of how to conduct basic quantitative analysis in Stata or R, how to understand the mechanics of multivariate regression analysis, and how to interpret the results.
  
-    |           | Coef. | SE  |
-    | --------- | ----- | --- |
-    | Ideology  | 2.5   | 0.7 |
-    | Intercept | 4.1   | 0.6 |
-    |           |       |     |
-    | R-squared | .32   |     |
-    |         n | 1500  |     |
+ 2. Download the European Social Survey (ESS) Round 7 (2014) dataset from http://www.europeansocialsurvey.org/data/download.html?r=7. You will need to register an email address to do so. Alternatively, a copy of the dataset in Stata format has been provided on Moodle. Also download the documentation (again, a copy is provided on Moodle). Load the data into Stata or R. Your choice.
  
-   a. In plain language, what relationship does ideology appear to have with support for same-sex marriage rights? Is this relationship substantively large or small?
-   
-   b. Is the relationship between ideology and same-sex marriage support statistically distinguishable from zero? (Show your work.)
-   
-   c. For what reasons might we hesitate to draw a causal inference from these data?
+ 3. From the documentation and/or the data itself, identify an attitudinal variable that you would like to consider as an outcome or dependent variable to be explained. Then, identify one particularly important variable that you think might explain that outcome. Discuss why you think these two variables might be related. Calculate the correlation coefficient for the relationship and report it in your paper. Is the correlation large or small?
  
- 2. Imagine we are interested in knowing the effect of economic performance on support for the government, conditional on whether one's own party is in government. To test this a researcher collects monthly data on percentage GDP growth and, from a repeated cross-sectional survey over a ten-year period, an average feeling thermometer rating of government support (ranging from 0 to 100) separately by party (assume two parties: government and opposition).
+ 4. Then, without reference to the data or codebook, identify 3-4 (or more) other factors that you think might explain this outcome and/or your key explanatory variable. Draw a causal graph ("directed acyclic graph") showing the possible causal relationships between these variables. Include this in your paper.
  
-    a. Describe the structure of the dataset. What is the unit of analysis? How many observations are there? What are the variables?
-    
-    a. Assuming economic performance and party identification are exogeneous, describe a regression model that would provide an estimate of the effect of of economic performance on the feeling thermometer for each group. How would you interpret the regression coefficients in each case?
+ 5. With reference to your graph, identify variables in the dataset that might operationalize the potential explanatory variables you have identified in your graph. In natural language, describe each of the variables from your graph, why you think they might be causally relevant, and describe what - if any - variables in the ESS dataset can be used to operationalize the constructs. Discuss any weaknesses or limitations in the way these variables are measured.
  
- 3. Consider a four-wave panel survey that begins with 2000 respondents. The goal of the study is to assess the relationship between economic uncertainty (measured as "high" or "low") and support for economic redistribution (measured on a 0-1 scale), measured at each panel wave.
-
-    a. Assuming no attrition, if we all respondents to all waves were pooled and analyzed together in a single regression model of opinion on economic uncertainty, what are we ignoring in our analysis? Can we consider the coefficient on economic uncertainty to be a causal effect?
-    
-    b. In the scenario in (a), what consequence does this approach have for the uncertainty surrounding our estimates?
-    
-    c. Another way to estimate the effect of uncertainty on support for redistribution is a fixed effects regression. In what ways would this approach improve our inference? In what ways would it limit us?
-    
-    d. If 15% of remaining respondents attrit (leave the panel) after each panel wave, how many respondents are left in wave 4? Briefly describe how you could (or would) deal with this attrition in practical or statistical ways.
+ 6. If there are any variables in your graph that are not available in the dataset (and there should be some), describe what relationship you think they might have on your outcome and/or other explanatory variables and discuss what problems this may introduce into your analysis.
+ 
+ 7. Estimate a regression equation based upon your graph, with the outcome variable regressed on the explanatory variables. Include the output of the regression model in your paper (you may want to use a "fixed width" font to do so; or properly format the output as a table). Interpret the results. Are they substantively significant? Are they statistically significant? Is it reasonable to interpret the effect of any or all of the explanatory variables as causal? Why or why not?
  
 
 ## Submission Instructions
