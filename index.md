@@ -58,7 +58,7 @@ Given the combination of an assessed essay as the sole summative assessment, a r
 | [Correlation and Regression](Assignments/ProblemSet3.html) | Jan. 31 |
 | [Experimentation](Assignments/ProblemSet4.html) | Feb. 7 |
 
-The problem sets take the form of "replication" activities, in which the data from a published research article is made available and students are asked to reproduce the results of the paper from the original data and explain the logical of the underlying methods. The problem sets are mandatory but are not marked. Please treat them as an opportunity to self-evaluate and learn and to approach the instructor with any hesitations you may have. Collaboration is allowed, but each student should submit an individual assignment. Marking rubrics will be provided.
+The problem sets are "mandatory" (meaning encouraged but optional) and are not marked. Please treat them as an opportunity to self-evaluate and learn and to approach the instructor with any hesitations you may have. Collaboration is allowed, but each student should submit an individual assignment. Marking rubrics will be provided.
 
 ## Reading Week Activities
 

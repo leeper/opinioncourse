@@ -19,7 +19,9 @@ The purpose of this problem set is to assess your understanding of one key metho
 \section{Your Task}\label{your-task}
 
 \begin{enumerate}
-\item  In your own words, explain the ``fundamental problem of causal inference'' and how experiments provide a solution to that problem.
+\item Read the Gerber and Green (2008) chapter provided on Moodle.
+
+\item  In your own words, explain the ``potential outcomes framework'' of causal inference and explain how experiments a way to identify causal effects.
 
 \begin{solution}
 
@@ -46,20 +48,6 @@ The former design has claims to ``external'' validity because sample characteris
 The latter design has claims to ``internal'' validity because randomized assignment to debate viewing enables an estimation of an average causal effect of viewing the debate but that effect does not necessarily reflect the average effect in any population. The measurement of vote intentions occurs immediately. In both designs, this measurement of vote intention may not say anything about actual voting behavior.
 
 Both designs likely present other trade-offs: feasibility, cost, etc.
-
-\end{solution}
-
-\item How do we know if randomization ``worked''? In other words, how do we  know that experimental groups are identical to one another except for the difference in the experimentally manipulated variable?
-
-\begin{solution}
-There are two basic answers:
-
-\begin{enumerate}
-\item We don't. If we used a physical randomization process (i.e., something we ``know'' is truly random), then we do not check anything. Randomization creates balance in expectation and we are using a randomized process.
-\item Balance tests. We select a set of covariates that we think are important to have balance on and we perform something akin to a t-test for each variable using the treatment assignment variable as a right-hand side variable. If non of these tests indicate a significant difference in covariates, then the covariates are balanced and we say treatment randomization ``worked.''
-\end{enumerate}
-
-The first appeals to ``design-based'' inference while the latter assumes that we have to demonstrate successful randomization rather than assume it by design.
 
 \end{solution}
 
@@ -128,24 +116,338 @@ Answering this question technically requires consulting a t-distribution. You ca
 	
 	\end{enumerate}
 
-\item Consider an experiment in which the effect of a treatment is measured using a single survey question. Assuming a given effect size, and that we cannot change $\alpha$ or the size of the experimental groups, what practical action can we do to increase the power of our experimental design?
+\item Download the data for the Klar (2014) article we read in class during Week 4.\footnote{A data file can be found here: \url{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/22892}} Using this data set and the code provided below (in R or Stata), reproduce the analysis reported in all of the figures of the paper. The code below creates variable representing each of the treatment ``factors'' in the design --- ambivalence and group type (homogeneous, heterogeneous, or none). You should use regression analysis or another appropriate technique to estimate treatment means for each outcome; which are named as follows:
+
+\begin{itemize}
+\item \texttt{energypriority}
+\item \texttt{healthpriority}
+\item \texttt{oil}
+\item \texttt{alternative}
+\item \texttt{competition}
+\item \texttt{subsidies}
+\item \texttt{energygroup}
+\item \texttt{healthgroup}
+\end{itemize}
+
+\textbf{R code}
+
+\begin{verbatim}
+dat <- rio::import("Klar_AJPS_4.dta")
+
+# analysis focuses only on Democrats
+dems <- dat[dat[["pid"]] %in% 1:3,]
+dim(dems)
+# [1] 277  49
+
+# treatment variable
+table(dems[["condition_number"]])
+dems[["treatment"]] <- NA_real_
+dems[["treatment"]][dems[["condition_number"]] == 2] <- 1L
+dems[["treatment"]][dems[["condition_number"]] == 3] <- 4L
+dems[["treatment"]][dems[["condition_number"]] == 4] <- 2L
+dems[["treatment"]][dems[["condition_number"]] == 5] <- 5L
+dems[["treatment"]][dems[["condition_number"]] == 6] <- 3L
+dems[["treatment"]][dems[["condition_number"]] == 7] <- 6L
+dems[["ambivalent"]] <- NA_real_
+dems[["ambivalent"]][dems[["treatment"]] %in% 1:3] <- 1L
+dems[["ambivalent"]][dems[["treatment"]] %in% 4:6] <- 0L
+dems[["group_type"]] <- NA_real_
+dems[["group_type"]][dems[["treatment"]] %in% c(1,4)] <- 0L
+dems[["group_type"]][dems[["treatment"]] %in% c(2,5)] <- 1L # homogeneous
+dems[["group_type"]][dems[["treatment"]] %in% c(3,6)] <- 2L # heterogeneous
+\end{verbatim}
+
+\textbf{Stata code}
+
+\begin{verbatim}
+use "Klar_AJPS_4.dta"
+
+* analysis focuses only on Democrats
+drop if pid > 3
+
+* treatment variable
+tab condition_number
+
+gen treatment = .
+replace treatment = 1 if condition_number == 2
+replace treatment = 4 if condition_number == 3
+replace treatment = 2 if condition_number == 4
+replace treatment = 5 if condition_number == 5
+replace treatment = 3 if condition_number == 6
+replace treatment = 6 if condition_number == 7
+
+gen ambivalent = .
+replace ambivalent = 1 if treatment < 4
+replace ambivalent = 0 if treatment > 3
+
+gen group_type = .
+* no group
+replace group_type = 0 if treatment == 1 | treatment == 4
+* homogeneous
+replace group_type = 1 if treatment == 2 | treatment == 5 
+* heterogeneous
+replace group_type = 2 if treatment == 3 | treatment == 6 
+
+\end{verbatim}
 
 \begin{solution}
-
-The only thing we can change in this design is the variance of the outcome. One's immediate reaction might be that this is impossible, but that is not true. The easiest way to reduce the variance of an outcome is to create a more precise measure. That can be achieved by using multiple rather than a single item measure, creating a simple scale.
-
-If it is cheap to add additional questions (and it might not be, given the particular design), then adding questions in this way might be much more affordable than increasing sample size, given the dramatically declining marginal power of increasing sample size.
-
+Complete results are shown at the end of this document for both R and Stata.
 \end{solution}
+
 
 \end{enumerate}
 
 \section{Submission Instructions}\label{submission-instructions}
 
-Please submit your answers as a PDF document via Moodle. It should be no more than 4 pages, single-spaced, in Times New Roman font size 12, on A4 paper with standard 2.54cm margins. This problem set is self-assessed. A solution set will be provided on the course website and the activity will be discussed in class.
+Please submit your answers as a PDF document via Moodle. It should be no more than 4 pages, single-spaced, in Times New Roman font size 12, on A4 paper with standard 2.54cm margins. The code for R or Stata to reproduce results should be included as an appendix, written entirely in fixed width format font (e.g., Courier New). This problem set is self-assessed. A solution set will be provided on the course website and the activity will be discussed in class.
 
 \section{Feedback}\label{feedback}
 
 Group feedback will be provided during class. If you would like more specific individual feedback on your work, please ask the instructor during office hours.
+
+
+\clearpage
+
+\section{Klar (2014) Analysis}
+
+\subsection*{R Code (.R)}
+
+\begin{verbatim}
+# Download data from: 
+# https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/22892
+
+# or use the dataverse package:
+if ("Klar_AJPS_4.dta" %in% dir()) {
+    if (!require("ghit")) {
+        install.packages("ghit")
+        library("ghit")
+    }
+    ghit::install_github("IQSS/dataverse-client-r")
+    library("dataverse")
+    d <- dataverse::get_file("Klar_AJPS_4.dta", dataset = "doi:10.7910/DVN/22892")
+    writeBin(as.raw(d), con = "Klar_AJPS_4.dta")
+}
+
+# load the data
+if (!require("rio")) {
+    install.packages("rio")
+    library("rio")
+}
+dat <- rio::import("Klar_AJPS_4.dta")
+
+# analysis focuses only on Democrats
+dems <- dat[dat[["pid"]] %in% 1:3,]
+dim(dems)
+# [1] 277  49
+
+# treatment variable
+table(dems[["condition_number"]])
+dems[["treatment"]] <- NA_real_
+dems[["treatment"]][dems[["condition_number"]] == 2] <- 1L
+dems[["treatment"]][dems[["condition_number"]] == 3] <- 4L
+dems[["treatment"]][dems[["condition_number"]] == 4] <- 2L
+dems[["treatment"]][dems[["condition_number"]] == 5] <- 5L
+dems[["treatment"]][dems[["condition_number"]] == 6] <- 3L
+dems[["treatment"]][dems[["condition_number"]] == 7] <- 6L
+dems[["ambivalent"]] <- NA_real_
+dems[["ambivalent"]][dems[["treatment"]] %in% 1:3] <- 1L
+dems[["ambivalent"]][dems[["treatment"]] %in% 4:6] <- 0L
+dems[["group_type"]] <- NA_real_
+dems[["group_type"]][dems[["treatment"]] %in% c(1,4)] <- 0L
+dems[["group_type"]][dems[["treatment"]] %in% c(2,5)] <- 1L # homogeneous
+dems[["group_type"]][dems[["treatment"]] %in% c(3,6)] <- 2L # heterogeneous
+
+
+# Figure 1
+aggregate(energypriority ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(healthpriority ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(energypriority ~ ambivalent, data = dems))
+summary(lm(healthpriority ~ ambivalent, data = dems))
+
+# Figure 2
+aggregate(oil ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(alternative ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(competition ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(subsidies ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(oil ~ ambivalent, data = dems))
+summary(lm(alternative ~ ambivalent, data = dems))
+summary(lm(competition ~ ambivalent, data = dems))
+summary(lm(subsidies ~ ambivalent, data = dems))
+
+# Figure 3
+aggregate(energypriority ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(healthpriority ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(energypriority ~ group_type, data = dems))
+summary(lm(healthpriority ~ group_type, data = dems))
+
+# Figure 4
+aggregate(oil ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(alternative ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(competition ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(subsidies ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(oil ~ group_type, data = dems))
+summary(lm(alternative ~ group_type, data = dems))
+summary(lm(competition ~ group_type, data = dems))
+summary(lm(subsidies ~ group_type, data = dems))
+
+# Figure 5
+aggregate(energypriority ~ ambivalent + group_type, 
+          data = dems[!dems[["treatment"]] %in% c(1,4),], FUN = mean, na.rm = TRUE)
+aggregate(healthpriority ~ ambivalent + group_type, 
+          data = dems[!dems[["treatment"]] %in% c(1,4),], FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(energypriority ~ ambivalent + group_type, 
+           data = dems[!dems[["treatment"]] %in% c(1,4),]))
+summary(lm(healthpriority ~ ambivalent + group_type, 
+           data = dems[!dems[["treatment"]] %in% c(1,4),]))
+
+# Figure 6
+aggregate(oil ~ ambivalent + group_type, 
+          data = dems[!dems[["treatment"]] %in% c(1,4),], FUN = mean, na.rm = TRUE)
+aggregate(competition ~ ambivalent + group_type, 
+          data = dems[!dems[["treatment"]] %in% c(1,4),], FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(oil ~ ambivalent + group_type, 
+           data = dems[!dems[["treatment"]] %in% c(1,4),]))
+summary(lm(competition ~ ambivalent + group_type, 
+           data = dems[!dems[["treatment"]] %in% c(1,4),]))
+
+# Figure 7
+aggregate(energygroup ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(healthgroup ~ ambivalent, data = dems, FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(energygroup ~ ambivalent, data = dems))
+summary(lm(healthgroup ~ ambivalent, data = dems))
+
+# Figure 8
+aggregate(energygroup ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+aggregate(healthgroup ~ group_type, data = dems, FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(energygroup ~ group_type, data = dems))
+summary(lm(healthgroup ~ group_type, data = dems))
+
+# Figure 9
+aggregate(energygroup ~ ambivalent + group_type, 
+          data = dems[!dems[["treatment"]] %in% c(1,4),], FUN = mean, na.rm = TRUE)
+aggregate(healthgroup ~ ambivalent + group_type, 
+          data = dems[!dems[["treatment"]] %in% c(1,4),], FUN = mean, na.rm = TRUE)
+## regression version
+summary(lm(energygroup ~ ambivalent + group_type, 
+           data = dems[!dems[["treatment"]] %in% c(1,4),]))
+summary(lm(healthgroup ~ ambivalent + group_type, 
+           data = dems[!dems[["treatment"]] %in% c(1,4),]))
+\end{verbatim}
+
+
+\subsection*{Stata Code (.do)}
+
+\begin{verbatim}
+* Download data from: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/22892
+
+use "Klar_AJPS_4.dta"
+
+* analysis focuses only on Democrats
+drop if pid > 3
+
+* treatment variable
+tab condition_number
+
+gen treatment = .
+replace treatment = 1 if condition_number == 2
+replace treatment = 4 if condition_number == 3
+replace treatment = 2 if condition_number == 4
+replace treatment = 5 if condition_number == 5
+replace treatment = 3 if condition_number == 6
+replace treatment = 6 if condition_number == 7
+
+gen ambivalent = .
+replace ambivalent = 1 if treatment < 4
+replace ambivalent = 0 if treatment > 3
+
+gen group_type = .
+* no group
+replace group_type = 0 if treatment == 1 | treatment == 4
+* homogeneous
+replace group_type = 1 if treatment == 2 | treatment == 5 
+* heterogeneous
+replace group_type = 2 if treatment == 3 | treatment == 6 
+
+
+* Figure 1
+tabstat energypriority, by(ambivalent)
+tabstat healthpriority, by(ambivalent)
+** regression version
+reg energypriority ambivalent
+reg healthpriority ambivalent
+
+* Figure 2
+tabstat oil, by(ambivalent)
+tabstat alternative, by(ambivalent)
+tabstat competition, by(ambivalent)
+tabstat subsidies, by(ambivalent)
+** regression version
+reg oil ambivalent
+reg alternative ambivalent
+reg competition ambivalent
+reg subsidies ambivalent
+
+* Figure 3
+tabstat energypriority, by(group_type)
+tabstat healthpriority, by(group_type)
+** regression version
+reg energypriority i.group_type
+reg healthpriority i.group_type
+
+* Figure 4
+tabstat oil, by(group_type)
+tabstat alternative, by(group_type)
+tabstat competition, by(group_type)
+tabstat subsidies, by(group_type)
+** regression version
+reg oil i.group_type
+reg alternative i.group_type
+reg competition i.group_type
+reg subsidies i.group_type
+
+* Figure 5
+tabstat energypriority, by(treatment)
+tabstat healthpriority, by(treatment)
+** regression version
+reg energypriority i.treatment if treatment != 1 & treatment != 4
+reg healthpriority i.treatment if treatment != 1 & treatment != 4
+
+* Figure 6
+tabstat oil, by(treatment)
+tabstat competition, by(treatment)
+** regression version
+reg oil i.treatment if treatment != 1 & treatment != 4
+reg alternative i.treatment if treatment != 1 & treatment != 4
+
+* Figure 7
+tabstat energygroup, by(ambivalent)
+tabstat healthgroup, by(ambivalent)
+** regression version
+reg energygroup i.ambivalent
+reg healthgroup i.ambivalent
+
+* Figure 8
+tabstat energygroup, by(group_type)
+tabstat healthgroup, by(group_type)
+** regression version
+reg energygroup i.group_type
+reg healthgroup i.group_type
+
+* Figure 9
+tabstat energygroup, by(treatment)
+tabstat healthgroup, by(treatment)
+** regression version
+reg energygroup i.treatment if treatment != 1 & treatment != 4
+reg healthgroup i.treatment if treatment != 1 & treatment != 4
+\end{verbatim}
+
 
 \end{document}
