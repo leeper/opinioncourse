@@ -20,11 +20,11 @@
 
 \section{Purpose}
 
-The purpose of this activity is to provide you with an understanding of regression analysis and to both develop and apply that knowledge to the use of the R statistical programming environment.
+The purpose of this activity is to provide you with an understanding of regression analysis (for the purposes of improving your understanding of Problem Sets 3 and 4, the quantitative reading material, and/or your final essay) and to both develop and apply that knowledge to the use of the R statistical programming environment.
 
 \section{Overview}
 
-This lab can be completed during class time and at-home. You should allocate time to complete the relevant portions of the lab in line with the scheduled topics for each week. The two quantitative problem sets in LT relate to, roughly, the first half and second half of the material covered in this lab (this document containing the second half).
+This lab can be completed during at home and everything you need to know is provided in this document.
 
 \section{Your Task}
 
@@ -33,7 +33,7 @@ Using R as instructed, complete the following activities.
 \subsection{Bivariate Regression}
 
 \begin{enumerate}
-\item For this lab, we will use the UK portion of the European Social Survey (ESS) Round 6 data from 2012. You can download these data from here: \url{http://www.europeansocialsurvey.org/download.html?file=ESS6GB&c=GB&y=2012}. You may have to login with an email address and unzip the file. Save the file on your computer and unzip it.
+\item For this lab, we will use the UK portion of the European Social Survey (ESS) Round 7 data from 2014. You can download these data from here: \url{http://www.europeansocialsurvey.org/download.html?file=ESS6GB&c=GB&y=2014}. You may have to login with an email address and unzip the file. Save the file on your computer and unzip it.
 
 \item Use \texttt{setwd()} to set your working directory to wherever you saved the file.
 
@@ -41,7 +41,7 @@ Using R as instructed, complete the following activities.
 
 \begin{verbatim}
 library("rio")
-d <- import("ESS6GB.dta", haven = FALSE)
+d <- import("ESS7GB.dta", haven = FALSE)
 \end{verbatim}
 
 \item How many observations are there in the dataset? How many variables?
@@ -347,15 +347,13 @@ sum(boot < 0)/length(boot) # p-value
 
 \subsection{Multivariate Regression}
 
-Note: Material in this section is relevant to LT Week 8 and Problem Set 7.
-
 \begin{enumerate}
 
 \item Think again about political interest. How correlated are interest, happiness, gender, and religiosity? If they are correlated, can we interpret those correlations as causal relationships? What criteria for causal inference to we have to satisfy in order to interpret this correlation as a causal relationship?
 
 \item One major barrier to causal inference here is confounding: the relationship between these two factors may be explained by some other variable or variables. We might be concerned that there is some earlier variable, that precedes both religiosity and (current) happiness in time that causes both variables, and in turn makes it appear that the two variables are related due to a causal relationship between religiosity and happiness.
 
-To think about this possibility, it can be useful to draw a ``causal diagram'' in the form of a ``directed, acyclic graph'' (DAG).\footnote{Recall we encountered these once before when reading Morgan and Winship in MT Week 9.} Figure \ref{fig:causalgraph} shows an example DAG. We can imagine that religiosity is \textbf{X} and happiness is \textbf{Y}. We are concerned bout variables like \textbf{Z} and \textbf{W} that cause both. Draw a possible DAG, labeling possible confounding variables. (You might also wnat to include other variables in your graph, like \textbf{A} and \textbf{E} that cause happiness but that you do not think cause religiosity.)
+To think about this possibility, it can be useful to draw a ``causal diagram'' in the form of a ``directed, acyclic graph'' (DAG). Figure \ref{fig:causalgraph} shows an example DAG. We can imagine that religiosity is \textbf{X} and happiness is \textbf{Y}. We are concerned bout variables like \textbf{Z} and \textbf{W} that cause both. Draw a possible DAG, labeling possible confounding variables. (You might also want to include other variables in your graph, like \textbf{A} and \textbf{E} that cause happiness but that you do not think cause religiosity.)
 
 \begin{figure}
 \centering
@@ -375,7 +373,7 @@ To think about this possibility, it can be useful to draw a ``causal diagram'' i
 \end{figure}
 
 
-\item Once you have a reasonable DAG showing possibly causal relationships, think about whether you can observe any of the variables in your DAG. Are all of the potentially confounding variables you named available in the ESS dataset? You can find a complete listing of variables in: \texttt{attributes(d)\$var.labels} or in the complete documentation of the ESS questionnaire here: \url{http://www.europeansocialsurvey.org/docs/round6/fieldwork/united_kingdom/ESS6_questionnaires_GB.pdf}.
+\item Once you have a reasonable DAG showing possibly causal relationships, think about whether you can observe any of the variables in your DAG. Are all of the potentially confounding variables you named available in the ESS dataset? You can find a complete listing of variables in: \texttt{attributes(d)\$var.labels} or in the complete documentation of the ESS questionnaire here: \url{http://www.europeansocialsurvey.org/docs/round7/fieldwork/united_kingdom/ESS7_questionnaires_GB.pdf}.
 
 \item If you have access to potentially confounding variables, then we can use an elaboration of the bivariate regression models we just discussed to help to control for this confounding. If potentially confounding variables in your DAG are unobserved (either because they are not included in the ESS or because they are perhaps ``unobservable'' factors), there is nothing we can do to rule out the potential for confounding. We are, in that situation, completely unable to draw a causal inference from the observational data in front of us. We would need more data!
 
@@ -416,7 +414,7 @@ round(cor(cbind(p1$residuals, new2$religiosity, new2$pinterest)), 3)
 round(cor(cbind(p2$residuals, new2$religiosity, new2$pinterest)), 3)
 \end{verbatim}
 
-\item We can see that the excluded variables appear to still be associated with the outcome (i.e., there is some residual some of squares that is still associated with the excluded RHS variables). If we include these, as in the multivariate model \texttt{m2}, we can account for the independent influences of each of these factors. But how does this work?\footnote{Kellsted and Whitten provide a generic explanation in Section 9.3.} To understand multiple regression we have to understand a simpler concept: the \textit{partial correlation}.
+\item We can see that the excluded variables appear to still be associated with the outcome (i.e., there is some residual some of squares that is still associated with the excluded RHS variables). If we include these, as in the multivariate model \texttt{m2}, we can account for the independent influences of each of these factors. But how does this work? To understand multiple regression we have to understand a simpler concept: the \textit{partial correlation}.
 
 A partial correlation is the correlation between two variables controlling for the influence of a third variable. If we want to know the partial correlation between \texttt{happy} and \texttt{religiosity}, controlling for \texttt{pinterest}, we regress each variable on \texttt{pinterest} and correlate their residuals:
 

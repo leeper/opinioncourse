@@ -51,12 +51,12 @@ Additionally, given the discussion format of the course, every week, every stude
 
 Given the combination of an assessed essay as the sole summative assessment, a relatively short term (10 weeks), and the varied backgrounds of students enrolled in the course, short problem sets applying different research methods in public opinion are due in the first four weeks of the course (Weeks 2--5). These provide an opportunity to both gain methodological competence to critique readings in the course and prepare the final exam project.
 
-| Problem Set | Due Date |
-|-------------|----------|
-| [Interviewing](Assignments/ProblemSet1.html) | Jan. 17 |
-| [Trends and Toplines](Assignments/ProblemSet2.html) | Jan. 24 |
-| [Correlation and Regression](Assignments/ProblemSet3.html) | Jan. 31 |
-| [Experimentation](Assignments/ProblemSet4.html) | Feb. 7 |
+| Problem Set | Due Date | Solution Set |
+|-------------|----------|--------------|
+| [Interviewing](Assignments/ProblemSet1.html) | Jan. 17 | [Solutions](Assignments/ProblemSet1.pdf) |
+| [Trends and Toplines](Assignments/ProblemSet2.html) | Jan. 24 | [Solutions](Assignments/ProblemSet2.pdf) |
+| [Correlation and Regression](Assignments/ProblemSet3.html) | Jan. 31 | [Solutions](Assignments/ProblemSet3.pdf) |
+| [Experimentation](Assignments/ProblemSet4.html) | Feb. 7 | [Solutions](](Assignments/ProblemSet4.pdf) |
 
 The problem sets are "mandatory" (meaning encouraged but optional) and are not marked. Please treat them as an opportunity to self-evaluate and learn and to approach the instructor with any hesitations you may have. Collaboration is allowed, but each student should submit an individual assignment. Marking rubrics will be provided.
 
