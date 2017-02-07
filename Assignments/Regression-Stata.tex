@@ -33,7 +33,7 @@ Using Stata as instructed, complete the following activities.
 \subsection{Bivariate Regression}
 
 \begin{enumerate}
-\item For this lab, we will use the UK portion of the European Social Survey (ESS) Round 7 data from 2014. You can download these data from here: \url{http://www.europeansocialsurvey.org/download.html?file=ESS6GB&c=GB&y=2014}. You may have to login with an email address and unzip the file. Save the file on your computer and unzip it.
+\item For this lab, we will use the UK portion of the European Social Survey (ESS) Round 7 data from 2014. You can download these data from here: \url{http://www.europeansocialsurvey.org/download.html?file=ESS7GB&c=GB&y=2014}. You may have to login with an email address and unzip the file. Save the file on your computer and unzip it.
 
 \item Use \texttt{cd} to set your working directory to wherever you saved the file.
 
@@ -285,45 +285,48 @@ disp r(sum)
 \item \texttt{predict RESIDUALS, residuals} will create a variable \texttt{RESIDUALS} containing the residuals for each observation in your dataset. These residuals will be equal to \texttt{happy - FITTED}
 \end{enumerate}
 
-\item Returning to our main focus, another common measure of model fit is called the residual mean squared error, or sometimes simply $\hat{\sigma}$. This is simply the standard deviation of the residuals (the unexplained variation in y). As religiosity explains more and more of the variation in happiness, then the residuals will become small and have a lower variance (and lower standard deviation).\footnote{Recall the standard deviation is simply the square root of the variance.} There are three ways to calculate sigma: (a) by manually calculating the residuals and taking the standard deviation thereof, (b) extracting the residuals from the \texttt{m} object (returned by \texttt{reg}), or (c) using R's calculation of sigma:
+\item Returning to our main focus, another common measure of model fit is called the residual mean squared error, or sometimes simply $\hat{\sigma}$. This is simply the standard deviation of the residuals (the unexplained variation in y). As religiosity explains more and more of the variation in happiness, then the residuals will become small and have a lower variance (and lower standard deviation).\footnote{Recall the standard deviation is simply the square root of the variance.} There are three ways to calculate sigma: (a) by manually calculating the residuals and taking the standard deviation thereof, (b) extracting the residuals from the regression object (returned by \texttt{reg}), or (c) using Stata's calculation of sigma in the raw regression output:
 
 \begin{verbatim}
-sqrt(sum((new$happy - (coef(m)[1] + (coef(m)[2] * new$religiosity)))^2)/nrow(new))
-sd(residuals(m))
+gen happy_resid3 = (happy - (_b[_cons] + (_b[rlgdgr] * rlgdgr)) )^2
+quietly summ happy_resid2
+disp sqrt(r(sum)/(_N-))
+
+predict RESIDUALS, residuals
+summ RESIDUALS
 \end{verbatim}
 
-\noindent The reason this quantity is useful as a measure of model fit is that it is on the scale of the y-axis variable (happiness) and can be directly compared to the standard deviation of y. If religiosity explained a lot of the variation in happiness, then $\hat{\sigma}$ would be small compared to \texttt{sd(new\$happy)}. Is it?
+\noindent The reason this quantity is useful as a measure of model fit is that it is on the scale of the y-axis variable (happiness) and can be directly compared to the standard deviation of y. If religiosity explained a lot of the variation in happiness, then $\hat{\sigma}$ would be small compared to the standard deviation of \texttt{happy} (returned by \texttt{summ happy}). Is it?
 
-\item Returning to our estimated regression model, \texttt{m}, use \texttt{summary(m)} to see a more complete print out of the regression results. Can you make sense of all of the information that is displayed? What are the values of the following quantities:
+\item Returning to our estimated regression model, use \texttt{reg happy rlgdgr} to see the regression results again. Can you make sense of all of the information that is displayed? What are the values of the following quantities:
 
 \begin{enumerate}
 \item Regression slope
 \item $\hat{\sigma}$
 \item R-squared
-\item Mean residual
-\item y-intercept (the value of happiness when religiosity = 0)
+\item y-intercept or constant (the value of happiness when religiosity = 0)
 \end{enumerate}
 
-\item You will note that the table includes a number of other statistics that we haven't discussed, including the standard errors of the regression slope and y-intercept, and t-statistics and p-values for each of these. We are not going to cover the calculation of the standard errors, but can you see how the t-statistics are calculated given what we covered last week?
+\item You will note that the table includes a number of other statistics that we haven't discussed, including the standard errors of the regression slope and y-intercept, and t-statistics and p-values for each of these. We are not going to cover the calculation of the standard errors, but can you see how the t-statistics are calculated given what we covered in Lab 2?
 
 \item Is the estimated regression slope substantively large? Is the slope significantly different from zero?
 
 \item In order to ensure your understanding, you may want to redo some of these exercises using other combinations of variables (e.g., political interest, etc.). One particularly illustrative example would be to use gender as an x-axis variable. (You will want to redefine \texttt{gender} as:
 
 \begin{verbatim}
-d$gender <- as.integer(d$gndr)-1
+gen gender = gndr - 1
 \end{verbatim}
 
 \noindent In that case, you will hopefully note some similarities between the conditional mean of an outcome variable given gender:
 
 \begin{verbatim}
-aggregate(as.integer(polintr) ~ gender, data = d, FUN = mean, na.rm = TRUE)
+tabstat polintr, by(gender)
 \end{verbatim}
 
 \noindent and the results of a corresponding regression analysis:
 
 \begin{verbatim}
-lm(as.integer(polintr) ~ gender, data = d)
+reg polintr gender
 \end{verbatim}
 
 \item Recall that the p-value in a statistical significance test represents the probability of observing a t-statistic as large or larger than the one observed in a sample of the data from a population where the true t-statistic is zero (in this case, where the slope of the relationship between religiosity and happiness is non-existent).
@@ -335,11 +338,7 @@ If you extract the estimated slope from each bootstrap sample, this bootstrap sa
 Here's the code:
 
 \begin{verbatim}
-boot <- replicate(5000L, 
-          lm(happy ~ religiosity, 
-             data = new[sample(1:nrow(new), nrow(new), TRUE), ])$coef[2])
-summary(boot)
-sum(boot < 0)/length(boot) # p-value
+reg happy rlgdgr, vce(boot)
 \end{verbatim}
 
 \noindent What is p-value of the regression slope, based on the bootstrap sampling distribution?
