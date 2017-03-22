@@ -6,7 +6,7 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 # GV4J3: Public Opinion, Political Psychology, and Citizenship
 
-This course is being conducted as an MSc seminar at the London School of Economics and Political Science during Lent Term, primarily for students in the Political Science and Political Economy or Comparative Politics MSc programmes but it is open to students in other degree programmes, as well. [The course overview is available in the LSE Calendar](http://www.lse.ac.uk/resources/calendar/courseGuides/GV/2016_GV4J3.htm).
+This course is being conducted as an MSc seminar at the London School of Economics and Political Science during Lent Term, primarily for students in the Political Science and Political Economy or Comparative Politics MSc programmes but it is open to students in other degree programmes, as well. [The course overview is available in the LSE Calendar](http://www.lse.ac.uk/resources/calendar/courseGuides/GV/2017_GV4J3.htm).
 
 ## Overview and Syllabus
 
@@ -20,15 +20,15 @@ A final schedule is below:
 
  - Week 1 (Jan. 13): Conceptualizations of "Public" "Opinion"
  - Week 2 (Jan. 20): Voting Behaviour
- - Week 3 (Jan. 27): What are attitudes?
- - Week 4 (Feb. 3): Media and Social Influence
- - Week 5 (Feb. 10): Motivated Reasoning
+ - Week 3 (Jan. 27): What are attitudes? Why and how do they change?
+ - Week 4 (Feb. 3): Ideology, values, and predispositions
+ - Week 5 (Feb. 10): Identity and social influence
  - Week 6: Reading Week feedback sessions (see below)
- - Week 7 (Feb. 24): Attitude Strength and Attitude Change
- - Week 8 (Mar. 3): Political Identity, Values, and Other Predispositions
- - Week 9 (Mar. 9): Emotion and/or Cognition, Implicit and/or Explicit?
- - Weeks 1 (Mar. 17): Judgement and Decision-Making I
- - Week 11 (Mar. 24): Judgement and Decision-Making II; Conclusion
+ - Week 7 (Feb. 24): Media and elite influence 
+ - Week 8 (Mar. 3): Thinking Fast, Slow, Warm, and Cold
+ - Week 9 (Mar. 9): Presentations
+ - Week 10 (Mar. 17): Presentations
+ - Week 11 (Mar. 24): Judgement and Decision-Making; Conclusion
 
 ## Weekly Questions and Writing Assignments
 
