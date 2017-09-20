@@ -24,10 +24,10 @@ A final schedule is below:
  - Week 4 (Feb. 3): Media and Social Influence
  - Week 5 (Feb. 10): Motivated Reasoning
  - Week 6: Reading Week feedback sessions (see below)
- - Week 7 (Feb. 24): Attitude Strength and Attitude Change
+ - Week 7 (Feb. 24): Emotion and/or Cognition
  - Week 8 (Mar. 3): Political Identity, Values, and Other Predispositions
- - Week 9 (Mar. 9): Emotion and/or Cognition, Implicit and/or Explicit?
- - Weeks 1 (Mar. 17): Judgement and Decision-Making I
+ - Week 9 (Mar. 9): Student Presentations
+ - Weeks 1 (Mar. 17): Student Presentations
  - Week 11 (Mar. 24): Judgement and Decision-Making II; Conclusion
 
 ## Weekly Questions and Writing Assignments
@@ -53,24 +53,24 @@ Given the combination of an assessed essay as the sole summative assessment, a r
 
 | Problem Set | Due Date | Solution Set |
 |-------------|----------|--------------|
-| [Interviewing](Assignments/ProblemSet1.html) | Jan. 17 | [Solutions](Assignments/ProblemSet1.pdf) |
-| [Trends and Toplines](Assignments/ProblemSet2.html) | Jan. 24 | [Solutions](Assignments/ProblemSet2.pdf) |
-| [Correlation and Regression](Assignments/ProblemSet3.html) | Jan. 31 | [Solutions](Assignments/ProblemSet3.pdf) |
-| [Experimentation](Assignments/ProblemSet4.html) | Feb. 7 | [Solutions](](Assignments/ProblemSet4.pdf) |
+| [Interviewing](Assignments/ProblemSet1.html) | Jan. 16 | [Solutions](Assignments/ProblemSet1.pdf) |
+| [Trends and Toplines](Assignments/ProblemSet2.html) | Jan. 23 | [Solutions](Assignments/ProblemSet2.pdf) |
+| [Correlation and Regression](Assignments/ProblemSet3.html) | Jan. 30 | [Solutions](Assignments/ProblemSet3.pdf) |
+| [Experimentation](Assignments/ProblemSet4.html) | Feb. 6 | [Solutions](](Assignments/ProblemSet4.pdf) |
 
 The problem sets are "mandatory" (meaning encouraged but optional) and are not marked. Please treat them as an opportunity to self-evaluate and learn and to approach the instructor with any hesitations you may have. Collaboration is allowed, but each student should submit an individual assignment. Marking rubrics will be provided.
 
 ## Reading Week Activities
 
-There will be no class meeting on February 17 (LT Week 6) due to Reading Week. In preparation for the final exam, students will prepare a short, 2-page proposal to be submitted in Week 6 of Lent Term that outlines a possible project for the assessed essay. This document should state a research topic and clear research question, make reference to relevant theoretical and empirical literature, and propose a basic design for addressing the question. Students should focus on one topic, but can present up to two distinct ideas if they are undecided about what to do. The proposal should be uploaded to Moodle by the beginning of Week 6.
+There will be no class meeting on February 16 (LT Week 6) due to Reading Week. In preparation for the final exam, students will prepare a short, 2-page proposal to be submitted in Week 6 of Lent Term that outlines a possible project for the assessed essay. This document should state a research topic and clear research question, make reference to relevant theoretical and empirical literature, and propose a basic design for addressing the question. Students should focus on one topic, but can present up to two distinct ideas if they are undecided about what to do. The proposal should be uploaded to Moodle by the beginning of Week 6.
 
 Students should then meet one-on-one with the instructor during Week 6 to discuss the ideas, receive feedback, and make plans for the final paper. Once a topic is agreed, student should use Week 6 to complete an annotated bibliography of 5--10 relevant studies (from reading list and elsewhere) that motivate the final project and upload it to Moodle.
 
-Once finalized, 3--4 students per week will be asked to briefly present their projects for peer feedback during class meetings in Weeks 7--10 of term. These presentations should be oral and last about 5 minutes.
+Once finalized, 3--4 students per week will be asked to briefly present their projects for peer feedback during class meetings in Weeks 9--10 of term. These presentations should be oral and last about 5 minutes.
 
 ## Exam
 
-*Due Tuesday 25 April 2017 at 5:00pm*
+*Due Tuesday 24 April 2017 at 5:00pm*
 
 The exam for the course is an independent research paper of approximately 5,000 words that addresses an important political science question related to public opinion, political psychology, or political behavior, offers a theoretical contribution toward understanding that question, and reports the results of an empirical analysis to test that theory. The requirements for the empirical component are flexible and it can involve an original survey and/or experimental data collection, a pilot test of a proposed research design, qualitative data analysis (such as focus groups or semi-structured interviewing), the analysis of existing public opinion data, or a mix of these.
 
