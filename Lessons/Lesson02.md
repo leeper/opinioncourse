@@ -8,12 +8,6 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 ## Welcome
 
- - Introductions
-   - Courses
-   - Countries
-   - Names
- - My bio
-
 ## Problem Set 1 Discussion
 
 ## Overview of voting behaviour literature
