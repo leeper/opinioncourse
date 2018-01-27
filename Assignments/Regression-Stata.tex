@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[margin=0.5in]{geometry}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{subcaption}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
@@ -30,12 +30,15 @@ This lab can be completed during at home and everything you need to know is prov
 
 Using Stata as instructed, complete the following activities.
 
+For this lab, we will use the UK portion of the European Social Survey (ESS) Round 7 data from 2014. You can download these data from here: \url{http://www.europeansocialsurvey.org/download.html?file=ESS7GB&c=GB&y=2014}. You may have to login with an email address and unzip the file. Save the file on your computer and unzip it.
+
 \subsection{Bivariate Regression}
 
 \begin{enumerate}
-\item For this lab, we will use the UK portion of the European Social Survey (ESS) Round 7 data from 2014. You can download these data from here: \url{http://www.europeansocialsurvey.org/download.html?file=ESS7GB&c=GB&y=2014}. You may have to login with an email address and unzip the file. Save the file on your computer and unzip it.
 
-\item Use \texttt{cd} to set your working directory to wherever you saved the file.
+\item Use \texttt{cd} to set your working directory to wherever you saved the file. For example, on Windows, you might want to try \texttt{cd c:/users/thomas/desktop}.
+
+\item Start a new text document in the editor of your choice (could be the Stata ``do file editor'' or Notepad, etc.). Write all code that you generate in that file so you have a complete record of your analysis.
 
 \item Read the data into Stata using: 
 
@@ -466,9 +469,55 @@ reg happy polintr rlgdgr
 
 \item The only thing that is different about bivariate and multivariate regression is the substantive interpretation of estimated regression slopes. Rather than talk about these slopes as the ``influence of X on Y'' we instead interpret them as the ``influence of X on Y controlling for Z'' or the ``influence of X on Y all else constant''. This is a subtle change but it's important to remember that in a multivariate regression we are not estimating a \textit{raw} relationship but rather than relationship accounting for the variance in X and Y explained by the other RHS variables in the model. For this reason, the slopes in a multivariate regression are sometimes called ``marginal effects'' due to their representing the change of influence of one variable while the other variables remain constant.
 
+\subsection{Survey-Weighted Analyses}
+
+\item Now that you have a sense of how to estimate and interpret regression models, we need to handle a very important final caveat to all of the above. When we work with survey data, we need to acknowledge that such data are often \textit{weighted}. That is, they do not represent a simple random sample from a population but instead come from a more complex survey design and the \textit{representativeness} of the sample data hinges on the estimates being re-weighted to make them match the target population. 
+
+\item The easiest way to do this is to use the \texttt{svyset} command to instruct Stata that the dataset should be weighted. The specific of this command are pretty complex but for our purposes we need to tell stata, via this command, that the \texttt{pspwght} weight variable contains the weights that make our sample representative.
+
+A simple example of this is as follows:
+
+\begin{verbatim}
+* set survey weighting globally
+svyset [pweight=pspwght]
+
+* calculate unweighted means
+mean happy polintr rlgdgr
+
+* calculate weighted means
+svy: mean happy polintr rlgdgr
+\end{verbatim}
+
+\noindent How do the unweighted and weighted means differ?
+
+\item The difference is that in the unweighted analysis, every row in the dataset counts equally whereas in the weighted analysis, some rows count for more than others. Individuals that are underrepresented in the sample relative to the population are given weights larger than 1 and individuals that are overrepresented in the sample relative to the population are given weights smaller than 1. You might want to examine the distribution of weights using some of the following:
+
+\begin{verbatim}
+hist pspwght
+summ pspwght
+
+tabstat pspwght, by(gndr)
+tabstat pspwght, by(region)
+tabstat pspwght, by(yrbrn)
+\end{verbatim}
+
+\item For regression analysis, we can either use \texttt{svyset} to globally specify that the data are supposed to be weighted. Or we can the \texttt{[pweight=...]} option to \texttt{reg}:
+
+\begin{verbatim}
+** unweighted command behaves as normal
+reg happy polintr rlgdgr
+
+* survey-weighted model
+reg happy polintr rlgdgr [pweight=pspwght]
+
+** 'svy:'-prefixed command provides weighted results
+svy: reg happy polintr rlgdgr
+\end{verbatim}
+
+\noindent The last two sets of results should be basically identical, but both should differ from the unweighted regression.
+
 \end{enumerate}
 
 
 \end{document}
-
 
