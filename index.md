@@ -6,7 +6,7 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
 
 # GV4J3: Public Opinion, Political Psychology, and Citizenship
 
-This course is being conducted as an MSc seminar at the London School of Economics and Political Science during Lent Term, primarily for students in the Political Science and Political Economy or Comparative Politics MSc programmes but it is open to students in other degree programmes, as well. [The course overview is available in the LSE Calendar](http://www.lse.ac.uk/resources/calendar/courseGuides/GV/2016_GV4J3.htm).
+This course is being conducted as an MSc seminar at the London School of Economics and Political Science during Lent Term, primarily for students in the Political Science and Political Economy or Comparative Politics MSc programmes but it is open to students in other degree programmes, as well. [The course overview is available in the LSE Calendar](http://www.lse.ac.uk/resources/calendar/courseGuides/GV/2017_GV4J3.htm).
 
 ## Overview and Syllabus
 
@@ -70,7 +70,7 @@ Once finalized, 3--4 students per week will be asked to briefly present their pr
 
 ## Exam
 
-*Due Tuesday 24 April 2017 at 5:00pm*
+*Due Tuesday 25 April 2018 at 5:00pm*
 
 The exam for the course is an independent research paper of approximately 5,000 words that addresses an important political science question related to public opinion, political psychology, or political behavior, offers a theoretical contribution toward understanding that question, and reports the results of an empirical analysis to test that theory. The requirements for the empirical component are flexible and it can involve an original survey and/or experimental data collection, a pilot test of a proposed research design, qualitative data analysis (such as focus groups or semi-structured interviewing), the analysis of existing public opinion data, or a mix of these.
 
