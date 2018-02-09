@@ -71,7 +71,7 @@ table(d$polintr)
 \noindent Then, replace the values of ``Refusal'', ``Don't know'', and ``No answer'' as missing values: 
 
 \begin{verbatim}
-levels(d$polintr)[5:7] <- NA
+d$polintr[d$polintr %in% 5:7] <- NA
 \end{verbatim}
 
 \noindent Repeat the tabulation to confirm that this work. Using what you have learned already, attempt to answer the following questions:
@@ -87,8 +87,8 @@ levels(d$polintr)[5:7] <- NA
 \item Now examine a different set of variables: happiness (\texttt{happy}) and religiosity (\texttt{rlgdgr}). First, remove the nonresponse categories from these variables:
 
 \begin{verbatim}
-levels(d$rlgdgr)[12:14] <- NA
-levels(d$happy)[12:14] <- NA
+d$rlgdgr[d$rlgdgr %in% 12:14] <- NA
+d$happy[d$happy %in% 12:14] <- NA
 \end{verbatim}
 
 \item How happy are people in Great Britain on average? How religious are they?

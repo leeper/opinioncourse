@@ -15,8 +15,14 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
     - Theoretical traditions related to the scope of influence
         - Hypodermic effects
         - Direct effects
+            - Persuasion
+            - Belief change
         - Null effects
         - Indirect effects
+    - Forms of indirect effects
+        - Framing
+        - Priming
+        - Agenda-setting
     - What do we mean by media? What counts?
         - How do we measure media?
         - Do we care about quantitative or qualitative metrics of exposure?
@@ -28,20 +34,25 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
         - Abstract social groups (e.g., race, class, etc.)
         - Surveys of self-reported social networks or social interaction
         - Artificial, laboratory-based discussions
-        - Social media
-
+ - Social media
+    - Is social media "media" or something else?
+    - What kinds of influence can we expect?
+    - What kinds of heterogeneity of experiences and effects?
+    - How do platforms differ from one another and evolve over time?
+    
 ## Discussion questions
 
- - What are attitudes?
- - Where do they come from? What factors lead our attitudes to change?
- - Do attitudes persist? How?
- - How aware are we of our own attitudes? Are they accessible? Are they explicit?
- - What does it mean for an attitude to be strong? Can an attitude be strong in multiple ways?
- - Is there anything unique about *political* attitudes compared to other kinds of attitudes?
+Tackle each reading according to our worksheet:
+ - What is the RQ?
+ - What is the theory? Is it any good?
+ - To which literature(s) does this speak?
+ - What are the hypotheses?
+ - What are the methods?
+ - What are the results?
+ - Reactions/extensions/evaluations
 
 ## Methods Mini-Lecture
 
- - Problem Set 3 Discussion
  - Setup Problem Set 4: Experimentation
     - Mini Lecture
  - Preview: Motivated reasoning
@@ -49,3 +60,5 @@ ghurl: https://github.com/leeper/opinioncourse/tree/gh-pages
     - Reed and Aspinwall: Self-affirmation as a mitigation strategy
     - Tetlock et al: Accountability
     - Chen et al: Different kinds of motivations
+ - Mini-lab
+ - Problem Set 3 Discussion
