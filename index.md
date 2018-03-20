@@ -56,7 +56,7 @@ Given the combination of an assessed essay as the sole summative assessment, a r
 | [Interviewing](Assignments/ProblemSet1.html) | Jan. 16 | [Solutions](Assignments/ProblemSet1.pdf) |
 | [Trends and Toplines](Assignments/ProblemSet2.html) | Jan. 23 | [Solutions](Assignments/ProblemSet2.pdf) |
 | [Correlation and Regression](Assignments/ProblemSet3.html) | Jan. 30 | [Solutions](Assignments/ProblemSet3.pdf) |
-| [Experimentation](Assignments/ProblemSet4.html) | Feb. 6 | [Solutions](](Assignments/ProblemSet4.pdf) |
+| [Experimentation](Assignments/ProblemSet4.html) | Feb. 6 | [Solutions](Assignments/ProblemSet4.pdf) |
 
 The problem sets are "mandatory" (meaning encouraged but optional) and are not marked. Please treat them as an opportunity to self-evaluate and learn and to approach the instructor with any hesitations you may have. Collaboration is allowed, but each student should submit an individual assignment. Marking rubrics will be provided.
 
